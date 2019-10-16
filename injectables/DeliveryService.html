@@ -1,0 +1,2883 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>DeliveryService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>libs/material/src/lib/delivery/+state/delivery.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#addDelivery">addDelivery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#addDeliveryFromWizard">addDeliveryFromWizard</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#addDeliveryWithMovieMaterials">addDeliveryWithMovieMaterials</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addStakeholder">addStakeholder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#copyMaterialsInDelivery">copyMaterialsInDelivery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#copyMaterialsInMovie">copyMaterialsInMovie</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteDelivery">deleteDelivery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#deliveryDoc">deliveryDoc</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#deliveryStakeholderDoc">deliveryStakeholderDoc</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#deliveryStakeholdersCollection">deliveryStakeholdersCollection</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#materialDeliveryDoc">materialDeliveryDoc</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#movieDoc">movieDoc</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#pushDeliveryId">pushDeliveryId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeMaterialsStepId">removeMaterialsStepId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeStakeholder">removeStakeholder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setSignDeliveryTx">setSignDeliveryTx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#signDelivery">signDelivery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#unsealDelivery">unsealDelivery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateCurrentMGDeadline">updateCurrentMGDeadline</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateDates">updateDates</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateDeliveryStatus">updateDeliveryStatus</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateInformations">updateInformations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateMGDeadlines">updateMGDeadlines</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateSteps">updateSteps</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#currentDeliveryDoc">currentDeliveryDoc</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(movieQuery: <a href="../injectables/MovieQuery.html">MovieQuery</a>, templateQuery: <a href="../injectables/TemplateQuery.html">TemplateQuery</a>, materialQuery: <a href="../injectables/MaterialQuery.html">MaterialQuery</a>, materialService: <a href="../injectables/MaterialService.html">MaterialService</a>, organizationQuery: <a href="../injectables/OrganizationQuery.html">OrganizationQuery</a>, query: <a href="../injectables/DeliveryQuery.html">DeliveryQuery</a>, permissionsService: <a href="../injectables/PermissionsService.html">PermissionsService</a>, shService: <a href="../injectables/StakeholderService.html">StakeholderService</a>, walletService: <a href="../injectables/WalletService.html">WalletService</a>, db: <a href="../injectables/FireQuery.html">FireQuery</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:56</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>movieQuery</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MovieQuery.html" target="_self" >MovieQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>templateQuery</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TemplateQuery.html" target="_self" >TemplateQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>materialQuery</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MaterialQuery.html" target="_self" >MaterialQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>materialService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MaterialService.html" target="_self" >MaterialService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>organizationQuery</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrganizationQuery.html" target="_self" >OrganizationQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>query</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DeliveryQuery.html" target="_self" >DeliveryQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>permissionsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PermissionsService.html" target="_self" >PermissionsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>shService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StakeholderService.html" target="_self" >StakeholderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>walletService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WalletService.html" target="_self" >WalletService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>db</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FireQuery.html" target="_self" >FireQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addDelivery"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            addDelivery
+                        </b>
+                        <a href="#addDelivery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addDelivery(opts: <a href="../interfaces/AddDeliveryOptions.html">AddDeliveryOptions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initializes a new delivery in firebase</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>opts</td>
+                                    <td>
+                                                <code><a href="../interfaces/AddDeliveryOptions.html" target="_self" >AddDeliveryOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>if templateId is present, the materials sub-collection is populated with materials from this template</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addDeliveryFromWizard"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            addDeliveryFromWizard
+                        </b>
+                        <a href="#addDeliveryFromWizard"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addDeliveryFromWizard(wizard: <a href="../interfaces/DeliveryWizard.html">DeliveryWizard</a>, movieId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, templateId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="205"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:205</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add a delivery using all the settings picked in the creation tunnel </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>wizard</td>
+                                    <td>
+                                                <code><a href="../interfaces/DeliveryWizard.html" target="_self" >DeliveryWizard</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>movieId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>templateId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addDeliveryWithMovieMaterials"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            addDeliveryWithMovieMaterials
+                        </b>
+                        <a href="#addDeliveryWithMovieMaterials"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addDeliveryWithMovieMaterials(opts?: <a href="../interfaces/AddDeliveryOptions.html">AddDeliveryOptions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="162"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:162</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add a new delivery by copying the movie&#39;s materials </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>opts</td>
+                                    <td>
+                                                <code><a href="../interfaces/AddDeliveryOptions.html" target="_self" >AddDeliveryOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addStakeholder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            addStakeholder
+                        </b>
+                        <a href="#addStakeholder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addStakeholder(movieStakeholder: <a href="../interfaces/Stakeholder.html">Stakeholder</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="443"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:443</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add a stakeholder to the delivery </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>movieStakeholder</td>
+                                    <td>
+                                                <code><a href="../interfaces/Stakeholder.html" target="_self" >Stakeholder</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="copyMaterialsInDelivery"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            copyMaterialsInDelivery
+                        </b>
+                        <a href="#copyMaterialsInDelivery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>copyMaterialsInDelivery(delivery: <a href="../interfaces/Delivery.html">Delivery</a>, document: <a href="../interfaces/BFDoc.html">BFDoc</a>, tx: <a href="../undefineds/restore.html">firebase.firestore.Transaction</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="362"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:362</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create a transaction to copy the template/movie materials into the delivery materials </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>delivery</td>
+                                    <td>
+                                                <code><a href="../interfaces/Delivery.html" target="_self" >Delivery</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>document</td>
+                                    <td>
+                                                <code><a href="../interfaces/BFDoc.html" target="_self" >BFDoc</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>tx</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.Transaction</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="copyMaterialsInMovie"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            copyMaterialsInMovie
+                        </b>
+                        <a href="#copyMaterialsInMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>copyMaterialsInMovie(delivery: <a href="../interfaces/Delivery.html">Delivery</a>, document: <a href="../interfaces/BFDoc.html">BFDoc</a>, tx: <a href="../undefineds/restore.html">firebase.firestore.Transaction</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="402"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:402</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Copy the template materials into the movie materials </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>delivery</td>
+                                    <td>
+                                                <code><a href="../interfaces/Delivery.html" target="_self" >Delivery</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>document</td>
+                                    <td>
+                                                <code><a href="../interfaces/BFDoc.html" target="_self" >BFDoc</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>tx</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.Transaction</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteDelivery"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            deleteDelivery
+                        </b>
+                        <a href="#deleteDelivery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteDelivery()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="312"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:312</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes delivery and all the sub-collections in firebase </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deliveryDoc"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            deliveryDoc
+                        </b>
+                        <a href="#deliveryDoc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deliveryDoc(deliveryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>deliveryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >AngularFirestoreDocument&lt;DeliveryWithTimestamps&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deliveryStakeholderDoc"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            deliveryStakeholderDoc
+                        </b>
+                        <a href="#deliveryStakeholderDoc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deliveryStakeholderDoc(deliveryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, stakeholderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>deliveryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>stakeholderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >AngularFirestoreDocument&lt;StakeholderDocument&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deliveryStakeholdersCollection"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            deliveryStakeholdersCollection
+                        </b>
+                        <a href="#deliveryStakeholdersCollection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deliveryStakeholdersCollection(deliveryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>deliveryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Stakeholder.html" target="_self" >AngularFirestoreCollection&lt;Stakeholder&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="materialDeliveryDoc"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            materialDeliveryDoc
+                        </b>
+                        <a href="#materialDeliveryDoc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>materialDeliveryDoc(deliveryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, materialId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>deliveryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>materialId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >AngularFirestoreDocument</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="movieDoc"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            movieDoc
+                        </b>
+                        <a href="#movieDoc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>movieDoc(movieId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>movieId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >AngularFirestoreDocument&lt;Movie&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pushDeliveryId"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            pushDeliveryId
+                        </b>
+                        <a href="#pushDeliveryId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>pushDeliveryId(deliveryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, document: <a href="../interfaces/BFDoc.html">BFDoc</a>, tx: <a href="../undefineds/restore.html">firebase.firestore.Transaction</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="384"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:384</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add a new deliveryId in each materials of a movie </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>deliveryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>document</td>
+                                    <td>
+                                                <code><a href="../interfaces/BFDoc.html" target="_self" >BFDoc</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>tx</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.Transaction</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeMaterialsStepId"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            removeMaterialsStepId
+                        </b>
+                        <a href="#removeMaterialsStepId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeMaterialsStepId(steps: <a href="../interfaces/Step.html">Step[]</a>, batch: <a href="../undefineds/restore.html">firebase.firestore.WriteBatch</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="290"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:290</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Remove stepId of materials of delivery for an array of steps </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>steps</td>
+                                    <td>
+                                                <code><a href="../interfaces/Step.html" target="_self" >Step[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>batch</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.WriteBatch</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeStakeholder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            removeStakeholder
+                        </b>
+                        <a href="#removeStakeholder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeStakeholder(stakeholderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="460"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:460</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete stakeholder delivery </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>stakeholderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setSignDeliveryTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setSignDeliveryTx
+                        </b>
+                        <a href="#setSignDeliveryTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setSignDeliveryTx(orgEthAddress: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, deliveryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, deliveryHash: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, movieId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="340"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:340</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sign the delivery and save this action into active organization logs </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orgEthAddress</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>deliveryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>deliveryHash</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>movieId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="signDelivery"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            signDelivery
+                        </b>
+                        <a href="#signDelivery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>signDelivery(deliveryId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="317"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:317</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Push stakeholder id into validated array as a signature </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>deliveryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unsealDelivery"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            unsealDelivery
+                        </b>
+                        <a href="#unsealDelivery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>unsealDelivery()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="306"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:306</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Remove signatures in array validated of delivery </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateCurrentMGDeadline"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updateCurrentMGDeadline
+                        </b>
+                        <a href="#updateCurrentMGDeadline"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateCurrentMGDeadline(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:109</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateDates"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            updateDates
+                        </b>
+                        <a href="#updateDates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateDates(delivery: <a href="../interfaces/Delivery.html">Partial<Delivery></a>, deliveryRef: <a href="../undefineds/restore.html">firebase.firestore.DocumentReference</a>, batch: <a href="../undefineds/restore.html">firebase.firestore.WriteBatch</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update dates of delivery </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>delivery</td>
+                                    <td>
+                                                <code><a href="../interfaces/Delivery.html" target="_self" >Partial&lt;Delivery&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>deliveryRef</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.DocumentReference</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>batch</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.WriteBatch</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateDeliveryStatus"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updateDeliveryStatus
+                        </b>
+                        <a href="#updateDeliveryStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateDeliveryStatus(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateInformations"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updateInformations
+                        </b>
+                        <a href="#updateInformations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateInformations(delivery: <a href="../interfaces/Delivery.html">Partial<Delivery></a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="229"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:229</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update informations of delivery </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>delivery</td>
+                                    <td>
+                                                <code><a href="../interfaces/Delivery.html" target="_self" >Partial&lt;Delivery&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateMGDeadlines"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            updateMGDeadlines
+                        </b>
+                        <a href="#updateMGDeadlines"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateMGDeadlines(delivery: <a href="../interfaces/Delivery.html">Partial<Delivery></a>, deliveryRef: <a href="../undefineds/restore.html">firebase.firestore.DocumentReference</a>, batch: <a href="../undefineds/restore.html">firebase.firestore.WriteBatch</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="242"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:242</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update minimum guaranteed informations of delivery </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>delivery</td>
+                                    <td>
+                                                <code><a href="../interfaces/Delivery.html" target="_self" >Partial&lt;Delivery&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>deliveryRef</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.DocumentReference</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>batch</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.WriteBatch</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateSteps"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            updateSteps
+                        </b>
+                        <a href="#updateSteps"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateSteps(steps: <a href="../interfaces/Step.html">Step[]</a>, deliveryRef: <a href="../undefineds/restore.html">firebase.firestore.DocumentReference</a>, batch: <a href="../undefineds/restore.html">firebase.firestore.WriteBatch</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:268</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update steps of delivery </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>steps</td>
+                                    <td>
+                                                <code><a href="../interfaces/Step.html" target="_self" >Step[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>deliveryRef</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.DocumentReference</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>batch</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#restore" target="_self" >firebase.firestore.WriteBatch</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentDeliveryDoc"></a>
+                        <span class="name"><b>currentDeliveryDoc</b><a href="#currentDeliveryDoc"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>currentDeliveryDoc()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">libs/material/src/lib/delivery/+state/delivery.service.ts:78</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { DeliveryQuery } from &#x27;./delivery.query&#x27;;
+import { Material } from &#x27;../../material/+state/material.model&#x27;;
+import { createDelivery, Delivery, DeliveryWithTimestamps, deliveryStatuses, Step } from &#x27;./delivery.model&#x27;;
+import {
+  Movie,
+  MovieQuery
+} from &#x27;@blockframes/movie&#x27;;
+import { OrganizationQuery, PermissionsService, StakeholderService, Stakeholder } from &#x27;@blockframes/organization&#x27;;
+import { BFDoc, FireQuery } from &#x27;@blockframes/utils&#x27;;
+import { MaterialQuery, MaterialService, createMaterial } from &#x27;../../material/+state&#x27;;
+import { TemplateQuery } from &#x27;../../template/+state&#x27;;
+import { DeliveryOption, DeliveryWizard, DeliveryWizardKind } from &#x27;./delivery.store&#x27;;
+import { AngularFirestoreCollection, AngularFirestoreDocument } from &#x27;@angular/fire/firestore&#x27;;
+import * as firebase from &#x27;firebase&#x27;;
+import { WalletService } from &#x27;libs/ethers/src/lib/wallet/+state&#x27;;
+import { CreateTx, TxFeedback } from &#x27;@blockframes/ethers&#x27;;
+import { StakeholderDocument, createStakeholder } from &#x27;@blockframes/organization/stakeholder/types&#x27;;
+
+interface AddDeliveryOptions {
+  templateId?: string;
+  movieId?: string;
+  mustChargeMaterials?: boolean;
+  mustBeSigned?: boolean;
+}
+
+export function timestampObjectsToDate(docs: any[]) {
+  if (!docs) {
+    return [];
+  }
+
+  return docs.map(doc &#x3D;&gt; {
+    if (doc.date) {
+      return { ...doc, date: doc.date.toDate() };
+    } else {
+      return doc;
+    }
+  });
+}
+
+/** Takes a DeliveryDB (dates in Timestamp) and returns a Delivery with dates in type Date */
+export function modifyTimestampToDate(delivery: DeliveryWithTimestamps): Delivery {
+  const mgDeadlines &#x3D; delivery.mgDeadlines || [];
+
+  return {
+    ...delivery,
+    dueDate: delivery.dueDate ? delivery.dueDate.toDate() : null,
+    steps: timestampObjectsToDate(delivery.steps),
+    mgDeadlines: timestampObjectsToDate(mgDeadlines)
+  };
+}
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class DeliveryService {
+  constructor(
+    private movieQuery: MovieQuery,
+    private templateQuery: TemplateQuery,
+    private materialQuery: MaterialQuery,
+    private materialService: MaterialService,
+    private organizationQuery: OrganizationQuery,
+    private query: DeliveryQuery,
+    private permissionsService: PermissionsService,
+    private shService: StakeholderService,
+    private walletService: WalletService,
+    private db: FireQuery
+  ) {}
+
+  ///////////////////////////
+  // Document manipulation //
+  ///////////////////////////
+
+  private movieDoc(movieId: string): AngularFirestoreDocument&lt;Movie&gt; {
+    return this.db.doc&lt;Movie&gt;(&#x60;movies/${movieId}&#x60;);
+  }
+
+  private get currentDeliveryDoc() {
+    return this.deliveryDoc(this.query.getActiveId());
+  }
+
+  private materialDeliveryDoc(deliveryId: string, materialId: string): AngularFirestoreDocument {
+    return this.deliveryDoc(deliveryId).collection(&#x27;materials&#x27;).doc(materialId);
+  }
+
+  private deliveryDoc(deliveryId: string): AngularFirestoreDocument&lt;DeliveryWithTimestamps&gt; {
+    return this.db.doc(&#x60;deliveries/${deliveryId}&#x60;);
+  }
+
+  private deliveryStakeholderDoc(
+    deliveryId: string,
+    stakeholderId: string
+  ): AngularFirestoreDocument&lt;StakeholderDocument&gt; {
+    return this.deliveryStakeholdersCollection(deliveryId).doc(stakeholderId);
+  }
+
+  private deliveryStakeholdersCollection(deliveryId: string): AngularFirestoreCollection&lt;Stakeholder&gt; {
+    return this.deliveryDoc(deliveryId).collection(&#x27;stakeholders&#x27;);
+  }
+
+  ///////////////////
+  // CRUD DELIVERY //
+  ///////////////////
+
+  public updateDeliveryStatus(index: number): Promise&lt;any&gt; {
+    return this.currentDeliveryDoc.update({ status: deliveryStatuses[index] });
+  }
+
+  public updateCurrentMGDeadline(index: number): Promise&lt;any&gt; {
+    return this.currentDeliveryDoc.update({ mgCurrentDeadline: index });
+  }
+
+  /** Initializes a new delivery in firebase
+   *
+   * @param opts if templateId is present, the materials sub-collection is populated with materials from this template
+   */
+  public async addDelivery(opts: AddDeliveryOptions) {
+    const id &#x3D; this.db.createId();
+    const organization &#x3D; this.organizationQuery.getValue().org;
+    const movieId &#x3D; opts.movieId || this.movieQuery.getActiveId();
+    const movieRef &#x3D; this.movieDoc(movieId).ref;
+
+    const delivery &#x3D; createDelivery({
+      id,
+      movieId,
+      validated: [],
+      mustChargeMaterials: opts.mustChargeMaterials,
+      mustBeSigned: opts.mustBeSigned
+    });
+
+    await this.db.firestore.runTransaction(async (tx: firebase.firestore.Transaction) &#x3D;&gt; {
+      const movieSnap &#x3D; await tx.get(movieRef);
+      const deliveryIds &#x3D; movieSnap.data().deliveryIds || [];
+
+      // Create document and permissions
+      await this.permissionsService.createDocAndPermissions(delivery, organization, tx);
+
+      // If there is a templateId, and mustBeSigned is true, copy template materials to the delivery
+      if (!!opts.templateId &amp;&amp; delivery.mustBeSigned) {
+        const template &#x3D; this.templateQuery.getEntity(opts.templateId);
+        await this.copyMaterialsInDelivery(delivery, template, tx);
+      }
+
+      // If there is a templateId, and mustBeSigned is false, copy template materials to the movie
+      if (!!opts.templateId &amp;&amp; !delivery.mustBeSigned) {
+        const template &#x3D; this.templateQuery.getEntity(opts.templateId);
+        await this.copyMaterialsInMovie(delivery, template, tx);
+      }
+
+      // Create the stakeholder in the sub-collection
+      await this.shService.addStakeholder(delivery.id, organization.id, true, tx);
+
+      // Update the movie deliveryIds
+      const nextDeliveryIds &#x3D; [...deliveryIds, delivery.id];
+      tx.update(movieRef, { deliveryIds: nextDeliveryIds });
+    });
+
+    return id;
+  }
+
+  /** Add a new delivery by copying the movie&#x27;s materials */
+  public async addDeliveryWithMovieMaterials(opts?: AddDeliveryOptions) {
+    const id &#x3D; this.db.createId();
+    const movieId &#x3D; this.movieQuery.getActiveId();
+    const organization &#x3D; this.organizationQuery.getValue().org;
+    const movieRef &#x3D; this.movieDoc(movieId).ref;
+
+    const delivery &#x3D; createDelivery({
+      id,
+      movieId,
+      validated: [],
+      mustChargeMaterials: opts.mustChargeMaterials,
+      mustBeSigned: opts.mustBeSigned
+    });
+
+    await this.db.firestore.runTransaction(async (tx: firebase.firestore.Transaction) &#x3D;&gt; {
+      const movieSnap &#x3D; await tx.get(movieRef);
+      const deliveryIds &#x3D; movieSnap.data().deliveryIds || [];
+
+      // Create document and permissions
+      await this.permissionsService.createDocAndPermissions(delivery, organization, tx);
+
+      // If mustBeSigned is true, copy materials to the delivery
+      if (delivery.mustBeSigned) {
+        await this.copyMaterialsInDelivery(delivery, movieSnap.data() as Movie, tx);
+      }
+
+      // If mustBeSigned is false, add deliveryId in deliveryIds of each material
+      if (!delivery.mustBeSigned) {
+        await this.pushDeliveryId(delivery.id, movieSnap.data() as Movie, tx);
+      }
+
+      // Create the stakeholder in the sub-collection
+      await this.shService.addStakeholder(delivery.id, organization.id, true, tx);
+
+      // Update the movie deliveryIds
+      const nextDeliveryIds &#x3D; [...deliveryIds, delivery.id];
+      tx.update(movieRef, { deliveryIds: nextDeliveryIds });
+    });
+
+    return id;
+  }
+
+  /** Add a delivery using all the settings picked in the creation tunnel */
+  public async addDeliveryFromWizard(wizard: DeliveryWizard, movieId: string, templateId: string) {
+    const mustBeSigned &#x3D; wizard.options.includes(DeliveryOption.mustBeSigned);
+    const mustChargeMaterials &#x3D; wizard.options.includes(DeliveryOption.mustChargeMaterials);
+
+    const opts: AddDeliveryOptions &#x3D; {
+      movieId,
+      mustChargeMaterials,
+      mustBeSigned
+    };
+
+    switch (wizard.kind) {
+      case DeliveryWizardKind.useTemplate:
+        opts.templateId &#x3D; templateId;
+        return this.addDelivery(opts);
+      case DeliveryWizardKind.specificDeliveryList:
+        return this.addDelivery(opts);
+      case DeliveryWizardKind.blankList:
+        return this.addDelivery(opts);
+      case DeliveryWizardKind.materialList:
+        return this.addDeliveryWithMovieMaterials(opts);
+    }
+  }
+
+  /** Update informations of delivery */
+  public updateInformations(delivery: Partial&lt;Delivery&gt;) {
+    const batch &#x3D; this.db.firestore.batch();
+    const deliveryId &#x3D; this.query.getActiveId();
+    const deliveryRef &#x3D; this.deliveryDoc(deliveryId).ref;
+
+    this.updateMGDeadlines(delivery, deliveryRef, batch);
+    this.updateDates(delivery, deliveryRef, batch);
+    this.updateSteps(delivery.steps, deliveryRef, batch);
+
+    return batch.commit();
+  }
+
+  /** Update minimum guaranteed informations of delivery */
+  private updateMGDeadlines(
+    delivery: Partial&lt;Delivery&gt;,
+    deliveryRef: firebase.firestore.DocumentReference,
+    batch: firebase.firestore.WriteBatch
+  ) {
+    return batch.update(deliveryRef, {
+      mgAmount: delivery.mgAmount,
+      mgCurrency: delivery.mgCurrency,
+      mgDeadlines: delivery.mgDeadlines
+    });
+  }
+
+  /** Update dates of delivery */
+  private updateDates(
+    delivery: Partial&lt;Delivery&gt;,
+    deliveryRef: firebase.firestore.DocumentReference,
+    batch: firebase.firestore.WriteBatch
+  ) {
+    return batch.update(deliveryRef, {
+      dueDate: delivery.dueDate,
+      acceptationPeriod: delivery.acceptationPeriod,
+      reWorkingPeriod: delivery.reWorkingPeriod
+    });
+  }
+
+  /** Update steps of delivery */
+  private updateSteps(
+    steps: Step[],
+    deliveryRef: firebase.firestore.DocumentReference,
+    batch: firebase.firestore.WriteBatch
+  ) {
+    const oldSteps &#x3D; this.query.getActive().steps;
+
+    // Add an id for new steps
+    const stepsWithId &#x3D; steps.map(step &#x3D;&gt; (step.id ? step : { ...step, id: this.db.createId() }));
+
+    // Find steps that need to be removed
+    const deletedSteps &#x3D; oldSteps.filter(
+      oldStep &#x3D;&gt; !stepsWithId.some(newStep &#x3D;&gt; newStep.id &#x3D;&#x3D;&#x3D; oldStep.id)
+    );
+
+    // Remove stepId from the materials according to this array
+    this.removeMaterialsStepId(deletedSteps, batch);
+
+    return batch.update(deliveryRef, { steps: stepsWithId });
+  }
+
+  /** Remove stepId of materials of delivery for an array of steps */
+  private removeMaterialsStepId(steps: Step[], batch: firebase.firestore.WriteBatch) {
+    // TODO(issue#773): Use a transaction to make sure we don&#x27;t lose data
+    const deliveryId &#x3D; this.query.getActiveId();
+
+    // We also set the concerned materials stepId to an empty string
+    steps.forEach(step &#x3D;&gt; {
+      const materials &#x3D; this.materialQuery.getAll().filter(material &#x3D;&gt; material.stepId &#x3D;&#x3D;&#x3D; step.id);
+
+      materials.forEach(material &#x3D;&gt; {
+        const ref &#x3D; this.materialDeliveryDoc(deliveryId, material.id).ref;
+        batch.update(ref, { stepId: &#x27;&#x27; });
+      });
+    });
+  }
+
+  /** Remove signatures in array validated of delivery */
+  public unsealDelivery(): Promise&lt;void&gt; {
+    // TODO(issue#775): ask all stakeholders for permission to re-open the delivery form
+    return this.currentDeliveryDoc.update({ validated: [], isSigned: false });
+  }
+
+  /** Deletes delivery and all the sub-collections in firebase */
+  public async deleteDelivery(): Promise&lt;any&gt; {
+    return this.currentDeliveryDoc.delete();
+  }
+
+  /** Push stakeholder id into validated array as a signature */
+  public signDelivery(deliveryId?: string): Promise&lt;any&gt; {
+    let delivery: Delivery;
+
+    if (!!deliveryId) {
+      delivery &#x3D; this.query.getEntity(deliveryId);
+    } else {
+      delivery &#x3D; this.query.getActive();
+    }
+
+    const organizationId &#x3D; this.organizationQuery.getValue().org.id;
+    const { id, validated, stakeholders } &#x3D; delivery;
+
+    const stakeholderSignee &#x3D; stakeholders.find(
+      ({ id: stakeholderId }) &#x3D;&gt; organizationId &#x3D;&#x3D;&#x3D; stakeholderId
+    );
+
+    if (!validated.includes(stakeholderSignee.id)) {
+      const updatedValidated &#x3D; [...validated, stakeholderSignee.id];
+      return this.deliveryDoc(id).update({ validated: updatedValidated });
+    }
+  }
+
+  /** Sign the delivery and save this action into active organization logs */
+  public setSignDeliveryTx(orgEthAddress: string, deliveryId: string, deliveryHash: string, movieId: string) {
+    const name &#x3D; &#x60;Delivery #${deliveryId}&#x60;; // TODO better delivery name (see with @ioaNikas)
+    const callback &#x3D; async () &#x3D;&gt; {
+      await Promise.all([
+        this.db
+          .collection(&#x27;actions&#x27;)
+          .doc(deliveryHash)
+          .set({ name }),
+        this.signDelivery(deliveryId)
+      ]);
+    };
+    const feedback: TxFeedback &#x3D; {
+      confirmation: &#x60;You are about to sign the delivery ${name}&#x60;,
+      success: &#x60;The delivery has been successfully signed !&#x60;,
+      redirectName: &#x27;Back to Delivery&#x27;,
+      redirectRoute: &#x60;/layout/o/delivery/${movieId}/${deliveryId}/informations&#x60;,
+    }
+    this.walletService.setTx(CreateTx.approveDelivery(orgEthAddress, deliveryHash, callback));
+    this.walletService.setTxFeedback(feedback);
+  }
+
+  /** Create a transaction to copy the template/movie materials into the delivery materials */
+  public async copyMaterialsInDelivery(
+    delivery: Delivery,
+    document: BFDoc,
+    tx: firebase.firestore.Transaction
+  ) {
+    const materials &#x3D; await this.db.snapshot&lt;Material[]&gt;(
+      &#x60;${document._type}/${document.id}/materials&#x60;
+    );
+
+    materials.forEach(material &#x3D;&gt; {
+      tx.set(this.materialDeliveryDoc(delivery.id, material.id).ref, {
+        ...material,
+        state: &#x27;&#x27;,
+        deliveryIds: null,
+        stepId: &#x27;&#x27;
+      });
+    });
+
+    return tx;
+  }
+
+  /** Add a new deliveryId in each materials of a movie */
+  public async pushDeliveryId(
+    deliveryId: string,
+    document: BFDoc,
+    tx: firebase.firestore.Transaction
+  ) {
+    const materials &#x3D; await this.db.snapshot&lt;Material[]&gt;(
+      &#x60;${document._type}/${document.id}/materials&#x60;
+    );
+
+    materials.forEach(material &#x3D;&gt; {
+      const targetRef &#x3D; this.db.doc&lt;Material&gt;(&#x60;movies/${document.id}/materials/${material.id}&#x60;).ref;
+      tx.update(targetRef, { deliveryIds: [...material.deliveryIds, deliveryId] });
+    });
+
+    return tx;
+  }
+
+  /** Copy the template materials into the movie materials */
+  public async copyMaterialsInMovie(
+    delivery: Delivery,
+    document: BFDoc,
+    tx: firebase.firestore.Transaction
+  ) {
+    // NOTE: There is no way to query a collection within the transaction
+    // So we accept a race condition here
+    const materials &#x3D; await this.db.snapshot&lt;Material[]&gt;(&#x60;${document._type}/${document.id}/materials&#x60;);
+    const movieMaterials &#x3D; await this.db.snapshot&lt;Material[]&gt;(&#x60;movies/${delivery.movieId}/materials&#x60;);
+
+    materials.forEach(material &#x3D;&gt; {
+      const sameValuesMaterial &#x3D; movieMaterials.find(movieMaterial &#x3D;&gt; this.materialService.isTheSame(movieMaterial, material));
+      const isNewMaterial &#x3D; !movieMaterials.find(movieMaterial &#x3D;&gt; movieMaterial.id &#x3D;&#x3D;&#x3D; material.id) &amp;&amp; !sameValuesMaterial;
+
+      // We check if material is brand new. If so, we just add it to database and return.
+      if (isNewMaterial) {
+        this.materialService.setNewMaterial(material, delivery, tx);
+        return;
+      }
+
+      // If there already is a material with same properties (but different id), we merge this
+      // material with existing one, and push the new deliveryId into deliveryIds.
+      if (!!sameValuesMaterial) {
+        this.materialService.updateMaterialDeliveryIds(sameValuesMaterial, delivery, tx);
+      }
+
+      // If values are not the same, this material is considered as new and we have to create
+      // and set a new material (with new Id).
+      if (!sameValuesMaterial) {
+        const newMaterial &#x3D; createMaterial({...material, id: this.db.createId()});
+        this.materialService.setNewMaterial(newMaterial, delivery, tx);
+      }
+    });
+    return tx;
+  }
+
+  ////////////////////////
+  // CRUD STAKEHOLDERS //
+  //////////////////////
+
+  /** Add a stakeholder to the delivery */
+  public addStakeholder(movieStakeholder: Stakeholder) {
+    const delivery &#x3D; this.query.getActive();
+    const deliveryStakeholder &#x3D; delivery.stakeholders.find(
+      stakeholder &#x3D;&gt; stakeholder.id &#x3D;&#x3D;&#x3D; movieStakeholder.id
+    );
+
+    // If deliveryStakeholder doesn&#x27;t exist yet, we need to create him
+    if (!deliveryStakeholder) {
+      const newDeliveryStakeholder &#x3D; createStakeholder({ id: movieStakeholder.id, isAccepted: false });
+
+      return this.deliveryStakeholderDoc(delivery.id, newDeliveryStakeholder.id).set(
+        newDeliveryStakeholder
+      );
+    }
+  }
+
+  /** Delete stakeholder delivery */
+  public removeStakeholder(stakeholderId: string) {
+    const deliveryId &#x3D; this.query.getActiveId();
+    return this.deliveryStakeholderDoc(deliveryId, stakeholderId).delete();
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'DeliveryService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
