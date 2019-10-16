@@ -58,25 +58,19 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#basketsQuery" title="apps/catalog/marketplace/marketplace/src/app/distribution-right/+state/basket.service.ts"><b>basketsQuery</b>&nbsp;&nbsp;&nbsp;(apps/.../basket.service.ts)</a>
+                            <a href="#CONTEXT_MENU" title="apps/catalog/dashboard/dashboard/src/app/layout/context-menu.ts"><b>CONTEXT_MENU</b>&nbsp;&nbsp;&nbsp;(apps/.../context-menu.ts)</a>
                         </li>
                         <li>
-                            <a href="#catalogMovieActtive" title="apps/catalog/marketplace/marketplace/src/app/guards/catalog-movie-active.guard.ts"><b>catalogMovieActtive</b>&nbsp;&nbsp;&nbsp;(apps/.../catalog-movie-active.guard.ts)</a>
+                            <a href="#environment" title="apps/catalog/dashboard/dashboard/src/environments/environment.ci.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.ci.ts)</a>
                         </li>
                         <li>
-                            <a href="#CONTEXT_MENU" title="apps/catalog/marketplace/marketplace/src/app/layout/context-menu.ts"><b>CONTEXT_MENU</b>&nbsp;&nbsp;&nbsp;(apps/.../context-menu.ts)</a>
+                            <a href="#environment" title="apps/catalog/dashboard/dashboard/src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.prod.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="apps/catalog/marketplace/marketplace/src/environments/environment.ci.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.ci.ts)</a>
+                            <a href="#environment" title="apps/catalog/dashboard/dashboard/src/environments/environment.staging.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.staging.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="apps/catalog/marketplace/marketplace/src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.prod.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#environment" title="apps/catalog/marketplace/marketplace/src/environments/environment.staging.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.staging.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#environment" title="apps/catalog/marketplace/marketplace/src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.ts)</a>
+                            <a href="#environment" title="apps/catalog/dashboard/dashboard/src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(apps/.../environment.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -85,60 +79,7 @@
     </table>
 </section>
 
-    <h3>apps/catalog/marketplace/marketplace/src/app/distribution-right/+state/basket.service.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="basketsQuery"></a>
-                        <span class="name">
-                            <b>
-                            basketsQuery</b>
-                            <a href="#basketsQuery"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(organizationId: string): Query&lt;CatalogBasket&gt; &#x3D;&gt; ({
-  path: &#x60;orgs/${organizationId}/baskets&#x60;,
-  queryFn: ref &#x3D;&gt; ref.where(&#x27;status&#x27;, &#x27;&#x3D;&#x3D;&#x27;, &#x27;pending&#x27;)
-})</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
-    <h3>apps/catalog/marketplace/marketplace/src/app/guards/catalog-movie-active.guard.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="catalogMovieActtive"></a>
-                        <span class="name">
-                            <b>
-                            catalogMovieActtive</b>
-                            <a href="#catalogMovieActtive"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(id: string): Query&lt;Movie&gt; &#x3D;&gt; ({
-  path: &#x60;movies/${id}&#x60;
-})</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
-    <h3>apps/catalog/marketplace/marketplace/src/app/layout/context-menu.ts</h3>
+    <h3>apps/catalog/dashboard/dashboard/src/app/layout/context-menu.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -163,83 +104,12 @@
                             <i>Default value : </i><code>[
   {
     route: &#x27;default&#x27;,
-    items: []
-  },
-  {
-    route: &#x27;/layout/o/catalog/home&#x27;,
     items: [
-      {
-        name: &#x27;home&#x27;,
-        path: &#x27;/layout/o/catalog/home&#x27;
-      },
-      {
-        name: &#x27;catalogue&#x27;,
-        path: &#x27;/layout/o/catalog/search&#x27;
-      },
-      {
-        name: &#x27;selection&#x27;,
-        path: &#x27;/layout/o/catalog/selection/overview&#x27;
-      }
-    ]
-  },
-  {
-    route: &#x27;/layout/o/catalog/search&#x27;,
-    items: [
-      {
-        name: &#x27;home&#x27;,
-        path: &#x27;/layout/o/catalog/home&#x27;
-      },
-      {
-        name: &#x27;catalogue&#x27;,
-        path: &#x27;/layout/o/catalog/search&#x27;
-      },
-      {
-        name: &#x27;selection&#x27;,
-        path: &#x27;/layout/o/catalog/selection/overview&#x27;
-      }
-    ]
-  },
-  {
-    route: &#x27;/layout/o/catalog/selection/overview&#x27;,
-    items: [
-      {
-        name: &#x27;home&#x27;,
-        path: &#x27;/layout/o/catalog/home&#x27;
-      },
-      {
-        name: &#x27;catalogue&#x27;,
-        path: &#x27;/layout/o/catalog/search&#x27;
-      },
-      {
-        name: &#x27;selection&#x27;,
-        path: &#x27;/layout/o/catalog/selection/overview&#x27;
-      }
-    ]
-  },
-  {
-    route: &#x27;/layout/o/catalog/:movieId/create&#x27;,
-    items: [
-      {
-        name: &#x27;view&#x27;,
-        path: &#x27;/layout/o/catalog/:movieId/view&#x27;
-      },
-      {
-        name: &#x27;create&#x27;,
-        path: &#x27;/layout/o/catalog/:movieId/create&#x27;
-      }
-    ]
-  },
-  {
-    route: &#x27;/layout/o/catalog/:movieId/view&#x27;,
-    items: [
-      {
-        name: &#x27;view&#x27;,
-        path: &#x27;/layout/o/catalog/:movieId/view&#x27;
-      },
-      {
-        name: &#x27;create&#x27;,
-        path: &#x27;/layout/o/catalog/:movieId/create&#x27;
-      }
+      // { name: &#x27;home&#x27;, path: &#x27;/layout/o/catalog/home&#x27; }, @todo #878 removed for torronto
+      { name: &#x27;movie list&#x27;, path: &#x27;/layout/o/home/list&#x27; }, // temp
+      { name: &#x27;Upload avails &amp; films doc&#x27;, path: &#x27;/layout/o/import&#x27; }, // temp until good place for this route is found
+      { name: &#x27;New Deals&#x27;, path: &#x27;https://projects.invisionapp.com/share/KWTO3NFHQCZ#/screens/381254658&#x27;, external: true},
+      { name: &#x27;Sales&#x27;, path: &#x27;https://projects.invisionapp.com/share/KWTO3NFHQCZ#/screens/381254662&#x27;, external: true},
     ]
   }
 ]</code>
@@ -250,7 +120,7 @@
             </tbody>
         </table>
 </section>
-    <h3>apps/catalog/marketplace/marketplace/src/environments/environment.ci.ts</h3>
+    <h3>apps/catalog/dashboard/dashboard/src/environments/environment.ci.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -284,7 +154,7 @@
             </tbody>
         </table>
 </section>
-    <h3>apps/catalog/marketplace/marketplace/src/environments/environment.prod.ts</h3>
+    <h3>apps/catalog/dashboard/dashboard/src/environments/environment.prod.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -318,7 +188,7 @@
             </tbody>
         </table>
 </section>
-    <h3>apps/catalog/marketplace/marketplace/src/environments/environment.staging.ts</h3>
+    <h3>apps/catalog/dashboard/dashboard/src/environments/environment.staging.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -352,7 +222,7 @@
             </tbody>
         </table>
 </section>
-    <h3>apps/catalog/marketplace/marketplace/src/environments/environment.ts</h3>
+    <h3>apps/catalog/dashboard/dashboard/src/environments/environment.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
