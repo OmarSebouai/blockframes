@@ -1,0 +1,514 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-typealiases">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Type aliases</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#CallableContext" title="apps/backend-functions/src/users.ts"><b>CallableContext</b>&nbsp;&nbsp;&nbsp;(apps/.../users.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CollectionReference" title="apps/backend-functions/src/backup.ts"><b>CollectionReference</b>&nbsp;&nbsp;&nbsp;(apps/.../backup.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CurrencyCode" title="libs/material/src/lib/material/+state/material.firestore.ts"><b>CurrencyCode</b>&nbsp;&nbsp;&nbsp;(libs/.../material.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#CurrencyCode" title="libs/material/src/lib/delivery/+state/delivery.firestore.ts"><b>CurrencyCode</b>&nbsp;&nbsp;&nbsp;(libs/.../delivery.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#DocumentReference" title="apps/backend-functions/src/backup.ts"><b>DocumentReference</b>&nbsp;&nbsp;&nbsp;(apps/.../backup.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#DocumentReference" title="apps/backend-functions/src/internals/firebase.ts"><b>DocumentReference</b>&nbsp;&nbsp;&nbsp;(apps/.../firebase.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Firestore" title="apps/backend-functions/src/backup.ts"><b>Firestore</b>&nbsp;&nbsp;&nbsp;(apps/.../backup.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#IDMap" title="apps/backend-functions/src/data/types.ts"><b>IDMap</b>&nbsp;&nbsp;&nbsp;(apps/.../types.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#InvitationDocument" title="libs/notification/src/lib/invitation/+state/invitation.firestore.ts"><b>InvitationDocument</b>&nbsp;&nbsp;&nbsp;(libs/.../invitation.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#InvitationOrUndefined" title="libs/notification/src/lib/invitation/+state/invitation.firestore.ts"><b>InvitationOrUndefined</b>&nbsp;&nbsp;&nbsp;(libs/.../invitation.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#QueryDocumentSnapshot" title="apps/backend-functions/src/backup.ts"><b>QueryDocumentSnapshot</b>&nbsp;&nbsp;&nbsp;(apps/.../backup.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#QuerySnapshot" title="apps/backend-functions/src/backup.ts"><b>QuerySnapshot</b>&nbsp;&nbsp;&nbsp;(apps/.../backup.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Timestamp" title="libs/material/src/lib/template/+state/template.firestore.ts"><b>Timestamp</b>&nbsp;&nbsp;&nbsp;(libs/.../template.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Timestamp" title="libs/material/src/lib/delivery/+state/delivery.firestore.ts"><b>Timestamp</b>&nbsp;&nbsp;&nbsp;(libs/.../delivery.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Timestamp" title="libs/movie/src/lib/movie/+state/movie.firestore.ts"><b>Timestamp</b>&nbsp;&nbsp;&nbsp;(libs/.../movie.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Timestamp" title="libs/notification/src/lib/invitation/+state/invitation.firestore.ts"><b>Timestamp</b>&nbsp;&nbsp;&nbsp;(libs/.../invitation.firestore.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#TxReceipt" title="apps/backend-functions/src/relayer.ts"><b>TxReceipt</b>&nbsp;&nbsp;&nbsp;(apps/.../relayer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#TxResponse" title="apps/backend-functions/src/relayer.ts"><b>TxResponse</b>&nbsp;&nbsp;&nbsp;(apps/.../relayer.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#UserRecord" title="apps/backend-functions/src/users.ts"><b>UserRecord</b>&nbsp;&nbsp;&nbsp;(apps/.../users.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>apps/backend-functions/src/users.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="CallableContext"></a>
+                    <span class="name"><b>CallableContext</b><a href="#CallableContext"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/typealiases.html#CallableContext" target="_self" >functions.https.CallableContext</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UserRecord"></a>
+                    <span class="name"><b>UserRecord</b><a href="#UserRecord"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/typealiases.html#UserRecord" target="_self" >admin.auth.UserRecord</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>apps/backend-functions/src/backup.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="CollectionReference"></a>
+                    <span class="name"><b>CollectionReference</b><a href="#CollectionReference"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/typealiases.html#CollectionReference" target="_self" >admin.firestore.CollectionReference</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="DocumentReference"></a>
+                    <span class="name"><b>DocumentReference</b><a href="#DocumentReference"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code>admin.firestore.DocumentReference</code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Firestore"></a>
+                    <span class="name"><b>Firestore</b><a href="#Firestore"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/typealiases.html#Firestore" target="_self" >admin.firestore.Firestore</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="QueryDocumentSnapshot"></a>
+                    <span class="name"><b>QueryDocumentSnapshot</b><a href="#QueryDocumentSnapshot"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/typealiases.html#QueryDocumentSnapshot" target="_self" >admin.firestore.QueryDocumentSnapshot</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="QuerySnapshot"></a>
+                    <span class="name"><b>QuerySnapshot</b><a href="#QuerySnapshot"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/typealiases.html#QuerySnapshot" target="_self" >admin.firestore.QuerySnapshot</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>libs/material/src/lib/material/+state/material.firestore.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="CurrencyCode"></a>
+                    <span class="name"><b>CurrencyCode</b><a href="#CurrencyCode"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>libs/material/src/lib/delivery/+state/delivery.firestore.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="CurrencyCode"></a>
+                    <span class="name"><b>CurrencyCode</b><a href="#CurrencyCode"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Timestamp"></a>
+                    <span class="name"><b>Timestamp</b><a href="#Timestamp"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >firestore.Timestamp</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>apps/backend-functions/src/internals/firebase.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="DocumentReference"></a>
+                    <span class="name"><b>DocumentReference</b><a href="#DocumentReference"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code>admin.firestore.DocumentReference</code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>apps/backend-functions/src/data/types.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="IDMap"></a>
+                    <span class="name"><b>IDMap</b><a href="#IDMap"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Types used by the firebase backend.</p>
+<p>Define all type to be used in the codebase. Please see the index.ts for more
+details on why, what and what&#39;s up next.</p>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code>Record&lt;string | T&gt;</code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>libs/notification/src/lib/invitation/+state/invitation.firestore.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="InvitationDocument"></a>
+                    <span class="name"><b>InvitationDocument</b><a href="#InvitationDocument"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Specific types of Invitation, both used in firebase functions. </p>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code>InvitationToWorkOnDocument | InvitationFromOrganizationToUser | InvitationFromUserToOrganization</code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="InvitationOrUndefined"></a>
+                    <span class="name"><b>InvitationOrUndefined</b><a href="#InvitationOrUndefined"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../interfaces/Invitation.html" target="_self" >InvitationDocument | undefined</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Timestamp"></a>
+                    <span class="name"><b>Timestamp</b><a href="#Timestamp"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >firestore.Timestamp</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>libs/material/src/lib/template/+state/template.firestore.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Timestamp"></a>
+                    <span class="name"><b>Timestamp</b><a href="#Timestamp"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >firestore.Timestamp</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>libs/movie/src/lib/movie/+state/movie.firestore.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Timestamp"></a>
+                    <span class="name"><b>Timestamp</b><a href="#Timestamp"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/variables.html#restore" target="_self" >firestore.Timestamp</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>apps/backend-functions/src/relayer.ts</h3>
+    <section>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="TxReceipt"></a>
+                    <span class="name"><b>TxReceipt</b><a href="#TxReceipt"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code>TransactionReceipt</code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="TxResponse"></a>
+                    <span class="name"><b>TxResponse</b><a href="#TxResponse"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code>TransactionResponse</code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-typealiases';
+            var COMPODOC_CURRENT_PAGE_URL = 'typealiases.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

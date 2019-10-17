@@ -1,0 +1,1179 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>CatalogSearchForm</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="../classes/FormEntity.html" target="_self" >FormEntity</a></code>
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addLanguage">addLanguage</a>
+                            </li>
+                            <li>
+                                <a href="#addTerritory">addTerritory</a>
+                            </li>
+                            <li>
+                                <a href="#addType">addType</a>
+                            </li>
+                            <li>
+                                <a href="#checkCertification">checkCertification</a>
+                            </li>
+                            <li>
+                                <a href="#checkMedia">checkMedia</a>
+                            </li>
+                            <li>
+                                <a href="#removeLanguage">removeLanguage</a>
+                            </li>
+                            <li>
+                                <a href="#removeTerritory">removeTerritory</a>
+                            </li>
+                            <li>
+                                <a href="#removeType">removeType</a>
+                            </li>
+                            <li>
+                                <a href="#get">get</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#languages">languages</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(search: <a href="../interfaces/CatalogSearch.html">Partial<CatalogSearch></a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:135</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>search</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/CatalogSearch.html" target="_self" >Partial&lt;CatalogSearch&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addLanguage"></a>
+                    <span class="name">
+                        <b>
+                            addLanguage
+                        </b>
+                        <a href="#addLanguage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addLanguage(language: <a href="../undefineds/LanguagesSlug.html">LanguagesSlug</a>, value: <a href="../interfaces/MovieLanguageSpecification.html">Partial<MovieLanguageSpecification></a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:146</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>language</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#LanguagesSlug" target="_self" >LanguagesSlug</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="../interfaces/MovieLanguageSpecification.html" target="_self" >Partial&lt;MovieLanguageSpecification&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{}</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addTerritory"></a>
+                    <span class="name">
+                        <b>
+                            addTerritory
+                        </b>
+                        <a href="#addTerritory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addTerritory(territory: <a href="../undefineds/TerritoriesSlug.html">TerritoriesSlug</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="212"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:212</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>territory</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#TerritoriesSlug" target="_self" >TerritoriesSlug</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addType"></a>
+                    <span class="name">
+                        <b>
+                            addType
+                        </b>
+                        <a href="#addType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addType(type: <a href="../undefineds/GenresSlug.html">GenresSlug</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#GenresSlug" target="_self" >GenresSlug</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkCertification"></a>
+                    <span class="name">
+                        <b>
+                            checkCertification
+                        </b>
+                        <a href="#checkCertification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkCertification(certificationChecked: <a href="../undefineds/CertificationsSlug.html">CertificationsSlug</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="175"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:175</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>certificationChecked</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#CertificationsSlug" target="_self" >CertificationsSlug</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkMedia"></a>
+                    <span class="name">
+                        <b>
+                            checkMedia
+                        </b>
+                        <a href="#checkMedia"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkMedia(mediaChecked: <a href="../undefineds/MediasSlug.html">MediasSlug</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:195</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>mediaChecked</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#MediasSlug" target="_self" >MediasSlug</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeLanguage"></a>
+                    <span class="name">
+                        <b>
+                            removeLanguage
+                        </b>
+                        <a href="#removeLanguage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeLanguage(language: <a href="../undefineds/LanguagesSlug.html">LanguagesSlug</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>language</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#LanguagesSlug" target="_self" >LanguagesSlug</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeTerritory"></a>
+                    <span class="name">
+                        <b>
+                            removeTerritory
+                        </b>
+                        <a href="#removeTerritory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeTerritory(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:227</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeType"></a>
+                    <span class="name">
+                        <b>
+                            removeType
+                        </b>
+                        <a href="#removeType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeType(type: <a href="../undefineds/GenresSlug.html">GenresSlug</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#GenresSlug" target="_self" >GenresSlug</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get"></a>
+                    <span class="name">
+                        <b>
+                            get
+                        </b>
+                        <a href="#get"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get(path: Extract<K | string>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/FormEntity.html" target="_self" >FormEntity</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/FormEntity.html#source" target="_self" >FormEntity:10</a></code>
+</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>K</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>path</td>
+                                    <td>
+                                            <code>Extract&lt;K | string&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="languages"></a>
+                        <span class="name"><b>languages</b><a href="#languages"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>languages()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">apps/catalog/marketplace/marketplace/src/app/movie/search/search.form.ts:142</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  LanguagesLabel,
+  CertificationsLabel,
+  MediasLabel,
+  TerritoriesLabel,
+  GenresLabel,
+  GENRES_LABEL,
+  LanguagesSlug,
+  GenresSlug,
+  GENRES_SLUG,
+  CertificationsSlug,
+  CERTIFICATIONS_SLUG,
+  MediasSlug,
+  MEDIAS_SLUG,
+  TerritoriesSlug,
+  TERRITORIES_SLUG
+} from &#x27;@blockframes/movie/movie/static-model/types&#x27;;
+import { Validators, FormArray } from &#x27;@angular/forms&#x27;;
+import { FormGroup, FormControl } from &#x27;@angular/forms&#x27;;
+import { FormEntity, yearValidators, numberRangeValidator } from &#x27;@blockframes/utils&#x27;;
+import { getLabelByCode } from &#x27;@blockframes/movie/movie/static-model/staticModels&#x27;;
+
+/////////////////////////
+// CatalogGenresFilter //
+/////////////////////////
+
+export interface MovieLanguageSpecification {
+  original: boolean;
+  dubbed: boolean;
+  subtitle: boolean;
+}
+
+export interface CatalogSearch {
+  productionYear: {
+    from: number;
+    to: number;
+  };
+  availabilities: {
+    from: Date;
+    to: Date;
+  };
+  type: GenresLabel[];
+  languages: { [language in LanguagesLabel]: MovieLanguageSpecification };
+  certifications: CertificationsLabel[];
+  medias: MediasLabel[];
+  territories: TerritoriesLabel[];
+}
+
+/* ------------- */
+/* CREATE OBJECT */
+/* ------------- */
+
+export function createMovieLanguage(
+  movieLanguage: Partial&lt;MovieLanguageSpecification&gt; &#x3D; {}
+): MovieLanguageSpecification {
+  return {
+    original: false,
+    dubbed: false,
+    subtitle: false,
+    ...movieLanguage
+  } as MovieLanguageSpecification;
+}
+
+function createCatalogSearch(search: Partial&lt;CatalogSearch&gt;): CatalogSearch {
+  return {
+    productionYear: {},
+    availabilities: {},
+    type: [],
+    languages: {},
+    certifications: [],
+    medias: [],
+    territories: [],
+    ...search
+  } as CatalogSearch;
+}
+
+/* -------------- */
+/* CREATE CONTROL */
+/* -------------- */
+
+export function createLanguageControl(
+  language: MovieLanguageSpecification,
+  disableDubbed?: boolean
+) {
+  return new FormGroup({
+    original: new FormControl(language.original),
+    dubbed: new FormControl({ value: language.dubbed, disabled: disableDubbed }),
+    subtitle: new FormControl(language.subtitle)
+  });
+}
+
+function createCatalogSearchControl(search: CatalogSearch) {
+  // Create controls for the languages
+  const languageControl &#x3D; Object.keys(search.languages).reduce(
+    (acc, key) &#x3D;&gt; ({
+      ...acc,
+      // Key is the name of the language, english, french etc.
+      [key]: createLanguageControl(search.languages[key])
+    }),
+    {} // Initial value. No controls at the beginning
+  );
+  return {
+    productionYear: new FormGroup(
+      {
+        from: new FormControl(search.productionYear.from, [
+          yearValidators,
+          Validators.max(new Date().getFullYear())
+        ]),
+        to: new FormControl(search.productionYear.to, [yearValidators])
+      },
+      numberRangeValidator(&#x27;from&#x27;, &#x27;to&#x27;)
+    ),
+    availabilities: new FormGroup(
+      {
+        from: new FormControl(search.availabilities.from, [
+          Validators.min(new Date().getFullYear())
+        ]),
+        to: new FormControl(search.availabilities.to)
+      },
+      numberRangeValidator(&#x27;from&#x27;, &#x27;to&#x27;)
+    ),
+    type: new FormControl(search.type),
+    languages: new FormGroup(languageControl),
+    certifications: new FormControl(search.certifications),
+    medias: new FormControl(search.medias),
+    territories: new FormArray(search.territories.map(territory &#x3D;&gt; new FormControl(territory)))
+  };
+}
+export type CatalogSearchControl &#x3D; ReturnType&lt;typeof createCatalogSearchControl&gt;;
+
+/* ---- */
+/* FROM */
+/* ---- */
+
+export class CatalogSearchForm extends FormEntity&lt;CatalogSearchControl&gt; {
+  constructor(search: Partial&lt;CatalogSearch&gt; &#x3D; {}) {
+    const catalogSearch &#x3D; createCatalogSearch(search);
+    const control &#x3D; createCatalogSearchControl(catalogSearch);
+    super(control);
+  }
+
+  get languages() {
+    return this.get(&#x27;languages&#x27;) as FormGroup;
+  }
+
+  addLanguage(language: LanguagesSlug, value: Partial&lt;MovieLanguageSpecification&gt; &#x3D; {}) {
+    const movieLanguage &#x3D; createMovieLanguage(value);
+    this.get(&#x27;languages&#x27;).addControl(language, createLanguageControl(movieLanguage));
+  }
+
+  removeLanguage(language: LanguagesSlug) {
+    this.languages.removeControl(language);
+    this.updateValueAndValidity();
+  }
+
+  addType(type: GenresSlug) {
+    if (!GENRES_SLUG.includes(type)) {
+      throw new Error(
+        &#x60;Type ${type} is not part of the defined types, here is the complete list currently available: ${GENRES_LABEL}&#x60;
+      );
+    } else {
+      this.get(&#x27;type&#x27;).setValue([...this.get(&#x27;type&#x27;).value, type]);
+    }
+  }
+
+  removeType(type: GenresSlug) {
+    if (GENRES_SLUG.includes(type)) {
+      const newControls &#x3D; this.get(&#x27;type&#x27;).value.filter(typeToRemove &#x3D;&gt; typeToRemove !&#x3D;&#x3D; type);
+      this.get(&#x27;type&#x27;).setValue(newControls);
+    } else {
+      throw new Error(&#x60;The type ${type} was not found!&#x60;);
+    }
+  }
+
+  checkCertification(certificationChecked: CertificationsSlug) {
+    // check if certification is already checked by the user
+    if (
+      CERTIFICATIONS_SLUG.includes(certificationChecked) &amp;&amp;
+      !this.get(&#x27;certifications&#x27;).value.includes(certificationChecked)
+    ) {
+      this.get(&#x27;certifications&#x27;).setValue([
+        ...this.get(&#x27;certifications&#x27;).value,
+        certificationChecked
+      ]);
+    } else if (CERTIFICATIONS_SLUG.includes(certificationChecked)) {
+      const uncheckCertification &#x3D; this.get(&#x27;certifications&#x27;).value.filter(
+        removeCef &#x3D;&gt; removeCef !&#x3D;&#x3D; certificationChecked
+      );
+      this.get(&#x27;certifications&#x27;).setValue(uncheckCertification);
+    } else {
+      throw new Error(&#x60;Certification ${certificationChecked} doesn&#x27;t exist&#x60;);
+    }
+  }
+
+  checkMedia(mediaChecked: MediasSlug) {
+    // check if media is already checked by the user
+    if (MEDIAS_SLUG.includes(mediaChecked) &amp;&amp; !this.get(&#x27;medias&#x27;).value.includes(mediaChecked)) {
+      this.get(&#x27;medias&#x27;).setValue([...this.get(&#x27;medias&#x27;).value, mediaChecked]);
+    } else if (
+      MEDIAS_SLUG.includes(mediaChecked) &amp;&amp;
+      this.get(&#x27;medias&#x27;).value.includes(mediaChecked)
+    ) {
+      const uncheckMedia &#x3D; this.get(&#x27;medias&#x27;).value.filter(
+        removeMedia &#x3D;&gt; removeMedia !&#x3D;&#x3D; mediaChecked
+      );
+      this.get(&#x27;medias&#x27;).setValue(uncheckMedia);
+    } else {
+      throw new Error(&#x60;Media ${mediaChecked} doesn&#x27;t exist&#x60;);
+    }
+  }
+
+  addTerritory(territory: TerritoriesSlug) {
+    // Check it&#x27;s part of the list available
+    if (!TERRITORIES_SLUG.includes(territory)) {
+      throw new Error(
+        &#x60;Territory ${getLabelByCode(&#x27;TERRITORIES&#x27;, territory)} is not part of the list&#x60;
+      );
+    }
+    // Check it&#x27;s not already in the form control
+    const territoriesValue &#x3D; this.get(&#x27;territories&#x27;).value;
+    if (!territoriesValue.includes(territory)) {
+      this.get(&#x27;territories&#x27;).push(new FormControl(territory));
+    }
+    // Else do nothing as it&#x27;s already in the list
+  }
+
+  removeTerritory(index: number) {
+    this.get(&#x27;territories&#x27;).removeAt(index);
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'CatalogSearchForm.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

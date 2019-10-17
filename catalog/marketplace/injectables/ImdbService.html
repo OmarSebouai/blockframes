@@ -1,0 +1,910 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>ImdbService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>libs/utils/src/lib/imdb/service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#apiKey">apiKey</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#omdbapi">omdbapi</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get">get</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#search">search</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setApiKey">setApiKey</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="293" class="link-to-prism">libs/utils/src/lib/imdb/service.ts:293</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            get
+                        </b>
+                        <a href="#get"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get(req: <a href="../interfaces/MovieRequest.html">MovieRequest</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="308"
+                            class="link-to-prism">libs/utils/src/lib/imdb/service.ts:308</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches a single movie by arbitrary criteria</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>req</td>
+                                    <td>
+                                                <code><a href="../interfaces/MovieRequest.html" target="_self" >MovieRequest</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>set of requirements to search for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ImdbMovie.html" target="_self" >Promise&lt;ImdbMovie&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a promise yielding a movie</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="search"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            search
+                        </b>
+                        <a href="#search"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>search(req: <a href="../interfaces/SearchRequest.html">SearchRequest</a>, page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="355"
+                            class="link-to-prism">libs/utils/src/lib/imdb/service.ts:355</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Searches for a movie by arbitrary criteria</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>req</td>
+                                    <td>
+                                                <code><a href="../interfaces/SearchRequest.html" target="_self" >SearchRequest</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>set of requirements to search for</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <p>page number to return</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;SearchResults&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a promise yielding search results</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setApiKey"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setApiKey
+                        </b>
+                        <a href="#setApiKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setApiKey(apiKey: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="297"
+                            class="link-to-prism">libs/utils/src/lib/imdb/service.ts:297</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>apiKey</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="apiKey"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            apiKey</b>
+                            <a href="#apiKey"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="291" class="link-to-prism">libs/utils/src/lib/imdb/service.ts:291</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>API key for omdbapi. Needed to make any API calls.</p>
+<p>Get one <a href="https://www.patreon.com/posts/api-is-going-10743518">here</a></p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="omdbapi"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            omdbapi</b>
+                            <a href="#omdbapi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;https://www.omdbapi.com/&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="293" class="link-to-prism">libs/utils/src/lib/imdb/service.ts:293</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import {
+  isError,
+  isMovie,
+  OmdbError,
+  OmdbMovie,
+  OmdbSearch,
+  OmdbSearchResult,
+} from &quot;./interfaces&quot;;
+
+
+/**
+ * An explicit request for a movie. Does not do searching, this is meant
+ * to specify *one* movie.
+ *
+ * One of {@link name} or {@link id} *MUST* be requested. {@link year} can be used to ensure
+ * that the movie you&#x27;re looking for is selected in the case that there exists
+ * more than one movie with the same name.
+ */
+export interface MovieRequest {
+  /**
+   * Name of the movie
+   *
+   * Unfortunately, only English names are supported
+   * by omdb at the moment.
+   */
+  name?: string;
+
+  /**
+   * imdb id of the movie
+   */
+  id?: string;
+
+  /**
+   * Year that the movie was released
+   */
+  year?: number;
+}
+
+/**
+ * A search for a movie. This will fetch multiple results based on fuzzy matches
+ * for a particular piece of media.
+ */
+export interface SearchRequest {
+  /**
+   * Title of the movie that we&#x27;re looking for. Unfortunately, only English
+   * names are supported by omdb at the moment.
+   */
+  name: string;
+
+  /**
+   * Year that the movie was released
+   */
+  year?: number;
+}
+
+export class ImdbError {
+  public name &#x3D; &quot;imdb api error&quot;;
+
+  constructor(public message: string) { }
+}
+
+/**
+ * @hidden
+ */
+const transTable &#x3D; {
+  Genre: &quot;genres&quot;,
+  Language: &quot;languages&quot;,
+  imdbRating: &quot;rating&quot;,
+  imdbVotes: &quot;votes&quot;,
+};
+
+/**
+ * A single search result from either {@link search} or {@link Client.search}.
+ * This is not intended to be directly created by api consumers.
+ */
+export class SearchResult {
+  /** name of the movie */
+  public title: string;
+  /** name of the movie */
+  public name: string;
+  /** year the movie was released */
+  public year: number;
+  /** imdb id of the movie */
+  public imdbid: string;
+  /** type of media we found */
+  public type: string;
+  /** link to the poster for this movie */
+  public poster: string;
+
+  constructor(obj: OmdbSearchResult) {
+    for (const attr of Object.getOwnPropertyNames(obj)) {
+      if (attr &#x3D;&#x3D;&#x3D; &quot;Year&quot;) {
+        this[attr.toLowerCase()] &#x3D; parseInt(obj[attr], 10);
+      } else {
+        this[attr.toLowerCase()] &#x3D; obj[attr];
+      }
+    }
+
+    this.name &#x3D; this.title;
+  }
+}
+
+/**
+ * A single page of {@link SearchResult}s. You can call {@link SearchResults.next} to fetch
+ * the next page of results. This is not intended to be created by an API consumer, but instead
+ * to be returned by {@link search} or {@link Client.search}.
+ */
+export class SearchResults {
+  public results: SearchResult[] &#x3D; [];
+  public totalresults: number;
+  public page: number;
+
+  /**
+   * Builds a new {@link SearchResults}. Not intended to be called directly by
+   * API consumers, as it only creates the object from omdb results.
+   *
+   * @param obj Search results from omdb
+   * @param page Page number we&#x27;re fetching
+   */
+  constructor(obj: OmdbSearch, page: number) {
+    this.page &#x3D; page;
+
+    for (const attr of Object.getOwnPropertyNames(obj)) {
+      if (attr &#x3D;&#x3D;&#x3D; &quot;Search&quot;) {
+        for (const result of obj.Search) {
+          this.results.push(new SearchResult(result));
+        }
+      } else if (attr &#x3D;&#x3D;&#x3D; &quot;totalResults&quot;) {
+        this[attr.toLowerCase()] &#x3D; parseInt(obj[attr], 10);
+      } else {
+        this[attr.toLowerCase()] &#x3D; obj[attr];
+      }
+    }
+  }
+
+}
+
+/**
+ * A movie as returned by {@link get}, {@link search}, or any of the methods
+ * from {@link Client}. This is not meant to be created directly by consumers of
+ * this lib, but instead through querying omdb.
+ */
+export class ImdbMovie {
+  /** id of the movie on imdb */
+  public imdbid: string;
+  /** direct URL to the movie on imdb */
+  public imdburl: string;
+  /** the genres that this movie belongs to */
+  public genres: string;
+  /** languages this movie was released in */
+  public languages: string;
+  /** countries this movie was released in */
+  public country: string;
+  /** votes received on imdb */
+  public votes: string;
+  /** whether or not this is a TV series */
+  public series: boolean;
+  /** the rating as it appears on imdb */
+  public rating: number;
+  /** the runtime of the movie */
+  public runtime: string;
+  /** the title of the movie in English */
+  public title: string;
+  /** year the movie was released */
+  public year: number;
+
+  /** type of media */
+  public type: string;
+  /** link to the poster for this movie */
+  public poster: string;
+  /** score from a bunch of different review sites */
+  public metascore: string;
+  /** the plot (can either be long or short as specified in {@link MovieRequest}) */
+  public plot: string;
+  /** what the movie was rated in its country of release */
+  public rated: string;
+  /** the directors of the movie */
+  public director: string;
+  /** writers of the movie */
+  public writer: string;
+  /** leading actors that starred in the movie */
+  public actors: string;
+  /** date that the movie was originally released */
+  public released?: Date;
+  /** title of the movie */
+  public name: string;
+  /** production company of the movie */
+  public production: string;
+
+  /**
+   * @hidden
+   */
+  protected _yearData: string;
+
+  /**
+   * This takes a result from omdb, and transforms it into an
+   * object consumable by customers of imdb-api.
+   *
+   * This isn&#x27;t meant for direct consumption by API consumers,
+   * and consumers should look at {@link get}, {@link search} or
+   * any of the methods on {@link Client} to get a movie instead.
+   *
+   * @param obj Results from omdb
+   */
+  constructor(obj: OmdbMovie) {
+    for (const attr of Object.getOwnPropertyNames(obj)) {
+      if (attr &#x3D;&#x3D;&#x3D; &quot;Year&quot;) {
+        this._yearData &#x3D; obj[attr];
+        // check for emdash (ie: - or –) possibly comming from omdb
+        if (!obj[attr].match(/\d{4}[\-–](?:\d{4})?/)) {
+          const val &#x3D; parseInt(obj[attr], 10);
+          if (isNaN(val)) {
+            throw new TypeError(&quot;invalid year&quot;);
+          }
+          this[attr.toLowerCase()] &#x3D; val;
+        }
+      } else if (attr &#x3D;&#x3D;&#x3D; &quot;Released&quot;) {
+        const val &#x3D; new Date(obj[attr]);
+        if (isNaN(val.getTime())) {
+          this.released &#x3D; undefined;
+        } else {
+          this.released &#x3D; val;
+        }
+      } else if (attr &#x3D;&#x3D;&#x3D; &quot;imdbRating&quot;) {
+        const key &#x3D; transTable[attr];
+        const val &#x3D; parseFloat(obj[attr]);
+        this[key] &#x3D; isNaN(val) ? 0 : val;
+      } else if (transTable[attr] !&#x3D;&#x3D; undefined) {
+        this[transTable[attr]] &#x3D; obj[attr];
+      } else {
+        this[attr.toLowerCase()] &#x3D; obj[attr];
+      }
+    }
+
+    this.name &#x3D; this.title;
+    this.series &#x3D; this.type &#x3D;&#x3D;&#x3D; &quot;movie&quot; ? false : true;
+    this.imdburl &#x3D; &quot;https://www.imdb.com/title/&quot; + this.imdbid;
+  }
+}
+
+@Injectable({ providedIn: &#x27;root&#x27; })
+export class ImdbService {
+
+  /**
+   * API key for omdbapi. Needed to make any API calls.
+   *
+   * Get one [here](https://www.patreon.com/posts/api-is-going-10743518)
+   */
+  private apiKey: string;
+
+  private omdbapi &#x3D; &quot;https://www.omdbapi.com/&quot;;
+
+  constructor(private http: HttpClient) {}
+
+  public setApiKey(apiKey: string) {
+    this.apiKey &#x3D; apiKey;
+  }
+
+  /**
+   * Fetches a single movie by arbitrary criteria
+   *
+   * @param req set of requirements to search for
+   *
+   * @return a promise yielding a movie
+   */
+  public get(req: MovieRequest): Promise&lt;ImdbMovie&gt; {
+
+    const params &#x3D; {
+      apikey: this.apiKey,
+      i: undefined, // imdb id if any
+      plot: &#x27;full&#x27;, // we want to retreive full movie plot
+      r: &#x27;json&#x27;, // expected response type
+      t: undefined, // movie title if any
+      y: req.year ? req.year.toString() : undefined // movie year
+    };
+
+    if (req.name) {
+      params.t &#x3D; req.name.trim();
+      delete params.i;
+    } else if (req.id) {
+      params.i &#x3D; req.id;
+      delete params.t;
+    } else {
+      return Promise.reject(new ImdbError(&quot;Missing one of req.id or req.name&quot;));
+    }
+
+    return this.http.get(this.omdbapi, { params })
+      .toPromise()
+      .then((data: OmdbMovie | OmdbError) &#x3D;&gt; {
+        let ret: ImdbMovie;
+        if (isError(data)) {
+          throw new ImdbError(&#x60;${data.Error}: ${(req.name ? req.name : req.id)}&#x60;);
+        }
+
+        if (isMovie(data)) {
+          ret &#x3D; new ImdbMovie(data);
+        } else {
+          throw new ImdbError(&#x27;fetched data is not a movie&#x27;);
+        }
+
+        return Promise.resolve(ret);
+      });
+  }
+
+  /**
+   * Searches for a movie by arbitrary criteria
+   *
+   * @param req set of requirements to search for
+   * @param page page number to return
+   *
+   * @return a promise yielding search results
+   */
+  public search(req: SearchRequest, page: number &#x3D; 1): Promise&lt;SearchResults&gt; {
+
+    const params &#x3D; {
+      apikey: this.apiKey,
+      page: page.toString(), // page number
+      r: &quot;json&quot;, // expected response type
+      s: req.name.trim(), // our search string
+      type: &quot;movie&quot;, // exptected item type since api can retreive series, movies, episodes ..
+      y: req.year ? req.year.toString() : undefined // movie year
+    };
+
+    return this.http.get(this.omdbapi, { params })
+      .toPromise()
+      .then((data: OmdbSearch | OmdbError) &#x3D;&gt; {
+        if (isError(data)) {
+          throw new ImdbError(&#x60;${data.Error}: ${req.name}&#x60;);
+        }
+
+        return Promise.resolve(new SearchResults(data, page));
+      });
+  }
+
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ImdbService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

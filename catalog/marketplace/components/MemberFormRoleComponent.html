@@ -1,0 +1,824 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MemberFormRoleComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/organization/src/lib/components/member-form-role/member-form-role.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.Default</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>[formGroup] member-form-role</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./member-form-role.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./member-form-role.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#controlContainer">controlContainer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#changeRole">changeRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#destroyWallet">destroyWallet</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#control">control</a>
+                                </li>
+                                <li>
+                                    <a href="#name">name</a>
+                                </li>
+                                <li>
+                                    <a href="#role">role</a>
+                                </li>
+                                <li>
+                                    <a href="#canChangeRole">canChangeRole</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(controlContainer: <a href="https://angular.io/api/forms/ControlContainer" target="_blank">ControlContainer</a>, service: <a href="../injectables/OrganizationService.html">OrganizationService</a>, query: <a href="../injectables/OrganizationQuery.html">OrganizationQuery</a>, walletService: <a href="../injectables/WalletService.html">WalletService</a>, permissionsService: <a href="../injectables/PermissionsService.html">PermissionsService</a>, permissionsQuery: <a href="../injectables/PermissionsQuery.html">PermissionsQuery</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>controlContainer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/ControlContainer" target="_blank" >ControlContainer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>service</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrganizationService.html" target="_self" >OrganizationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>query</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrganizationQuery.html" target="_self" >OrganizationQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>walletService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WalletService.html" target="_self" >WalletService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>permissionsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PermissionsService.html" target="_self" >PermissionsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>permissionsQuery</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PermissionsQuery.html" target="_self" >PermissionsQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeRole"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            changeRole
+                        </b>
+                        <a href="#changeRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>changeRole(role: <a href="../interfaces/User.html">UserRole</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>role</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >UserRole</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="destroyWallet"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            destroyWallet
+                        </b>
+                        <a href="#destroyWallet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>destroyWallet()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instantiate the transaction to destroy a member&#39;s wallet, then redirect to the send tunnel </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="controlContainer"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            controlContainer</b>
+                            <a href="#controlContainer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/ControlContainer" target="_blank" >ControlContainer</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="control"></a>
+                        <span class="name"><b>control</b><a href="#control"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>control()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:26</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name"><b>name</b><a href="#name"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>name()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:30</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="role"></a>
+                        <span class="name"><b>role</b><a href="#role"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>role()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:35</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canChangeRole"></a>
+                        <span class="name"><b>canChangeRole</b><a href="#canChangeRole"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>canChangeRole()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">libs/organization/src/lib/components/member-form-role/member-form-role.component.ts:39</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ChangeDetectionStrategy } from &#x27;@angular/core&#x27;;
+import { ControlContainer } from &#x27;@angular/forms&#x27;;
+import { UserRole, OrganizationService, OrganizationQuery, OrganizationMember } from &#x27;../../+state&#x27;;
+import { WalletService } from &#x27;libs/ethers/src/lib/wallet/+state&#x27;;
+import { CreateTx, ActionTx, TxFeedback } from &#x27;@blockframes/ethers&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { PermissionsQuery, PermissionsService } from &#x27;../../permissions/+state&#x27;;
+
+@Component({
+  selector: &#x27;[formGroup] member-form-role&#x27;,
+  templateUrl: &#x27;./member-form-role.component.html&#x27;,
+  styleUrls: [&#x27;./member-form-role.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class MemberFormRoleComponent {
+  constructor(
+    public controlContainer: ControlContainer,
+    private service: OrganizationService,
+    private query: OrganizationQuery,
+    private walletService: WalletService,
+    private permissionsService: PermissionsService,
+    private permissionsQuery: PermissionsQuery,
+    private router: Router,
+  ) {}
+
+  get control() {
+    return this.controlContainer.control;
+  }
+
+  public get name() {
+    const {name} &#x3D; this.control.value;
+    return name;
+  }
+
+  public get role() {
+    return this.control.get(&#x27;role&#x27;);
+  }
+
+  public get canChangeRole() {
+    const cannotChange &#x3D;
+      this.role.value &#x3D;&#x3D;&#x3D; UserRole.admin
+      &amp;&amp; this.permissionsQuery.superAdminCount &lt;&#x3D; 1;
+    return !cannotChange;
+  }
+
+  public async changeRole(role: UserRole) {
+    if (!this.canChangeRole) {
+      throw new Error(&#x27;You can not change the role of the last Admin of an organization&#x27;);
+    }
+    const { uid, email } &#x3D; this.control.value;
+    const userEthAddress &#x3D; await this.service.getMemberEthAddress(email);
+    const orgEthAddress &#x3D; await this.service.getOrganizationEthAddress();
+    let tx: ActionTx;
+    const callback &#x3D; () &#x3D;&gt; {
+      const members &#x3D; this.query.getValue().org.members
+        .filter(member &#x3D;&gt; member.uid !&#x3D;&#x3D; uid)
+        .map(member &#x3D;&gt; {
+          if (!member.role) {
+            return {...member, role: this.permissionsQuery.isUserSuperAdmin(member.uid) ? UserRole.admin : UserRole.member} as OrganizationMember;
+          }
+          return member;
+        });
+      const memberToUpdate &#x3D; this.query.getValue().org.members.find(member &#x3D;&gt; member.uid &#x3D;&#x3D;&#x3D; uid);
+
+      const newMember: OrganizationMember &#x3D; {...memberToUpdate, role};
+      members.push(newMember);
+      this.permissionsService.updateMembersRole(members);
+    };
+
+    const orgName &#x3D; this.query.getValue().org.name;
+    const orgId &#x3D; this.query.id;
+    let feedback: TxFeedback;
+    if (role &#x3D;&#x3D;&#x3D; UserRole.admin){
+      tx &#x3D; CreateTx.addAdmin(orgEthAddress, userEthAddress, callback);
+      feedback &#x3D; {
+        confirmation: &#x60;You are about to promote ${this.name} as an Admin of ${orgName}&#x60;,
+        success: &#x60;${this.name} has been successfully promoted to the Admin role !&#x60;,
+        redirectName: &#x27;Back to Administration&#x27;,
+        redirectRoute: &#x60;/layout/o/organization/${orgId}/members&#x60;,
+      }
+    } else if (role &#x3D;&#x3D;&#x3D; UserRole.member &amp;&amp; this.permissionsQuery.superAdminCount &gt;&#x3D; 2) {
+      tx &#x3D; CreateTx.removeAdmin(orgEthAddress, userEthAddress, callback);
+      feedback &#x3D; {
+        confirmation: &#x60;You are about to revoke ${this.name} as an Admin of ${orgName}&#x60;,
+        success: &#x60;${this.name} has been successfully revoked from the Admin role !&#x60;,
+        redirectName: &#x27;Back to Administration&#x27;,
+        redirectRoute: &#x60;/layout/o/organization/${orgId}/members&#x60;,
+      }
+    }
+
+    this.walletService.setTx(tx);
+    this.walletService.setTxFeedback(feedback);
+    this.router.navigateByUrl(&#x27;/layout/o/account/wallet/send&#x27;);
+  }
+
+  /** Instantiate the transaction to destroy a member&#x27;s wallet, then redirect to the send tunnel */
+  public async destroyWallet() {
+    const { email } &#x3D; this.control.value;
+    const userEthAddress &#x3D; await this.service.getMemberEthAddress(email);
+    const orgId &#x3D; this.query.id;
+    const orgEthAddress &#x3D; await this.service.getOrganizationEthAddress();
+
+    const tx &#x3D; CreateTx.destroyMember(orgEthAddress, userEthAddress);
+    const feedback: TxFeedback &#x3D; {
+      confirmation: &#x60;You are about to destroy ${this.name}&#x27;s Wallet.&#x60;,
+      success: &#x60;${this.name}&#x27;s Wallet has been successfully destroyed!&#x60;,
+      redirectName: &#x27;Back to Members&#x27;,
+      redirectRoute: &#x60;/layout/o/organization/${orgId}/members&#x60;
+    }
+
+    this.walletService.setTx(tx);
+    this.walletService.setTxFeedback(feedback);
+    this.router.navigateByUrl(&#x27;/layout/o/account/wallet/send&#x27;);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h2&gt;{{name}}&lt;/h2&gt;
+&lt;ng-container *ngIf&#x3D;&quot;canChangeRole; else cannotChangeRole&quot;&gt;
+  &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+    &lt;mat-label&gt;Role&lt;/mat-label&gt;
+    &lt;mat-select [formControl]&#x3D;&quot;role&quot; (valueChange)&#x3D;&quot;changeRole($event)&quot;&gt;
+      &lt;mat-option value&#x3D;&quot;member&quot;&gt; Member &lt;/mat-option&gt;
+      &lt;mat-option value&#x3D;&quot;admin&quot;&gt; Admin &lt;/mat-option&gt;
+    &lt;/mat-select&gt;
+  &lt;/mat-form-field&gt;
+  &lt;button
+    mat-flat-button
+    color&#x3D;&quot;warn&quot;
+    (click)&#x3D;&quot;destroyWallet()&quot;
+  &gt;
+    &lt;mat-icon&gt;delete&lt;/mat-icon&gt;
+    Destroy Wallet
+  &lt;/button&gt;
+&lt;/ng-container&gt;
+&lt;ng-template #cannotChangeRole&gt;
+  &lt;div&gt;&lt;mat-icon&gt;error_outline&lt;/mat-icon&gt;&lt;/div&gt;
+  &lt;p&gt;You can&#x27;t change the role of the last Admin because an organization always need at least one Admin.&lt;/p&gt;
+  &lt;p&gt;If you want to change the role of this Admin, please promote another Admin before.&lt;/p&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./member-form-role.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">div {
+  text-align: center;
+  mat-icon {
+    font-size: 40px;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h2>{{name}}</h2><ng-container *ngIf="canChangeRole; else cannotChangeRole">  <mat-form-field appearance="outline">    <mat-label>Role</mat-label>    <mat-select [formControl]="role" (valueChange)="changeRole($event)">      <mat-option value="member"> Member </mat-option>      <mat-option value="admin"> Admin </mat-option>    </mat-select>  </mat-form-field>  <button    mat-flat-button    color="warn"    (click)="destroyWallet()"  >    <mat-icon>delete</mat-icon>    Destroy Wallet  </button></ng-container><ng-template #cannotChangeRole>  <div><mat-icon>error_outline</mat-icon></div>  <p>You can\'t change the role of the last Admin because an organization always need at least one Admin.</p>  <p>If you want to change the role of this Admin, please promote another Admin before.</p></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActionsListComponent', 'selector': 'actions-list'},{'name': 'ActionsPickerComponent', 'selector': 'actions-picker'},{'name': 'ActionsPickerListComponent', 'selector': 'actions-picker-list'},{'name': 'AddComponent', 'selector': 'ip-add'},{'name': 'AppComponent', 'selector': 'catalog-root'},{'name': 'AvatarListComponent', 'selector': 'avatar-list'},{'name': 'ButtonUploadComponent', 'selector': 'button-upload'},{'name': 'CalendarComponent', 'selector': 'month-calendar'},{'name': 'CatalogCompletionComponent', 'selector': 'catalog-completion-item'},{'name': 'CatalogFormSelectionComponent', 'selector': 'catalog-form-selection'},{'name': 'ChipsAutocompleteComponent', 'selector': 'chips-autocomplete'},{'name': 'ConfirmComponent', 'selector': 'blockframes-confirm'},{'name': 'ContextMenuComponent', 'selector': 'context-menu'},{'name': 'DatepickerRangeComponent', 'selector': 'datepicker-range'},{'name': 'DeliveryActionsComponent', 'selector': 'delivery-actions'},{'name': 'DeliveryAddChooseStarterComponent', 'selector': 'delivery-add-choose-starter'},{'name': 'DeliveryAddFindMovieComponent', 'selector': 'delivery-add-find-movie'},{'name': 'DeliveryAddSettingsComponent', 'selector': 'delivery-add-settings'},{'name': 'DeliveryAddSpecificDeliveryListPickerComponent', 'selector': 'delivery-add-specific-delivery-list-picker'},{'name': 'DeliveryAddTemplatePickerComponent', 'selector': 'delivery-add-template-picker'},{'name': 'DeliveryEditableComponent', 'selector': 'delivery-editable'},{'name': 'DeliveryInformationsDatesDisplayComponent', 'selector': 'delivery-informations-dates-display'},{'name': 'DeliveryInformationsDatesFormComponent', 'selector': '[formGroup] delivery-informations-dates-form'},{'name': 'DeliveryInformationsDeadlinesFormComponent', 'selector': '[formGroup] delivery-informations-deadlines-form'},{'name': 'DeliveryInformationsDeadlinesRepertoryComponent', 'selector': 'delivery-informations-deadlines-repertory'},{'name': 'DeliveryInformationsEditableComponent', 'selector': 'delivery-informations-editable'},{'name': 'DeliveryInformationsStakeholdersComponent', 'selector': 'delivery-informations-stakeholders'},{'name': 'DeliveryInformationsStepsFormComponent', 'selector': '[formGroup] delivery-informations-steps-form'},{'name': 'DeliveryInformationsStepsRepertoryComponent', 'selector': 'delivery-informations-steps-repertory'},{'name': 'DeliveryListComponent', 'selector': 'delivery-list'},{'name': 'DeliveryMaterialFormComponent', 'selector': '[formGroupName] delivery-material-form, [formGroup] delivery-material-form, delivery-material-form'},{'name': 'DeliveryMaterialListComponent', 'selector': 'delivery-material-list'},{'name': 'DeliveryRepertoryComponent', 'selector': 'delivery-repertory'},{'name': 'DeliveryStakeholdersEditableComponent', 'selector': 'delivery-stakeholders-editable'},{'name': 'DeliveryStakeholdersRepertoryComponent', 'selector': 'delivery-stakeholders-repertory'},{'name': 'DeliveryStatusesComponent', 'selector': 'delivery-statuses'},{'name': 'DistributionRightCreateComponent', 'selector': 'distribution-right-create'},{'name': 'EditableComponent', 'selector': 'ui-editable'},{'name': 'EditableSidenavComponent', 'selector': 'editable-sidenav'},{'name': 'EmailVerifyComponent', 'selector': 'auth-email-verify'},{'name': 'ExplorerComponent', 'selector': 'ip-explorer'},{'name': 'FeedbackMessageComponent', 'selector': 'feedback-message'},{'name': 'FileUploadComponent', 'selector': 'file-upload'},{'name': 'HeaderComponent', 'selector': 'toolbar-header'},{'name': 'HomeEmptyComponent', 'selector': 'movie-home-empty'},{'name': 'IdentityComponent', 'selector': 'auth-identity'},{'name': 'IdentityFeedbackComponent', 'selector': 'auth-identity-feedback'},{'name': 'ImportSpreadsheetComponent', 'selector': 'movie-import-spreadsheet'},{'name': 'ImportStepperComponent', 'selector': 'movie-import-stepper'},{'name': 'InvitationItemComponent', 'selector': 'invitation-item'},{'name': 'InvitationListComponent', 'selector': 'invitation-list'},{'name': 'KeyManagerItemComponent', 'selector': 'key-manager-item'},{'name': 'KeyManagerListComponent', 'selector': 'key-manager-list'},{'name': 'LayoutComponent', 'selector': 'catalog-layout'},{'name': 'LeftMenuComponent', 'selector': 'toolbar-left-menu'},{'name': 'LoginViewComponent', 'selector': 'auth-login-view'},{'name': 'MarketplaceHomeComponent', 'selector': 'catalog-home'},{'name': 'MarketplaceMovieViewComponent', 'selector': 'catalog-movie-view'},{'name': 'MarketplaceSearchComponent', 'selector': 'catalog-movie-search'},{'name': 'MarketplaceSelectionComponent', 'selector': 'catalog-selection'},{'name': 'MemberAddComponent', 'selector': 'member-add'},{'name': 'MemberEditableComponent', 'selector': 'member-editable'},{'name': 'MemberFormRoleComponent', 'selector': '[formGroup] member-form-role'},{'name': 'MemberInvitationComponent', 'selector': 'member-invitation'},{'name': 'MemberPendingComponent', 'selector': 'member-pending'},{'name': 'MemberRepertoryComponent', 'selector': 'member-repertory'},{'name': 'MovieCardComponent', 'selector': '[movie] movie-card'},{'name': 'MovieCreateComponent', 'selector': 'movie-movie-create'},{'name': 'MovieDisplayAssetsComponent', 'selector': '[assets] movie-display-assets'},{'name': 'MovieDisplayAvailabilitiesComponent', 'selector': '[rights] movie-display-availabilities'},{'name': 'MovieDisplayCardItemComponent', 'selector': '[movie] movie-display-card-item'},{'name': 'MovieDisplayComponent', 'selector': '[movie] movie-display-root'},{'name': 'MovieDisplayFestivalPrizesComponent', 'selector': '[festivalprizes] movie-display-festivalprizes'},{'name': 'MovieDisplayFilmDetailsComponent', 'selector': 'movie-display-film-details'},{'name': 'MovieDisplayKeywordsComponent', 'selector': '[keywords] movie-display-keywords'},{'name': 'MovieDisplayListComponent', 'selector': '[movies] movie-display-list'},{'name': 'MovieDisplayMainComponent', 'selector': '[main] movie-display-main'},{'name': 'MovieDisplayPrincipalInformationsComponent', 'selector': 'movie-display-principal-informations'},{'name': 'MovieDisplayPrizesComponent', 'selector': '[prizes] movie-display-prizes'},{'name': 'MovieDisplayProductionComponent', 'selector': 'movie-display-production'},{'name': 'MovieDisplayPromotionalDescriptionComponent', 'selector': '[description] movie-display-promotional-description'},{'name': 'MovieDisplayPromotionalElementsComponent', 'selector': '[elements] movie-display-promotional-elements'},{'name': 'MovieDisplaySalesAgentDealComponent', 'selector': '[deal] movie-display-salesdeal'},{'name': 'MovieDisplaySalesCastComponent', 'selector': '[cast] movie-display-sales-cast'},{'name': 'MovieDisplaySalesInfoComponent', 'selector': '[info] movie-display-sales-info'},{'name': 'MovieDisplayStoryComponent', 'selector': '[story] movie-display-story'},{'name': 'MovieDisplaySynopsisComponent', 'selector': '[synopsis] movie-display-synopsis'},{'name': 'MovieDisplayVersionInfoComponent', 'selector': '[info] movie-display-version-info'},{'name': 'MovieDisplayVersionInfoComponent', 'selector': 'movie-display-version-info'},{'name': 'MovieEditableComponent', 'selector': 'movie-editable'},{'name': 'MovieEditableComponent', 'selector': 'movie-editable'},{'name': 'MovieEmptyComponent', 'selector': 'movie-empty'},{'name': 'MovieFormFestivalPrizesComponent', 'selector': '[formGroup] movie-form-festivalprizes, [formGroupName] movie-form-festivalprizes'},{'name': 'MovieFormMainComponent', 'selector': '[formGroup] movie-form-main, [formGroupName] movie-form-main'},{'name': 'MovieFormPromotionalDescriptionComponent', 'selector': '[formGroup] movie-form-promotional-description, [formGroupName] movie-form-promotional-description'},{'name': 'MovieFormPromotionalElementsComponent', 'selector': '[formGroup] movie-form-promotional-elements, [formGroupName] movie-form-promotional-elements'},{'name': 'MovieFormRootComponent', 'selector': '[form] movie-form-root'},{'name': 'MovieFormSalesAgentDealComponent', 'selector': '[formGroup] movie-form-salesdeal, [formGroupName] movie-form-salesdeal'},{'name': 'MovieFormSalesCastComponent', 'selector': '[formGroup] movie-form-sales-cast, [formGroupName] movie-form-sales-cast'},{'name': 'MovieFormSalesInfoComponent', 'selector': '[formGroup] movie-form-sales-info, [formGroupName] movie-form-sales-info'},{'name': 'MovieFormStoryComponent', 'selector': '[formGroup] movie-form-story, [formGroupName] movie-form-story'},{'name': 'MovieFormVersionInfoComponent', 'selector': '[formGroup] movie-form-version-info, [formGroupName] movie-form-version-info'},{'name': 'MovieImdbSearchComponent', 'selector': 'movie-imdb-search'},{'name': 'MovieListComponent', 'selector': 'movie-list'},{'name': 'MovieMaterialFormComponent', 'selector': '[formGroupName] movie-material-form,[formGroup] movie-material-form, movie-material-form'},{'name': 'MovieMaterialListComponent', 'selector': 'movie-material-list'},{'name': 'MoviePickerComponent', 'selector': 'movie-picker'},{'name': 'MovieTitleFormComponent', 'selector': 'movie-title-form'},{'name': 'MovieViewComponent', 'selector': 'movie-view'},{'name': 'NewTemplateComponent', 'selector': 'delivery-new-template'},{'name': 'NotFoundComponent', 'selector': 'error-not-found'},{'name': 'NotificationItemComponent', 'selector': 'notification-item'},{'name': 'NotificationListComponent', 'selector': 'notification-list'},{'name': 'NotificationWidgetComponent', 'selector': 'notification-widget'},{'name': 'OrganizationActivityViewComponent', 'selector': 'org-activity-view'},{'name': 'OrganizationAdminViewComponent', 'selector': 'org-admin-view'},{'name': 'OrganizationCreateComponent', 'selector': 'organization-create'},{'name': 'OrganizationDisplayActionsComponent', 'selector': 'org-display-actions'},{'name': 'OrganizationDisplayComponent', 'selector': 'organization-display'},{'name': 'OrganizationDisplayOperationsComponent', 'selector': 'org-display-operations'},{'name': 'OrganizationEditableComponent', 'selector': 'organization-editable'},{'name': 'OrganizationFeedbackComponent', 'selector': 'organization-feedback'},{'name': 'OrganizationFindComponent', 'selector': 'organization-find'},{'name': 'OrganizationFormComponent', 'selector': '[formGroupName] organization-form, [formGroup] organization-form, organization-form'},{'name': 'OrganizationFormOperationComponent', 'selector': '[formGroup] organization-form-operation, [formGroupName] organization-form-operation'},{'name': 'OrganizationHomeComponent', 'selector': 'organization-home'},{'name': 'OrganizationSearchComponent', 'selector': 'organization-search'},{'name': 'OrganizationSignerFormComponent', 'selector': 'organization-signer-form'},{'name': 'OrganizationSignerRepertoryComponent', 'selector': 'org-signer-repertory'},{'name': 'OrganizationWidgetComponent', 'selector': 'organization-widget'},{'name': 'PasswordConfirmComponent', 'selector': 'password-confirm'},{'name': 'PasswordFormComponent', 'selector': '[formGroup] editPasswordForm, profile-password-form'},{'name': 'PreviewMovieComponent', 'selector': 'movie-import-preview-movie'},{'name': 'PreviewSheetComponent', 'selector': 'movie-import-preview-sheet'},{'name': 'ProfileDeleteComponent', 'selector': 'account-profile-delete'},{'name': 'ProfileDisplayComponent', 'selector': 'profile-display'},{'name': 'ProfileEditableComponent', 'selector': 'profile-editable'},{'name': 'ProfileFormComponent', 'selector': '[formGroupName] profile-form, [formGroup] profile-form, profile-form'},{'name': 'ProfileMenuComponent', 'selector': 'account-profile-menu'},{'name': 'ProfileWidgetComponent', 'selector': 'account-profile-widget'},{'name': 'SigninFormComponent', 'selector': 'auth-login-form'},{'name': 'SignupFormComponent', 'selector': 'auth-signup-form'},{'name': 'TableExtractedMoviesComponent', 'selector': 'movie-table-extracted-movies'},{'name': 'TableExtractedSalesComponent', 'selector': 'movie-table-extracted-sales'},{'name': 'TemplateAddComponent', 'selector': 'material-template-add'},{'name': 'TemplateCreateComponent', 'selector': 'template-create'},{'name': 'TemplateEditableComponent', 'selector': 'template-editable'},{'name': 'TemplateListComponent', 'selector': 'template-list'},{'name': 'TemplateMaterialFormComponent', 'selector': '[formGroup] template-material-form'},{'name': 'TemplateMaterialListComponent', 'selector': 'template-material-list'},{'name': 'TemplateRepertoryComponent', 'selector': 'template-repertory'},{'name': 'ViewExtractedElementsComponent', 'selector': 'movie-view-extracted-elements'},{'name': 'ViewImportErrorsComponent', 'selector': 'movie-view-import-errors'},{'name': 'WalletAddKeyTunnelComponent', 'selector': 'wallet-add-key-tunnel'},{'name': 'WalletAddressViewComponent', 'selector': 'wallet-address-view'},{'name': 'WalletAskPasswordFormComponent', 'selector': 'wallet-ask-password-form'},{'name': 'WalletBlockieComponent', 'selector': 'wallet-blockie'},{'name': 'WalletCreatePasswordFormComponent', 'selector': 'wallet-create-password-form'},{'name': 'WalletImportKeyComponent', 'selector': 'wallet-import-key'},{'name': 'WalletImportKeyFormComponent', 'selector': 'wallet-import-key-form'},{'name': 'WalletNoKeyComponent', 'selector': 'wallet-no-key'},{'name': 'WalletRevealMnemonicComponent', 'selector': 'wallet-reveal-mnemonic'},{'name': 'WalletSendTxTunnelComponent', 'selector': 'wallet-send-tx'},{'name': 'WalletViewComponent', 'selector': 'wallet-view'},{'name': 'WalletWidgetComponent', 'selector': 'wallet-widget'},{'name': 'WelcomeViewComponent', 'selector': 'auth-welcome-view'}];
+    var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'EditModeDirective', 'selector': '[materialEditMode]'},{'name': 'ViewModeDirective', 'selector': '[materialViewMode]'}];
+    var ACTUAL_COMPONENT = {'name': 'MemberFormRoleComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MemberFormRoleComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

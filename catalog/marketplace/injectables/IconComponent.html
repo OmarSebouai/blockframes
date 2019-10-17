@@ -1,0 +1,476 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>IconComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>libs/ui/src/lib/icon-component.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Load the icons and make sure they are provided everywhere.
+To be used at the root of every app.</p>
+<p>Invoke the icons with:
+  <mat-icon svgIcon="notPayed"></mat-icon></p>
+
+            </p>
+
+
+
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(matIconRegistry: MatIconRegistry, domSanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="260" class="link-to-prism">libs/ui/src/lib/icon-component.ts:260</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>matIconRegistry</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatIconRegistry</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>domSanitizer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { MatIconRegistry } from &#x27;@angular/material/icon&#x27;;
+import { DomSanitizer } from &#x27;@angular/platform-browser&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+
+const ICONS_SVG &#x3D; [
+  {
+    name: &#x27;trash&#x27;,
+    url: &#x27;assets/icons/trash.svg&#x27;
+  },
+  {
+    name: &#x27;accepted&#x27;,
+    url: &#x27;assets/icons/accepted.svg&#x27;
+  },
+  {
+    name: &#x27;adjustableWrench&#x27;,
+    url: &#x27;assets/icons/adjustableWrench.svg&#x27;
+  },
+  {
+    name: &#x27;signatory&#x27;,
+    url: &#x27;assets/icons/signatory.svg&#x27;
+  },
+  {
+    name: &#x27;acceptMember&#x27;,
+    url: &#x27;assets/icons/acceptMember.svg&#x27;
+  },
+  {
+    name: &#x27;refuseMember&#x27;,
+    url: &#x27;assets/icons/refuseMember.svg&#x27;
+  },
+  {
+    name: &#x27;cross&#x27;,
+    url: &#x27;assets/icons/cross.svg&#x27;
+  },
+  {
+    name: &#x27;save&#x27;,
+    url: &#x27;assets/icons/save.svg&#x27;
+  },
+  {
+    name: &#x27;edit&#x27;,
+    url: &#x27;assets/icons/edit.svg&#x27;
+  },
+  {
+    name: &#x27;changePass&#x27;,
+    url: &#x27;assets/icons/changePass.svg&#x27;
+  },
+  {
+    name: &#x27;magicWand&#x27;,
+    url: &#x27;assets/icons/magicWand.svg&#x27;
+  },
+  {
+    name: &#x27;magnifyingGlass&#x27;,
+    url: &#x27;assets/icons/magnifyingGlass.svg&#x27;
+  },
+  {
+    name: &#x27;arrow&#x27;,
+    url: &#x27;assets/icons/arrow.svg&#x27;
+  },
+  {
+    name: &#x27;add&#x27;,
+    url: &#x27;assets/icons/add.svg&#x27;
+  },
+  {
+    name: &#x27;applications&#x27;,
+    url: &#x27;assets/apps/applications.svg&#x27;
+  },
+  {
+    name: &#x27;available&#x27;,
+    url: &#x27;assets/icons/available.svg&#x27;
+  },
+  {
+    name: &#x27;delivered&#x27;,
+    url: &#x27;assets/icons/delivered.svg&#x27;
+  },
+  {
+    name: &#x27;disabled&#x27;,
+    url: &#x27;assets/icons/disabled.svg&#x27;
+  },
+  {
+    name: &#x27;enabled&#x27;,
+    url: &#x27;assets/icons/removeRedEye.svg&#x27;
+  },
+  {
+    name: &#x27;filter&#x27;,
+    url: &#x27;assets/icons/filter.svg&#x27;
+  },
+  {
+    name: &#x27;home_of_scripts&#x27;,
+    url: &#x27;assets/apps/home_of_scripts.svg&#x27;
+  },
+  {
+    name: &#x27;bigger_boat&#x27;,
+    url: &#x27;assets/apps/home_of_scripts.svg&#x27;
+  },
+  {
+    name: &#x27;libraryBooks&#x27;,
+    url: &#x27;assets/icons/libraryBooks.svg&#x27;
+  },
+  {
+    name: &#x27;logical&#x27;,
+    url: &#x27;assets/icons/logical.svg&#x27;
+  },
+  {
+    name: &#x27;logoBFdark&#x27;,
+    url: &#x27;assets/logo/logoBFdark.svg&#x27;
+  },
+  {
+    name: &#x27;logoBFlight&#x27;,
+    url: &#x27;assets/logo/logoBFlight.svg&#x27;
+  },
+  {
+    name: &#x27;media_delivering&#x27;,
+    url: &#x27;assets/apps/media_delivering.svg&#x27;
+  },
+  {
+    name: &#x27;media_financiers&#x27;,
+    url: &#x27;assets/apps/media_financiers.svg&#x27;
+  },
+  {
+    name: &#x27;moviefinancing&#x27;,
+    url: &#x27;assets/apps/moviefinancing.svg&#x27;
+  },
+  {
+    name: &#x27;notifications&#x27;,
+    url: &#x27;assets/icons/notifications.svg&#x27;
+  },
+  {
+    name: &#x27;order&#x27;,
+    url: &#x27;assets/icons/order.svg&#x27;
+  },
+  {
+    name: &#x27;notPayed&#x27;,
+    url: &#x27;assets/icons/notPayed.svg&#x27;
+  },
+  {
+    name: &#x27;payed&#x27;,
+    url: &#x27;assets/icons/payed.svg&#x27;
+  },
+  {
+    name: &#x27;pending&#x27;,
+    url: &#x27;assets/icons/pending.svg&#x27;
+  },
+  {
+    name: &#x27;pictureAsPdf&#x27;,
+    url: &#x27;assets/icons/pictureAsPdf.svg&#x27;
+  },
+  {
+    name: &#x27;refused&#x27;,
+    url: &#x27;assets/icons/refused.svg&#x27;
+  },
+  {
+    name: &#x27;signed&#x27;,
+    url: &#x27;assets/icons/signed.svg&#x27;
+  },
+  {
+    name: &#x27;circled_message&#x27;,
+    url: &#x27;assets/circled-icons/message.svg&#x27;
+  },
+  {
+    name: &#x27;circled_payment_ok&#x27;,
+    url: &#x27;assets/circled-icons/paymentOK.svg&#x27;
+  },
+  {
+    name: &#x27;circled_scenario&#x27;,
+    url: &#x27;assets/circled-icons/scenario.svg&#x27;
+  },
+  {
+    name: &#x27;circled_view&#x27;,
+    url: &#x27;assets/circled-icons/view.svg&#x27;
+  },
+  {
+    name: &#x27;circled_upload&#x27;,
+    url: &#x27;assets/circled-icons/upload.svg&#x27;
+  },
+  {
+    name: &#x27;circled_blacklist&#x27;,
+    url: &#x27;assets/circled-icons/blacklist.svg&#x27;
+  },
+  {
+    name: &#x27;circled_delete&#x27;,
+    url: &#x27;assets/circled-icons/delete.svg&#x27;
+  },
+  {
+    name: &#x27;keyIcon&#x27;,
+    url: &#x27;assets/icons/keyIcon.svg&#x27;
+  },
+  {
+    name: &#x27;template&#x27;,
+    url: &#x27;assets/icons/template.svg&#x27;
+  },
+  {
+    name: &#x27;delete&#x27;,
+    url: &#x27;assets/icons/trash.svg&#x27;
+  },
+  {
+    name: &#x27;signature&#x27;,
+    url: &#x27;assets/icons/signature.svg&#x27;
+  },
+  {
+    name: &#x27;pdf&#x27;,
+    url: &#x27;assets/icons/pdf.svg&#x27;
+  },
+  {
+    name: &#x27;listMaterial&#x27;,
+    url: &#x27;assets/icons/listMaterial.svg&#x27;
+  },
+  {
+    name: &#x27;blank&#x27;,
+    url: &#x27;assets/icons/blank.svg&#x27;
+  },
+  {
+    name: &#x27;ordered&#x27;,
+    url: &#x27;assets/icons/ordered.svg&#x27;
+  },
+  {
+    name: &#x27;paid&#x27;,
+    url: &#x27;assets/icons/paid.svg&#x27;
+  },
+  {
+    name: &#x27;arrowOpen&#x27;,
+    url: &#x27;assets/icons/icon_40px_ArrowOpen.svg&#x27;
+  },
+  {
+    name: &#x27;chevronLeft&#x27;,
+    url: &#x27;assets/icons/icon_40px_ChevronLeft.svg&#x27;
+  },
+  {
+    name: &#x27;arrowRight&#x27;,
+    url: &#x27;assets/icons/icon_32px_ArrowRight.svg&#x27;
+  },
+  {
+    name: &#x27;movie-financing&#x27;,
+    url: &#x27;assets/apps/movie-financing.svg&#x27;
+  },
+  {
+    name: &#x27;stories-and-more&#x27;,
+    url: &#x27;assets/apps/stories-and-more.svg&#x27;
+  },
+  {
+    name: &#x27;delivery&#x27;,
+    url: &#x27;assets/apps/delivery.svg&#x27;
+  },
+  {
+    name: &#x27;catalog-marketplace&#x27;,
+    url: &#x27;assets/apps/catalog-marketplace.svg&#x27;
+  },
+  {
+    name: &#x27;catalog-dashboard&#x27;,
+    url: &#x27;assets/apps/catalog-dashboard.svg&#x27;
+  }
+];
+
+/**
+ * Load the icons and make sure they are provided everywhere.
+ * To be used at the root of every app.
+ *
+ * Invoke the icons with:
+ *  &lt;mat-icon svgIcon&#x3D;&quot;notPayed&quot;&gt;&lt;/mat-icon&gt;
+ */
+@Injectable({ providedIn: &#x27;root&#x27; })
+export class IconComponent {
+  constructor(private matIconRegistry: MatIconRegistry,
+              private domSanitizer: DomSanitizer
+  ) {
+    ICONS_SVG.forEach(({ name, url }) &#x3D;&gt; {
+      this.matIconRegistry.addSvgIcon(name, this.domSanitizer.bypassSecurityTrustResourceUrl(url));
+    });
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'IconComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
