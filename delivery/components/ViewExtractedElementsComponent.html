@@ -1,0 +1,1952 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ViewExtractedElementsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.Default</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>movie-view-extracted-elements</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./view-extracted-elements.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./view-extracted-elements.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#moviesToCreate">moviesToCreate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#moviesToUpdate">moviesToUpdate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sales">sales</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#separator">separator</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#clearDataSources">clearDataSources</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#formatMovies">formatMovies</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#formatSales">formatSales</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateMovie">validateMovie</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateMovieSale">validateMovieSale</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(movieQuery: <a href="../injectables/MovieQuery.html">MovieQuery</a>, imageUploader: <a href="../injectables/ImageUploader.html">ImageUploader</a>, cdRef: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:105</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>movieQuery</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MovieQuery.html" target="_self" >MovieQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>imageUploader</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ImageUploader.html" target="_self" >ImageUploader</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearDataSources"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            clearDataSources
+                        </b>
+                        <a href="#clearDataSources"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>clearDataSources()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="1100"
+                            class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:1100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatMovies"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            formatMovies
+                        </b>
+                        <a href="#formatMovies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>formatMovies(sheetTab: <a href="../interfaces/SheetTab.html">SheetTab</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>sheetTab</td>
+                                    <td>
+                                                <code><a href="../interfaces/SheetTab.html" target="_self" >SheetTab</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatSales"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            formatSales
+                        </b>
+                        <a href="#formatSales"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>formatSales(sheetTab: <a href="../interfaces/SheetTab.html">SheetTab</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="802"
+                            class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:802</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>sheetTab</td>
+                                    <td>
+                                                <code><a href="../interfaces/SheetTab.html" target="_self" >SheetTab</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateMovie"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            validateMovie
+                        </b>
+                        <a href="#validateMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateMovie(importErrors: <a href="../interfaces/MovieImportState.html">MovieImportState</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="477"
+                            class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:477</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>importErrors</td>
+                                    <td>
+                                                <code><a href="../interfaces/MovieImportState.html" target="_self" >MovieImportState</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/MovieImportState.html" target="_self" >MovieImportState</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateMovieSale"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            validateMovieSale
+                        </b>
+                        <a href="#validateMovieSale"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateMovieSale(importErrors: <a href="../interfaces/SalesImportState.html">SalesImportState</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="958"
+                            class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:958</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>importErrors</td>
+                                    <td>
+                                                <code><a href="../interfaces/SalesImportState.html" target="_self" >SalesImportState</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SalesImportState.html" target="_self" >SalesImportState</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="moviesToCreate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            moviesToCreate</b>
+                            <a href="#moviesToCreate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new MatTableDataSource&lt;MovieImportState&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:102</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="moviesToUpdate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            moviesToUpdate</b>
+                            <a href="#moviesToUpdate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new MatTableDataSource&lt;MovieImportState&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:103</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sales"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            sales</b>
+                            <a href="#sales"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new MatTableDataSource&lt;SalesImportState&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:104</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="separator"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            separator</b>
+                            <a href="#separator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">libs/movie/src/lib/movie/components/import/view-extracted-elements/view-extracted-elements.component.ts:105</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from &#x27;@angular/core&#x27;;
+import { MatTableDataSource } from &#x27;@angular/material&#x27;;
+import {
+  Movie,
+  MovieQuery,
+  MovieSale,
+  Prize,
+  createMovieMain,
+  createMoviePromotionalDescription,
+  createMovieSalesCast,
+  createMovieSalesInfo,
+  createMovieVersionInfo,
+  createMovieFestivalPrizes,
+  createMovieSalesAgentDeal,
+  cleanModel,
+  createMovieSale
+} from &#x27;../../../+state&#x27;;
+import { SheetTab } from &#x27;@blockframes/utils/spreadsheet&#x27;;
+import { formatCredits } from &#x27;@blockframes/utils/spreadsheet/format&#x27;;
+import { ImageUploader } from &#x27;@blockframes/utils&#x27;;
+import { SSF$Date } from &#x27;ssf/types&#x27;;
+import { getCodeIfExists } from &#x27;../../../static-model/staticModels&#x27;;
+import { SSF } from &#x27;xlsx&#x27;;
+
+export interface SpreadsheetImportError {
+  field: string;
+  name: string;
+  reason: string;
+  type: string;
+  hint?: string;
+}
+
+export interface MovieImportState {
+  movie: Movie;
+  errors?: SpreadsheetImportError[];
+}
+
+export interface SalesImportState {
+  sale: MovieSale;
+  errors?: SpreadsheetImportError[];
+  movieTitle: String;
+  movieInternalRef?: string;
+}
+
+enum SpreadSheetMovie {
+  internalRef,
+  originalTitle,
+  productionYear,
+  scoring,
+  rightsStart,
+  rightsEnd,
+  territories,
+  medias,
+  directors,
+  poster,
+  isan,
+  internationalTitle,
+  length,
+  productionCompanies,
+  broadcasterCoproducers,
+  color,
+  originCountries,
+  europeanQualification,
+  rating,
+  certifications,
+  cast,
+  shortSynopsis,
+  internationalPremiere,
+  originCountryReleaseDate,
+  genres,
+  festivalPrizes,
+  keyAssets,
+  keywords,
+  languages,
+  dubbings,
+  subtitles
+}
+
+enum SpreadSheetSale {
+  internalRef,
+  internationalTitle, // unused
+  operatorName,
+  showOperatorName,
+  rightsStart,
+  rightsEnd,
+  territories,
+  medias,
+  dubbings,
+  subtitles,
+  exclusive,
+  price
+}
+
+@Component({
+  selector: &#x27;movie-view-extracted-elements&#x27;,
+  templateUrl: &#x27;./view-extracted-elements.component.html&#x27;,
+  styleUrls: [&#x27;./view-extracted-elements.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class ViewExtractedElementsComponent {
+
+  public moviesToCreate &#x3D; new MatTableDataSource&lt;MovieImportState&gt;();
+  public moviesToUpdate &#x3D; new MatTableDataSource&lt;MovieImportState&gt;();
+  public sales &#x3D; new MatTableDataSource&lt;SalesImportState&gt;();
+  private separator &#x3D; &#x27;;&#x27;;
+
+  constructor(
+    private movieQuery: MovieQuery,
+    private imageUploader: ImageUploader,
+    private cdRef: ChangeDetectorRef,
+  ) { }
+
+  public formatMovies(sheetTab: SheetTab) {
+    this.clearDataSources();
+
+    sheetTab.rows.forEach(async spreadSheetRow &#x3D;&gt; {
+      if (spreadSheetRow[SpreadSheetMovie.originalTitle]) {
+        const existingMovie &#x3D; this.movieQuery.existingMovie(spreadSheetRow[SpreadSheetMovie.internalRef]);
+        const movie &#x3D; {
+          main: createMovieMain(),
+          promotionalDescription: createMoviePromotionalDescription(),
+          salesCast: createMovieSalesCast(),
+          salesInfo: createMovieSalesInfo(),
+          versionInfo: createMovieVersionInfo(),
+          festivalPrizes: createMovieFestivalPrizes(),
+          salesAgentDeal: createMovieSalesAgentDeal(),
+          ...existingMovie ? cleanModel(existingMovie) : undefined
+        } as Movie;
+
+        movie.main.status &#x3D; &#x27;finished&#x27;; // all imported movies are in finished state
+        const importErrors &#x3D; { movie, errors: [] } as MovieImportState;
+
+        //////////////////
+        // REQUIRED FIELDS
+        //////////////////
+
+        // INTERNAL REF (Film Code)
+        movie.main.internalRef &#x3D; spreadSheetRow[SpreadSheetMovie.internalRef];
+
+        // ORIGINAL TITLE (Original Title)
+        if (spreadSheetRow[SpreadSheetMovie.originalTitle]) {
+          movie.main.title.original &#x3D; spreadSheetRow[SpreadSheetMovie.originalTitle];
+        }
+
+        // PRODUCTION YEAR
+        if (!isNaN(Number(spreadSheetRow[SpreadSheetMovie.productionYear]))) {
+          movie.main.productionYear &#x3D; parseInt(spreadSheetRow[SpreadSheetMovie.productionYear], 10);
+        }
+
+        // SCORING (Scoring)
+        if (spreadSheetRow[SpreadSheetMovie.scoring]) {
+          const scoring &#x3D; getCodeIfExists(&#x27;SCORING&#x27;, spreadSheetRow[SpreadSheetMovie.scoring]);
+          if (scoring) {
+            movie.salesInfo.scoring &#x3D; scoring;
+          } else {
+            importErrors.errors.push({
+              type: &#x27;error&#x27;,
+              field: &#x27;salesInfo.scoring&#x27;,
+              name: &quot;Scoring&quot;,
+              reason: &#x60;${spreadSheetRow[SpreadSheetMovie.scoring]} not found in scoring list&#x60;,
+              hint: &#x27;Edit corresponding sheet field.&#x27;
+            } as SpreadsheetImportError);
+
+          }
+        }
+
+        // BEGINNING OF RIGHTS (Mandate beginning of rights)
+        if (spreadSheetRow[SpreadSheetMovie.rightsStart]) {
+          const rightsStart: SSF$Date &#x3D; SSF.parse_date_code(spreadSheetRow[SpreadSheetMovie.rightsStart]);
+          movie.salesAgentDeal.rights.from &#x3D; new Date(&#x60;${rightsStart.y}-${rightsStart.m}-${rightsStart.d}&#x60;);
+        }
+
+        // END OF RIGHTS (Mandate End of rights)
+        if (spreadSheetRow[SpreadSheetMovie.rightsEnd]) {
+          const rightsEnd: SSF$Date &#x3D; SSF.parse_date_code(spreadSheetRow[SpreadSheetMovie.rightsEnd]);
+          movie.salesAgentDeal.rights.to &#x3D; new Date(&#x60;${rightsEnd.y}-${rightsEnd.m}-${rightsEnd.d}&#x60;);
+        }
+
+        // TERRITORIES (Mandate Territories)
+        // @todo #643 for territories: handle &quot;World excl. USA, Japan, France, Germany and Belgium&quot;
+        if (spreadSheetRow[SpreadSheetMovie.territories]) {
+          movie.salesAgentDeal.territories &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.territories].split(this.separator).forEach((c: string) &#x3D;&gt; {
+            const territory &#x3D; getCodeIfExists(&#x27;TERRITORIES&#x27;, c);
+            if (territory) {
+              movie.salesAgentDeal.territories.push(territory);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;error&#x27;,
+                field: &#x27;salesAgentDeal.territories&#x27;,
+                name: &quot;Mandate Territories&quot;,
+                reason: &#x60;${c} not found in territories list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+        }
+
+        // MEDIAS (Mandate Medias)
+        if (spreadSheetRow[SpreadSheetMovie.medias]) {
+          movie.salesAgentDeal.medias &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.medias].split(&#x27;;&#x27;).forEach((c: string) &#x3D;&gt; {
+            const media &#x3D; getCodeIfExists(&#x27;MEDIAS&#x27;, c);
+            if (media) {
+              movie.salesAgentDeal.medias.push(media);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;error&#x27;,
+                field: &#x27;salesAgentDeal.medias&#x27;,
+                name: &quot;Mandate Medias&quot;,
+                reason: &#x60;${c} not found in medias list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+        }
+
+        // DIRECTORS (Director(s))
+        if (spreadSheetRow[SpreadSheetMovie.directors]) {
+          movie.main.directors &#x3D; formatCredits(spreadSheetRow[SpreadSheetMovie.directors], this.separator);
+        }
+
+        // POSTER (Poster)
+        movie.main.poster &#x3D; await this.imageUploader.upload(spreadSheetRow[SpreadSheetMovie.poster]);
+
+        //////////////////
+        // OPTIONAL FIELDS
+        //////////////////
+
+        // ISAN (ISAN Number)
+        if (spreadSheetRow[SpreadSheetMovie.isan]) {
+          movie.main.isan &#x3D; spreadSheetRow[SpreadSheetMovie.isan];
+        }
+
+        // INTERNATIONAL TITLE (International Title)
+        if (spreadSheetRow[SpreadSheetMovie.internationalTitle]) {
+          movie.main.title.international &#x3D; spreadSheetRow[SpreadSheetMovie.internationalTitle];
+        }
+
+        // LENGTH (Length)
+        if (!isNaN(Number(spreadSheetRow[SpreadSheetMovie.length]))) {
+          movie.main.length &#x3D; parseInt(spreadSheetRow[SpreadSheetMovie.length], 10);
+        }
+
+        // PRODUCTION COMPANIES (Production Companie(s))
+        if (spreadSheetRow[SpreadSheetMovie.productionCompanies]) {
+          movie.main.productionCompanies &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.productionCompanies].split(this.separator).forEach((p: string) &#x3D;&gt; {
+            movie.main.productionCompanies.push({ firstName: p });
+          });
+        }
+
+        // BROADCASTER COPRODUCERS (TV / Platform coproducer(s))
+        if (spreadSheetRow[SpreadSheetMovie.broadcasterCoproducers]) {
+          movie.salesInfo.broadcasterCoproducers &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.broadcasterCoproducers].split(this.separator).forEach((p: string) &#x3D;&gt; {
+            movie.salesInfo.broadcasterCoproducers.push(p);
+          });
+        }
+
+        // COLOR (Color / Black &amp; White )
+        if (spreadSheetRow[SpreadSheetMovie.color]) {
+          const color &#x3D; getCodeIfExists(&#x27;COLORS&#x27;, spreadSheetRow[SpreadSheetMovie.color]);
+          if (color) {
+            movie.salesInfo.color &#x3D; color;
+          } else {
+            importErrors.errors.push({
+              type: &#x27;warning&#x27;,
+              field: &#x27;salesInfo.color&#x27;,
+              name: &quot;Color&quot;,
+              reason: &#x60;${spreadSheetRow[SpreadSheetMovie.color]} not found in colors list&#x60;,
+              hint: &#x27;Edit corresponding sheet field.&#x27;
+            } as SpreadsheetImportError);
+
+          }
+        }
+
+        // ORIGIN COUNTRIES (Countries of Origin)
+        if (spreadSheetRow[SpreadSheetMovie.originCountries]) {
+          movie.main.originCountries &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.originCountries].split(this.separator).forEach((c: string) &#x3D;&gt; {
+            const country &#x3D; getCodeIfExists(&#x27;TERRITORIES&#x27;, c);
+            if (country) {
+              movie.main.originCountries.push(country);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;warning&#x27;,
+                field: &#x27;main.originCountries&#x27;,
+                name: &quot;Countries of origin&quot;,
+                reason: &#x60;${c} not found in territories list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+        }
+
+        // CERTIFICATIONS (European Qualification)
+        if (spreadSheetRow[SpreadSheetMovie.europeanQualification]) {
+          movie.salesInfo.europeanQualification &#x3D; spreadSheetRow[SpreadSheetMovie.europeanQualification].toLowerCase() &#x3D;&#x3D;&#x3D; &#x27;yes&#x27; ? true : false;
+        }
+
+        // PEGI (Rating)
+        if (spreadSheetRow[SpreadSheetMovie.rating]) {
+          movie.salesInfo.pegi &#x3D; spreadSheetRow[SpreadSheetMovie.rating];
+        }
+
+        // CERTIFICATIONS (Certifications)
+        if (spreadSheetRow[SpreadSheetMovie.certifications]) {
+          movie.salesInfo.certifications &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.certifications].split(this.separator).forEach((c: string) &#x3D;&gt; {
+            const certification &#x3D; getCodeIfExists(&#x27;CERTIFICATIONS&#x27;, c);
+            if (certification) {
+              movie.salesInfo.certifications.push(certification);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;warning&#x27;,
+                field: &#x27;salesInfo.certifications&#x27;,
+                name: &quot;Certifications&quot;,
+                reason: &#x60;${c} not found in certifications list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+
+        }
+
+        // CREDITS (Principal Cast)
+        if (spreadSheetRow[SpreadSheetMovie.cast]) {
+          movie.salesCast.credits &#x3D; formatCredits(spreadSheetRow[SpreadSheetMovie.cast], this.separator)
+            .map(credit &#x3D;&gt; ({ ...credit, creditRole: &#x27;actor&#x27; }));
+        }
+
+        // SYNOPSIS (Short Synopsis)
+        if (spreadSheetRow[SpreadSheetMovie.shortSynopsis]) {
+          movie.main.shortSynopsis &#x3D; spreadSheetRow[SpreadSheetMovie.shortSynopsis];
+        }
+
+        // INTERNATIONAL PREMIERE (International Premiere )
+        if (spreadSheetRow[SpreadSheetMovie.internationalPremiere]) {
+          if (spreadSheetRow[SpreadSheetMovie.internationalPremiere].split(this.separator).length &#x3D;&#x3D;&#x3D; 2 &amp;&amp; !isNaN(Number(spreadSheetRow[SpreadSheetMovie.internationalPremiere].split(&#x27;,&#x27;)[1]))) {
+            movie.salesInfo.internationalPremiere.name &#x3D; spreadSheetRow[SpreadSheetMovie.internationalPremiere].split(&#x27;,&#x27;)[0];
+            movie.salesInfo.internationalPremiere.year &#x3D; Number(spreadSheetRow[SpreadSheetMovie.internationalPremiere].split(&#x27;,&#x27;)[1]);
+          }
+        }
+
+        // ORIGIN COUNTRY RELEASE DATE (Release date in Origin Country)
+        if (spreadSheetRow[SpreadSheetMovie.originCountryReleaseDate]) {
+          const originCountryReleaseDate: SSF$Date &#x3D; SSF.parse_date_code(spreadSheetRow[SpreadSheetMovie.originCountryReleaseDate]);
+          movie.salesInfo.originCountryReleaseDate &#x3D; new Date(&#x60;${originCountryReleaseDate.y}-${originCountryReleaseDate.m}-${originCountryReleaseDate.d}&#x60;);
+        }
+
+        // GENRES (Genres)
+        if (spreadSheetRow[SpreadSheetMovie.genres]) {
+          movie.main.genres &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.genres].split(this.separator).forEach((g: string) &#x3D;&gt; {
+            const genre &#x3D; getCodeIfExists(&#x27;GENRES&#x27;, g);
+            if (genre) {
+              movie.main.genres.push(genre);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;warning&#x27;,
+                field: &#x27;main.genres&#x27;,
+                name: &quot;Genres&quot;,
+                reason: &#x60;${g} not found in genres list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+        }
+
+        // PRIZES (Prizes)
+        if (spreadSheetRow[SpreadSheetMovie.festivalPrizes]) {
+          movie.festivalPrizes.prizes &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.festivalPrizes].split(this.separator).forEach((p: string) &#x3D;&gt; {
+            if (p.split(&#x27;,&#x27;).length &#x3D;&#x3D;&#x3D; 3) {
+              const prize &#x3D; { name: &#x27;&#x27;, year: undefined, prize: &#x27;&#x27; } as Prize;
+              prize.name &#x3D; p.split(&#x27;,&#x27;)[0];
+              prize.year &#x3D; parseInt(p.split(&#x27;,&#x27;)[1], 10);
+              prize.prize &#x3D; p.split(&#x27;,&#x27;)[2];
+              movie.festivalPrizes.prizes.push(prize);
+            }
+
+          });
+        }
+
+        // KEY ASSETS (Key Assets)
+        if (spreadSheetRow[SpreadSheetMovie.keyAssets]) {
+          movie.promotionalDescription.keyAssets &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.keyAssets].split(this.separator).forEach((k: string) &#x3D;&gt; {
+            movie.promotionalDescription.keyAssets.push(k);
+          });
+        }
+
+        // KEYWORDS
+        if (spreadSheetRow[SpreadSheetMovie.keywords]) {
+          movie.promotionalDescription.keywords &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.keywords].split(this.separator).forEach((k: string) &#x3D;&gt; {
+            movie.promotionalDescription.keywords.push(k);
+          });
+        }
+
+        // LANGUAGES (Original Language(s))
+        if (spreadSheetRow[SpreadSheetMovie.languages]) {
+          movie.main.languages &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.languages].split(this.separator).forEach((g: string) &#x3D;&gt; {
+            const language &#x3D; getCodeIfExists(&#x27;LANGUAGES&#x27;, g);
+            if (language) {
+              movie.main.languages.push(language);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;warning&#x27;,
+                field: &#x27;main.languages&#x27;,
+                name: &quot;Languages&quot;,
+                reason: &#x60;${g} not found in languages list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+        }
+
+        // DUBS (Available dubbing(s))
+        if (spreadSheetRow[SpreadSheetMovie.dubbings]) {
+          movie.versionInfo.dubbings &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.dubbings].split(this.separator).forEach((g: string) &#x3D;&gt; {
+            const dubbing &#x3D; getCodeIfExists(&#x27;LANGUAGES&#x27;, g);
+            if (dubbing) {
+              movie.versionInfo.dubbings.push(dubbing);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;warning&#x27;,
+                field: &#x27;versionInfo.dubbing&#x27;,
+                name: &quot;Dubbings&quot;,
+                reason: &#x60;${g} not found in languages list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+        }
+
+        // SUBTILES (Available subtitle(s))
+        if (spreadSheetRow[SpreadSheetMovie.subtitles]) {
+          movie.versionInfo.subtitles &#x3D; [];
+          spreadSheetRow[SpreadSheetMovie.subtitles].split(this.separator).forEach((g: string) &#x3D;&gt; {
+            const subtitle &#x3D; getCodeIfExists(&#x27;LANGUAGES&#x27;, g);
+            if (subtitle) {
+              movie.versionInfo.subtitles.push(subtitle);
+            } else {
+              importErrors.errors.push({
+                type: &#x27;warning&#x27;,
+                field: &#x27;versionInfo.subtitle&#x27;,
+                name: &quot;Subtitles&quot;,
+                reason: &#x60;${g} not found in languages list&#x60;,
+                hint: &#x27;Edit corresponding sheet field.&#x27;
+              } as SpreadsheetImportError);
+            }
+          });
+        }
+
+        ///////////////
+        // VALIDATION
+        ///////////////
+
+        const movieWithErrors &#x3D; this.validateMovie(importErrors);
+        if (movieWithErrors.movie.id) {
+          this.moviesToUpdate.data.push(movieWithErrors);
+          this.moviesToUpdate.data &#x3D; [... this.moviesToUpdate.data];
+        } else {
+          this.moviesToCreate.data.push(movieWithErrors);
+          this.moviesToCreate.data &#x3D; [... this.moviesToCreate.data];
+        }
+
+        this.cdRef.detectChanges();
+      }
+    });
+  }
+
+  private validateMovie(importErrors: MovieImportState): MovieImportState {
+    const movie &#x3D; importErrors.movie;
+    const errors &#x3D; importErrors.errors;
+    //////////////////
+    // REQUIRED FIELDS
+    //////////////////
+
+    if (!movie.main.internalRef) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;main.internalRef&#x27;,
+        name: &quot;Film Code &quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.main.title.original) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;main.title.original&#x27;,
+        name: &quot;Original title&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.main.productionYear) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;main.productionYear&#x27;,
+        name: &quot;Production Year&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesInfo.scoring) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;salesInfo.scoring&#x27;,
+        name: &quot;Scoring&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesAgentDeal.rights.from) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;salesAgentDeal.rights.from&#x27;,
+        name: &#x27;Mandate Beginning of rights&#x27;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesAgentDeal.rights.to) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;salesAgentDeal.rights.to&#x27;,
+        name: &#x27;Mandate End of rights&#x27;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesAgentDeal.territories) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;salesAgentDeal.territories&#x27;,
+        name: &quot;Mandate Territories&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesAgentDeal.medias) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;salesAgentDeal.medias&#x27;,
+        name: &quot;Mandate Medias&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.main.directors.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;main.directors&#x27;,
+        name: &quot;Directors&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.main.poster) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;main.poster&#x27;,
+        name: &quot;Poster&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Add poster URL in corresponding column.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    //////////////////
+    // OPTIONAL FIELDS
+    //////////////////
+
+    if (!movie.main.isan) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.isan&#x27;,
+        name: &quot;ISAN number&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.main.title.international) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.title.international&#x27;,
+        name: &quot;International title&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.main.length) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.length&#x27;,
+        name: &quot;Length&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.main.productionCompanies.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.productionCompanies&#x27;,
+        name: &quot;Production Companie(s)&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.salesInfo.broadcasterCoproducers.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.salesInfo.broadcasterCoproducers&#x27;,
+        name: &quot;TV / Platform coproducer(s)&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesInfo.color) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;salesInfo.color&#x27;,
+        name: &quot;Color / Black &amp; White &quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.main.originCountries.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.originCountries&#x27;,
+        name: &quot;Countries of origin&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesInfo.certifications) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;salesInfo.certifications&#x27;,
+        name: &quot;Certifications&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.salesInfo.europeanQualification &#x3D;&#x3D;&#x3D; undefined) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;salesInfo.europeanQualification&#x27;,
+        name: &#x27;European Qualification&#x27;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesInfo.pegi) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;salesInfo.pegi&#x27;,
+        name: &#x27;Rating&#x27;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.salesCast.credits.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;salesCast.credits&#x27;,
+        name: &quot;Principal Cast&quot;,
+        reason: &#x27;Optional fields are missing&#x27;,
+        hint: &#x27;Edit corresponding sheets fields: directors, principal cast.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.main.shortSynopsis) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.shortSynopsis&#x27;,
+        name: &quot;Synopsis&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesInfo.internationalPremiere) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;salesInfo.internationalPremiere&#x27;,
+        name: &quot;International Premiere&quot;,
+        reason: &#x27;Optional field is missing or could not be parsed&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (!movie.salesInfo.originCountryReleaseDate) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;salesInfo.originCountryReleaseDate&#x27;,
+        name: &#x27;Release date in Origin Country&#x27;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.main.genres.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.genres&#x27;,
+        name: &quot;Genres&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.festivalPrizes.prizes.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;festivalPrizes.prizes&#x27;,
+        name: &quot;Festival Prizes&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.promotionalDescription.keyAssets.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;promotionalDescription.keyAssets&#x27;,
+        name: &quot;Key assets&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.promotionalDescription.keywords.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;promotionalDescription.keywords&#x27;,
+        name: &quot;Keywords&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.main.languages.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;main.languages&#x27;,
+        name: &quot;Languages&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.versionInfo.dubbings.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;versionInfo.dubbings&#x27;,
+        name: &quot;Dubbings&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    if (movie.versionInfo.subtitles.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;versionInfo.subtitles&#x27;,
+        name: &quot;Subtitles&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    return importErrors;
+  }
+
+
+  public formatSales(sheetTab: SheetTab) {
+    this.clearDataSources();
+    sheetTab.rows.forEach(spreadSheetRow &#x3D;&gt; {
+
+      if (spreadSheetRow[SpreadSheetSale.internalRef]) {
+
+        const movie &#x3D; this.movieQuery.existingMovie(spreadSheetRow[SpreadSheetSale.internalRef]);
+        const sale &#x3D; createMovieSale();
+        const importErrors &#x3D; {
+          sale,
+          errors: [],
+          movieInternalRef: spreadSheetRow[SpreadSheetSale.internalRef],
+          movieTitle: movie ? movie.main.title.original : undefined
+        } as SalesImportState;
+
+        if (movie) {
+          // OPERATOR NAME
+          if (spreadSheetRow[SpreadSheetSale.operatorName]) {
+            sale.operatorName &#x3D; spreadSheetRow[SpreadSheetSale.operatorName];
+          }
+
+          // SHOW OPERATOR NAME
+          if (spreadSheetRow[SpreadSheetSale.showOperatorName]) {
+            sale.showOperatorName &#x3D; spreadSheetRow[SpreadSheetSale.showOperatorName].toLowerCase() &#x3D;&#x3D;&#x3D; &#x27;yes&#x27; ? true : false;
+          }
+
+          // BEGINNING OF RIGHTS
+          if (spreadSheetRow[SpreadSheetSale.rightsStart]) {
+            const rightsStart: SSF$Date &#x3D; SSF.parse_date_code(spreadSheetRow[SpreadSheetSale.rightsStart]);
+            sale.rights.from &#x3D; new Date(&#x60;${rightsStart.y}-${rightsStart.m}-${rightsStart.d}&#x60;);
+          }
+
+          // END OF RIGHTS
+          if (spreadSheetRow[SpreadSheetSale.rightsEnd]) {
+            const rightsEnd: SSF$Date &#x3D; SSF.parse_date_code(spreadSheetRow[SpreadSheetSale.rightsEnd]);
+            sale.rights.to &#x3D; new Date(&#x60;${rightsEnd.y}-${rightsEnd.m}-${rightsEnd.d}&#x60;);
+          }
+
+          // TERRITORIES (Mandate Territories)
+          if (spreadSheetRow[SpreadSheetSale.territories]) {
+            sale.territories &#x3D; [];
+            spreadSheetRow[SpreadSheetSale.territories].split(this.separator).forEach((c: string) &#x3D;&gt; {
+              const territory &#x3D; getCodeIfExists(&#x27;TERRITORIES&#x27;, c);
+              if (territory) {
+                sale.territories.push(territory);
+              } else {
+                importErrors.errors.push({
+                  type: &#x27;error&#x27;,
+                  field: &#x27;territories&#x27;,
+                  name: &quot;Territories sold&quot;,
+                  reason: &#x60;${c} not found in territories list&#x60;,
+                  hint: &#x27;Edit corresponding sheet field.&#x27;
+                } as SpreadsheetImportError);
+              }
+            });
+          }
+
+          // MEDIAS (Mandate Medias)
+          if (spreadSheetRow[SpreadSheetSale.medias]) {
+            sale.medias &#x3D; [];
+            spreadSheetRow[SpreadSheetSale.medias].split(this.separator).forEach((c: string) &#x3D;&gt; {
+              const media &#x3D; getCodeIfExists(&#x27;MEDIAS&#x27;, c);
+              if (media) {
+                sale.medias.push(media);
+              } else {
+                importErrors.errors.push({
+                  type: &#x27;error&#x27;,
+                  field: &#x27;medias&#x27;,
+                  name: &quot;Media(s)&quot;,
+                  reason: &#x60;${c} not found in medias list&#x60;,
+                  hint: &#x27;Edit corresponding sheet field.&#x27;
+                } as SpreadsheetImportError);
+              }
+            });
+          }
+
+          // DUBS (Authorized language(s))
+          if (spreadSheetRow[SpreadSheetSale.dubbings]) {
+            sale.dubbings &#x3D; [];
+            spreadSheetRow[SpreadSheetSale.dubbings].split(this.separator).forEach((g: string) &#x3D;&gt; {
+              const dubbing &#x3D; getCodeIfExists(&#x27;LANGUAGES&#x27;, g);
+              if (dubbing) {
+                sale.dubbings.push(dubbing);
+              } else {
+                importErrors.errors.push({
+                  type: &#x27;error&#x27;,
+                  field: &#x27;dubbing&#x27;,
+                  name: &quot;Authorized language(s)&quot;,
+                  reason: &#x60;${g} not found in languages list&#x60;,
+                  hint: &#x27;Edit corresponding sheet field.&#x27;
+                } as SpreadsheetImportError);
+              }
+            });
+
+          }
+
+          // SUBTILES (Available subtitle(s))
+          if (spreadSheetRow[SpreadSheetSale.subtitles]) {
+            sale.subtitles &#x3D; [];
+            spreadSheetRow[SpreadSheetSale.subtitles].split(this.separator).forEach((g: string) &#x3D;&gt; {
+              const subtitle &#x3D; getCodeIfExists(&#x27;LANGUAGES&#x27;, g);
+              if (!!subtitle) {
+                sale.subtitles.push(subtitle);
+              } else {
+                importErrors.errors.push({
+                  type: &#x27;error&#x27;,
+                  field: &#x27;subtitle&#x27;,
+                  name: &quot;Authorized subtitle(s)&quot;,
+                  reason: &#x60;${g} not found in languages list&#x60;,
+                  hint: &#x27;Edit corresponding sheet field.&#x27;
+                } as SpreadsheetImportError);
+              }
+            });
+
+          }
+
+          // EXCLUSIVE DEAL
+          if (spreadSheetRow[SpreadSheetSale.exclusive]) {
+            sale.exclusive &#x3D; spreadSheetRow[SpreadSheetSale.exclusive].toLowerCase() &#x3D;&#x3D;&#x3D; &#x27;yes&#x27; ? true : false;
+          }
+
+          // PRICE
+          if (!isNaN(Number(spreadSheetRow[SpreadSheetSale.price]))) {
+            sale.price &#x3D; parseInt(spreadSheetRow[SpreadSheetSale.price], 10);
+          }
+
+          // Checks if sale already exists
+          if (this.movieQuery.existingSale(movie.main.internalRef, sale)) {
+            importErrors.errors.push({
+              type: &#x27;error&#x27;,
+              field: &#x27;sale&#x27;,
+              name: &#x27;Sale&#x27;,
+              reason: &#x27;Sale already added&#x27;,
+              hint: &#x27;Sale already added&#x27;
+            } as SpreadsheetImportError)
+          }
+
+        } else {
+          importErrors.errors.push({
+            type: &#x27;error&#x27;,
+            field: &#x27;internalRef&#x27;,
+            name: &quot;Movie&quot;,
+            reason: &#x27;Movie not found&#x27;,
+            hint: &#x27;Try importing it first or check if data is correct.&#x27;
+          } as SpreadsheetImportError);
+        }
+
+        const saleWithErrors &#x3D; this.validateMovieSale(importErrors);
+        this.sales.data.push(saleWithErrors);
+        this.sales.data &#x3D; [... this.sales.data];
+
+      }
+
+    });
+  }
+
+  private validateMovieSale(importErrors: SalesImportState): SalesImportState {
+    const sale &#x3D; importErrors.sale;
+
+    const errors &#x3D; importErrors.errors;
+
+    // No movie found
+    if (!importErrors.movieTitle) {
+      return importErrors;
+    }
+
+    //////////////////
+    // REQUIRED FIELDS
+    //////////////////
+
+    //  OPERATOR NAME
+    if (!sale.operatorName) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;operatorName&#x27;,
+        name: &quot;Operator name&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    //  OPERATOR NAME
+    if (!sale.operatorName) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;operatorName&#x27;,
+        name: &quot;Operator name&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // SHOW OPERATOR NAME
+    if (sale.showOperatorName &#x3D;&#x3D;&#x3D; undefined) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;showOperatorName&#x27;,
+        name: &quot;Do you want to show the operator name on a buyer research ?&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // BEGINNING OF RIGHTS
+    if (!sale.rights.from) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;rights.from&#x27;,
+        name: &#x27;Beginning of rights&#x27;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // END OF RIGHTS
+    if (!sale.rights.to) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;rights.to&#x27;,
+        name: &#x27;End of rights&#x27;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // TERRITORIES
+    if (!sale.territories) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;territories&#x27;,
+        name: &quot;Territories sold&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // MEDIAS
+    if (!sale.medias) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;medias&#x27;,
+        name: &quot;Media(s)&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // DUBBINGS
+    if (sale.dubbings.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;dubbings&#x27;,
+        name: &quot;Authorized language(s)&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // SUBTITLES
+    if (sale.subtitles.length &#x3D;&#x3D;&#x3D; 0) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;subtitles&#x27;,
+        name: &quot;Authorized subtitle(s)&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    // EXCLUSIVE
+    if (sale.exclusive &#x3D;&#x3D;&#x3D; undefined) {
+      errors.push({
+        type: &#x27;error&#x27;,
+        field: &#x27;exclusive&#x27;,
+        name: &quot;Exclusive deal&quot;,
+        reason: &#x27;Required field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    //////////////////
+    // OPTIONAL FIELDS
+    //////////////////
+
+    // PRICE
+    if (!sale.price) {
+      errors.push({
+        type: &#x27;warning&#x27;,
+        field: &#x27;price&#x27;,
+        name: &quot;Sale price&quot;,
+        reason: &#x27;Optional field is missing&#x27;,
+        hint: &#x27;Edit corresponding sheet field.&#x27;
+      } as SpreadsheetImportError);
+    }
+
+    return importErrors;
+  }
+
+  private clearDataSources() {
+    this.moviesToCreate.data &#x3D; [];
+    this.moviesToUpdate.data &#x3D; [];
+    this.sales.data &#x3D; [];
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;moviesToUpdate.data.length&quot;&gt;
+  &lt;h3&gt;Movies to Update&lt;/h3&gt;
+  &lt;movie-table-extracted-movies [rows]&#x3D;&quot;moviesToUpdate&quot; mode&#x3D;&quot;update&quot;&gt;&lt;/movie-table-extracted-movies&gt;
+&lt;/ng-container&gt;
+&lt;ng-container *ngIf&#x3D;&quot;moviesToCreate.data.length&quot;&gt;
+  &lt;h3&gt;Movies to Create&lt;/h3&gt;
+  &lt;movie-table-extracted-movies [rows]&#x3D;&quot;moviesToCreate&quot; mode&#x3D;&quot;create&quot;&gt;&lt;/movie-table-extracted-movies&gt;
+&lt;/ng-container&gt;
+&lt;ng-container *ngIf&#x3D;&quot;sales.data.length&quot;&gt;
+  &lt;h3&gt;Movies Sales&lt;/h3&gt;
+  &lt;movie-table-extracted-sales [rows]&#x3D;&quot;sales&quot;&gt;&lt;/movie-table-extracted-sales&gt;
+&lt;/ng-container&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./view-extracted-elements.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="moviesToUpdate.data.length">  <h3>Movies to Update</h3>  <movie-table-extracted-movies [rows]="moviesToUpdate" mode="update"></movie-table-extracted-movies></ng-container><ng-container *ngIf="moviesToCreate.data.length">  <h3>Movies to Create</h3>  <movie-table-extracted-movies [rows]="moviesToCreate" mode="create"></movie-table-extracted-movies></ng-container><ng-container *ngIf="sales.data.length">  <h3>Movies Sales</h3>  <movie-table-extracted-sales [rows]="sales"></movie-table-extracted-sales></ng-container></div>'
+    var COMPONENTS = [{'name': 'ActionsListComponent', 'selector': 'actions-list'},{'name': 'ActionsPickerComponent', 'selector': 'actions-picker'},{'name': 'ActionsPickerListComponent', 'selector': 'actions-picker-list'},{'name': 'AddComponent', 'selector': 'ip-add'},{'name': 'AppComponent', 'selector': 'delivery-root'},{'name': 'AvatarListComponent', 'selector': 'avatar-list'},{'name': 'ButtonUploadComponent', 'selector': 'button-upload'},{'name': 'CalendarComponent', 'selector': 'month-calendar'},{'name': 'ChipsAutocompleteComponent', 'selector': 'chips-autocomplete'},{'name': 'ConfirmComponent', 'selector': 'blockframes-confirm'},{'name': 'ContextMenuComponent', 'selector': 'context-menu'},{'name': 'DatepickerRangeComponent', 'selector': 'datepicker-range'},{'name': 'DeliveryActionsComponent', 'selector': 'delivery-actions'},{'name': 'DeliveryAddChooseStarterComponent', 'selector': 'delivery-add-choose-starter'},{'name': 'DeliveryAddFindMovieComponent', 'selector': 'delivery-add-find-movie'},{'name': 'DeliveryAddSettingsComponent', 'selector': 'delivery-add-settings'},{'name': 'DeliveryAddSpecificDeliveryListPickerComponent', 'selector': 'delivery-add-specific-delivery-list-picker'},{'name': 'DeliveryAddTemplatePickerComponent', 'selector': 'delivery-add-template-picker'},{'name': 'DeliveryEditableComponent', 'selector': 'delivery-editable'},{'name': 'DeliveryInformationsDatesDisplayComponent', 'selector': 'delivery-informations-dates-display'},{'name': 'DeliveryInformationsDatesFormComponent', 'selector': '[formGroup] delivery-informations-dates-form'},{'name': 'DeliveryInformationsDeadlinesFormComponent', 'selector': '[formGroup] delivery-informations-deadlines-form'},{'name': 'DeliveryInformationsDeadlinesRepertoryComponent', 'selector': 'delivery-informations-deadlines-repertory'},{'name': 'DeliveryInformationsEditableComponent', 'selector': 'delivery-informations-editable'},{'name': 'DeliveryInformationsStakeholdersComponent', 'selector': 'delivery-informations-stakeholders'},{'name': 'DeliveryInformationsStepsFormComponent', 'selector': '[formGroup] delivery-informations-steps-form'},{'name': 'DeliveryInformationsStepsRepertoryComponent', 'selector': 'delivery-informations-steps-repertory'},{'name': 'DeliveryListComponent', 'selector': 'delivery-list'},{'name': 'DeliveryMaterialFormComponent', 'selector': '[formGroupName] delivery-material-form, [formGroup] delivery-material-form, delivery-material-form'},{'name': 'DeliveryMaterialListComponent', 'selector': 'delivery-material-list'},{'name': 'DeliveryRepertoryComponent', 'selector': 'delivery-repertory'},{'name': 'DeliveryStakeholdersEditableComponent', 'selector': 'delivery-stakeholders-editable'},{'name': 'DeliveryStakeholdersRepertoryComponent', 'selector': 'delivery-stakeholders-repertory'},{'name': 'DeliveryStatusesComponent', 'selector': 'delivery-statuses'},{'name': 'EditableComponent', 'selector': 'ui-editable'},{'name': 'EditableSidenavComponent', 'selector': 'editable-sidenav'},{'name': 'EmailVerifyComponent', 'selector': 'auth-email-verify'},{'name': 'ExplorerComponent', 'selector': 'ip-explorer'},{'name': 'FeedbackMessageComponent', 'selector': 'feedback-message'},{'name': 'FileUploadComponent', 'selector': 'file-upload'},{'name': 'HeaderComponent', 'selector': 'toolbar-header'},{'name': 'HomeEmptyComponent', 'selector': 'movie-home-empty'},{'name': 'IdentityComponent', 'selector': 'auth-identity'},{'name': 'IdentityFeedbackComponent', 'selector': 'auth-identity-feedback'},{'name': 'ImportSpreadsheetComponent', 'selector': 'movie-import-spreadsheet'},{'name': 'ImportStepperComponent', 'selector': 'movie-import-stepper'},{'name': 'InvitationItemComponent', 'selector': 'invitation-item'},{'name': 'InvitationListComponent', 'selector': 'invitation-list'},{'name': 'KeyManagerItemComponent', 'selector': 'key-manager-item'},{'name': 'KeyManagerListComponent', 'selector': 'key-manager-list'},{'name': 'LayoutComponent', 'selector': 'delivery-layout'},{'name': 'LeftMenuComponent', 'selector': 'toolbar-left-menu'},{'name': 'LoginViewComponent', 'selector': 'auth-login-view'},{'name': 'MemberAddComponent', 'selector': 'member-add'},{'name': 'MemberEditableComponent', 'selector': 'member-editable'},{'name': 'MemberFormRoleComponent', 'selector': '[formGroup] member-form-role'},{'name': 'MemberInvitationComponent', 'selector': 'member-invitation'},{'name': 'MemberPendingComponent', 'selector': 'member-pending'},{'name': 'MemberRepertoryComponent', 'selector': 'member-repertory'},{'name': 'MovieCardComponent', 'selector': '[movie] movie-card'},{'name': 'MovieCreateComponent', 'selector': 'movie-movie-create'},{'name': 'MovieDisplayAssetsComponent', 'selector': '[assets] movie-display-assets'},{'name': 'MovieDisplayAvailabilitiesComponent', 'selector': '[rights] movie-display-availabilities'},{'name': 'MovieDisplayCardItemComponent', 'selector': '[movie] movie-display-card-item'},{'name': 'MovieDisplayComponent', 'selector': '[movie] movie-display-root'},{'name': 'MovieDisplayFestivalPrizesComponent', 'selector': '[festivalprizes] movie-display-festivalprizes'},{'name': 'MovieDisplayFilmDetailsComponent', 'selector': 'movie-display-film-details'},{'name': 'MovieDisplayKeywordsComponent', 'selector': '[keywords] movie-display-keywords'},{'name': 'MovieDisplayListComponent', 'selector': '[movies] movie-display-list'},{'name': 'MovieDisplayMainComponent', 'selector': '[main] movie-display-main'},{'name': 'MovieDisplayPrincipalInformationsComponent', 'selector': 'movie-display-principal-informations'},{'name': 'MovieDisplayPrizesComponent', 'selector': '[prizes] movie-display-prizes'},{'name': 'MovieDisplayProductionComponent', 'selector': 'movie-display-production'},{'name': 'MovieDisplayPromotionalDescriptionComponent', 'selector': '[description] movie-display-promotional-description'},{'name': 'MovieDisplayPromotionalElementsComponent', 'selector': '[elements] movie-display-promotional-elements'},{'name': 'MovieDisplaySalesAgentDealComponent', 'selector': '[deal] movie-display-salesdeal'},{'name': 'MovieDisplaySalesCastComponent', 'selector': '[cast] movie-display-sales-cast'},{'name': 'MovieDisplaySalesInfoComponent', 'selector': '[info] movie-display-sales-info'},{'name': 'MovieDisplayStoryComponent', 'selector': '[story] movie-display-story'},{'name': 'MovieDisplaySynopsisComponent', 'selector': '[synopsis] movie-display-synopsis'},{'name': 'MovieDisplayVersionInfoComponent', 'selector': 'movie-display-version-info'},{'name': 'MovieDisplayVersionInfoComponent', 'selector': '[info] movie-display-version-info'},{'name': 'MovieEditableComponent', 'selector': 'movie-editable'},{'name': 'MovieEditableComponent', 'selector': 'movie-editable'},{'name': 'MovieEmptyComponent', 'selector': 'movie-empty'},{'name': 'MovieFormFestivalPrizesComponent', 'selector': '[formGroup] movie-form-festivalprizes, [formGroupName] movie-form-festivalprizes'},{'name': 'MovieFormMainComponent', 'selector': '[formGroup] movie-form-main, [formGroupName] movie-form-main'},{'name': 'MovieFormPromotionalDescriptionComponent', 'selector': '[formGroup] movie-form-promotional-description, [formGroupName] movie-form-promotional-description'},{'name': 'MovieFormPromotionalElementsComponent', 'selector': '[formGroup] movie-form-promotional-elements, [formGroupName] movie-form-promotional-elements'},{'name': 'MovieFormRootComponent', 'selector': '[form] movie-form-root'},{'name': 'MovieFormSalesAgentDealComponent', 'selector': '[formGroup] movie-form-salesdeal, [formGroupName] movie-form-salesdeal'},{'name': 'MovieFormSalesCastComponent', 'selector': '[formGroup] movie-form-sales-cast, [formGroupName] movie-form-sales-cast'},{'name': 'MovieFormSalesInfoComponent', 'selector': '[formGroup] movie-form-sales-info, [formGroupName] movie-form-sales-info'},{'name': 'MovieFormStoryComponent', 'selector': '[formGroup] movie-form-story, [formGroupName] movie-form-story'},{'name': 'MovieFormVersionInfoComponent', 'selector': '[formGroup] movie-form-version-info, [formGroupName] movie-form-version-info'},{'name': 'MovieImdbSearchComponent', 'selector': 'movie-imdb-search'},{'name': 'MovieListComponent', 'selector': 'movie-list'},{'name': 'MovieMaterialFormComponent', 'selector': '[formGroupName] movie-material-form,[formGroup] movie-material-form, movie-material-form'},{'name': 'MovieMaterialListComponent', 'selector': 'movie-material-list'},{'name': 'MoviePickerComponent', 'selector': 'movie-picker'},{'name': 'MovieTitleFormComponent', 'selector': 'movie-title-form'},{'name': 'MovieViewComponent', 'selector': 'movie-view'},{'name': 'NewTemplateComponent', 'selector': 'delivery-new-template'},{'name': 'NotFoundComponent', 'selector': 'error-not-found'},{'name': 'NotificationItemComponent', 'selector': 'notification-item'},{'name': 'NotificationListComponent', 'selector': 'notification-list'},{'name': 'NotificationWidgetComponent', 'selector': 'notification-widget'},{'name': 'OrganizationActivityViewComponent', 'selector': 'org-activity-view'},{'name': 'OrganizationAdminViewComponent', 'selector': 'org-admin-view'},{'name': 'OrganizationCreateComponent', 'selector': 'organization-create'},{'name': 'OrganizationDisplayActionsComponent', 'selector': 'org-display-actions'},{'name': 'OrganizationDisplayComponent', 'selector': 'organization-display'},{'name': 'OrganizationDisplayOperationsComponent', 'selector': 'org-display-operations'},{'name': 'OrganizationEditableComponent', 'selector': 'organization-editable'},{'name': 'OrganizationFeedbackComponent', 'selector': 'organization-feedback'},{'name': 'OrganizationFindComponent', 'selector': 'organization-find'},{'name': 'OrganizationFormComponent', 'selector': '[formGroupName] organization-form, [formGroup] organization-form, organization-form'},{'name': 'OrganizationFormOperationComponent', 'selector': '[formGroup] organization-form-operation, [formGroupName] organization-form-operation'},{'name': 'OrganizationHomeComponent', 'selector': 'organization-home'},{'name': 'OrganizationSearchComponent', 'selector': 'organization-search'},{'name': 'OrganizationSignerFormComponent', 'selector': 'organization-signer-form'},{'name': 'OrganizationSignerRepertoryComponent', 'selector': 'org-signer-repertory'},{'name': 'OrganizationWidgetComponent', 'selector': 'organization-widget'},{'name': 'PasswordConfirmComponent', 'selector': 'password-confirm'},{'name': 'PasswordFormComponent', 'selector': '[formGroup] editPasswordForm, profile-password-form'},{'name': 'PreviewMovieComponent', 'selector': 'movie-import-preview-movie'},{'name': 'PreviewSheetComponent', 'selector': 'movie-import-preview-sheet'},{'name': 'ProfileDeleteComponent', 'selector': 'account-profile-delete'},{'name': 'ProfileDisplayComponent', 'selector': 'profile-display'},{'name': 'ProfileEditableComponent', 'selector': 'profile-editable'},{'name': 'ProfileFormComponent', 'selector': '[formGroupName] profile-form, [formGroup] profile-form, profile-form'},{'name': 'ProfileMenuComponent', 'selector': 'account-profile-menu'},{'name': 'ProfileWidgetComponent', 'selector': 'account-profile-widget'},{'name': 'SigninFormComponent', 'selector': 'auth-login-form'},{'name': 'SignupFormComponent', 'selector': 'auth-signup-form'},{'name': 'TableExtractedMoviesComponent', 'selector': 'movie-table-extracted-movies'},{'name': 'TableExtractedSalesComponent', 'selector': 'movie-table-extracted-sales'},{'name': 'TemplateAddComponent', 'selector': 'material-template-add'},{'name': 'TemplateCreateComponent', 'selector': 'template-create'},{'name': 'TemplateEditableComponent', 'selector': 'template-editable'},{'name': 'TemplateListComponent', 'selector': 'template-list'},{'name': 'TemplateMaterialFormComponent', 'selector': '[formGroup] template-material-form'},{'name': 'TemplateMaterialListComponent', 'selector': 'template-material-list'},{'name': 'TemplateRepertoryComponent', 'selector': 'template-repertory'},{'name': 'ViewExtractedElementsComponent', 'selector': 'movie-view-extracted-elements'},{'name': 'ViewImportErrorsComponent', 'selector': 'movie-view-import-errors'},{'name': 'WalletAddKeyTunnelComponent', 'selector': 'wallet-add-key-tunnel'},{'name': 'WalletAddressViewComponent', 'selector': 'wallet-address-view'},{'name': 'WalletAskPasswordFormComponent', 'selector': 'wallet-ask-password-form'},{'name': 'WalletBlockieComponent', 'selector': 'wallet-blockie'},{'name': 'WalletCreatePasswordFormComponent', 'selector': 'wallet-create-password-form'},{'name': 'WalletImportKeyComponent', 'selector': 'wallet-import-key'},{'name': 'WalletImportKeyFormComponent', 'selector': 'wallet-import-key-form'},{'name': 'WalletNoKeyComponent', 'selector': 'wallet-no-key'},{'name': 'WalletRevealMnemonicComponent', 'selector': 'wallet-reveal-mnemonic'},{'name': 'WalletSendTxTunnelComponent', 'selector': 'wallet-send-tx'},{'name': 'WalletViewComponent', 'selector': 'wallet-view'},{'name': 'WalletWidgetComponent', 'selector': 'wallet-widget'},{'name': 'WelcomeViewComponent', 'selector': 'auth-welcome-view'}];
+    var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'EditModeDirective', 'selector': '[materialEditMode]'},{'name': 'ViewModeDirective', 'selector': '[materialViewMode]'}];
+    var ACTUAL_COMPONENT = {'name': 'ViewExtractedElementsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViewExtractedElementsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

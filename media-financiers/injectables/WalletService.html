@@ -1,0 +1,1987 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>WalletService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>libs/ethers/src/lib/wallet/+state/wallet.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#provider">provider</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_requireProvider">_requireProvider</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkWallet">checkWallet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#createRandomKeyFromEmail">createRandomKeyFromEmail</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#deleteTxFeedback">deleteTxFeedback</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#deployERC1077">deployERC1077</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getUsersERC1077">getUsersERC1077</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleError">handleError</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hashMetaTx">hashMetaTx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#prepareMetaTx">prepareMetaTx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#retrieveAddress">retrieveAddress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#sendSignedMetaTx">sendSignedMetaTx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setDeleteKeyTx">setDeleteKeyTx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setLinkKeyTx">setLinkKeyTx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setTx">setTx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setTxFeedback">setTxFeedback</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#signedMetaTxToData">signedMetaTxToData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateFromEmail">updateFromEmail</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#waitForTx">waitForTx</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(query: <a href="../injectables/WalletQuery.html">WalletQuery</a>, store: <a href="../injectables/WalletStore.html">WalletStore</a>, keyManager: <a href="../injectables/KeyManagerService.html">KeyManagerService</a>, keyQuery: <a href="../injectables/KeyManagerQuery.html">KeyManagerQuery</a>, relayer: <a href="../injectables/Relayer.html">Relayer</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>query</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WalletQuery.html" target="_self" >WalletQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WalletStore.html" target="_self" >WalletStore</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>keyManager</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/KeyManagerService.html" target="_self" >KeyManagerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>keyQuery</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/KeyManagerQuery.html" target="_self" >KeyManagerQuery</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>relayer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/Relayer.html" target="_self" >Relayer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_requireProvider"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _requireProvider
+                        </b>
+                        <a href="#_requireProvider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_requireProvider()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkWallet"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            checkWallet
+                        </b>
+                        <a href="#checkWallet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkWallet()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="230"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:230</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createRandomKeyFromEmail"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            createRandomKeyFromEmail
+                        </b>
+                        <a href="#createRandomKeyFromEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createRandomKeyFromEmail(keyName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>keyName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTxFeedback"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            deleteTxFeedback
+                        </b>
+                        <a href="#deleteTxFeedback"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteTxFeedback()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:137</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deployERC1077"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            deployERC1077
+                        </b>
+                        <a href="#deployERC1077"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deployERC1077(ensDomain: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, pubKey: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orgId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Ask the relayer to deploy the user&#39;s smart-wallet</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ensDomain</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the ens of the user : <code>alice.blockframes.eth</code></p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>pubKey</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the address of the first key to put in the smart-wallet</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>orgId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the user&#39;s org, it will be used to put the org address as the recover address</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUsersERC1077"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getUsersERC1077
+                        </b>
+                        <a href="#getUsersERC1077"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUsersERC1077(ensDomainOrAddress: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>return an instance of an ERC10777 contract </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ensDomainOrAddress</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleError"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            handleError
+                        </b>
+                        <a href="#handleError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleError(error: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="242"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:242</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update the feedback message with the error </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>error</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hashMetaTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            hashMetaTx
+                        </b>
+                        <a href="#hashMetaTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hashMetaTx(from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, metaTx: <a href="../interfaces/MetaTx.html">MetaTx</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="141"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:141</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>from</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>metaTx</td>
+                                    <td>
+                                                <code><a href="../interfaces/MetaTx.html" target="_self" >MetaTx</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareMetaTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            prepareMetaTx
+                        </b>
+                        <a href="#prepareMetaTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>prepareMetaTx(wallet: <a href="../interfaces/Wallet.html">EthersWallet</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="169"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:169</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>wallet</td>
+                                    <td>
+                                                <code><a href="../interfaces/Wallet.html" target="_self" >EthersWallet</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;SignedMetaTx&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="retrieveAddress"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            retrieveAddress
+                        </b>
+                        <a href="#retrieveAddress"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>retrieveAddress(ensDomain: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get address of the given ENS domain, if this ENS domain doesn&#39;t exist
+(i.e. the ERC1077 is not yet deployed) we precompute the address with CREATE2</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ensDomain</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the full ENS domain : <code>alice.blockframes.eth</code></p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendSignedMetaTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            sendSignedMetaTx
+                        </b>
+                        <a href="#sendSignedMetaTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sendSignedMetaTx(ensDomain: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, signedMetaTx: <a href="../interfaces/SignedMetaTx.html">SignedMetaTx</a>, ...args: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ensDomain</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>signedMetaTx</td>
+                                    <td>
+                                                <code><a href="../interfaces/SignedMetaTx.html" target="_self" >SignedMetaTx</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDeleteKeyTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setDeleteKeyTx
+                        </b>
+                        <a href="#setDeleteKeyTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setDeleteKeyTx(erc1077Address: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, key: <a href="../interfaces/Key.html">Key</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>erc1077Address</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="../interfaces/Key.html" target="_self" >Key</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLinkKeyTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setLinkKeyTx
+                        </b>
+                        <a href="#setLinkKeyTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setLinkKeyTx(erc1077Address: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, key: <a href="../interfaces/Key.html">Key</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>erc1077Address</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="../interfaces/Key.html" target="_self" >Key</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setTx
+                        </b>
+                        <a href="#setTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setTx(tx: <a href="../interfaces/ActionTx.html">ActionTx</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tx</td>
+                                    <td>
+                                                <code><a href="../interfaces/ActionTx.html" target="_self" >ActionTx</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTxFeedback"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setTxFeedback
+                        </b>
+                        <a href="#setTxFeedback"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setTxFeedback(feedback: <a href="../interfaces/TxFeedback.html">TxFeedback</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>feedback</td>
+                                    <td>
+                                                <code><a href="../interfaces/TxFeedback.html" target="_self" >TxFeedback</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="signedMetaTxToData"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            signedMetaTxToData
+                        </b>
+                        <a href="#signedMetaTxToData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>signedMetaTxToData(signedMetaTx: <a href="../interfaces/SignedMetaTx.html">SignedMetaTx</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>signedMetaTx</td>
+                                    <td>
+                                                <code><a href="../interfaces/SignedMetaTx.html" target="_self" >SignedMetaTx</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateFromEmail"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            updateFromEmail
+                        </b>
+                        <a href="#updateFromEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateFromEmail(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="waitForTx"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            waitForTx
+                        </b>
+                        <a href="#waitForTx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>waitForTx(txHash: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="224"
+                            class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:224</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>txHash</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="provider"></a>
+                        <span class="name">
+                            <b>
+                            provider</b>
+                            <a href="#provider"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/Provider" target="_blank" >Provider</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">libs/ethers/src/lib/wallet/+state/wallet.service.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { network } from &#x27;@env&#x27;;
+import { ERC1077 } from &#x27;@blockframes/contracts&#x27;;
+import { WalletStore } from &#x27;./wallet.store&#x27;;
+import { KeyManagerService, KeyManagerQuery } from &#x27;../../key-manager/+state&#x27;;
+import { Relayer } from &#x27;../../relayer/relayer&#x27;;
+import { MetaTx, SignedMetaTx, ActionTx, TxFeedback } from &#x27;../../types&#x27;;
+import { WalletQuery } from &#x27;./wallet.query&#x27;;
+import { emailToEnsDomain, precomputeAddress, getNameFromENS, Key } from &#x27;@blockframes/utils&#x27;;
+import { CreateTx } from &#x27;../../create-tx&#x27;;
+
+// Ethers
+import { arrayify } from &#x27;@ethersproject/bytes&#x27;;
+import { AbiCoder } from &#x27;@ethersproject/abi&#x27;;
+import { Provider, TransactionRequest } from &#x27;@ethersproject/providers&#x27;;
+import { Contract } from &#x27;@ethersproject/contracts&#x27;;
+import { Wallet as EthersWallet } from &#x27;@ethersproject/wallet&#x27;;
+import { InfuraProvider } from &#x27;@ethersproject/providers&#x27;;
+
+@Injectable({ providedIn: &#x27;root&#x27; })
+export class WalletService {
+
+  provider: Provider;
+
+  constructor(
+    private query: WalletQuery,
+    private store: WalletStore,
+    private keyManager: KeyManagerService,
+    private keyQuery: KeyManagerQuery,
+    private relayer: Relayer,
+  ) {}
+
+  public async updateFromEmail(email: string) {
+    const ensDomain &#x3D; emailToEnsDomain(email);
+    const address &#x3D; await this.retrieveAddress(ensDomain);
+    this.store.update({ensDomain, address});
+  }
+
+  /**
+   * Get address of the given ENS domain, if this ENS domain doesn&#x27;t exist
+   * (i.e. the ERC1077 is not yet deployed) we precompute the address with CREATE2
+   * @param ensDomain the full ENS domain : &#x60;alice.blockframes.eth&#x60;
+   */
+  public async retrieveAddress(ensDomain: string) {
+    this._requireProvider();
+    const address &#x3D; await this.provider.resolveName(ensDomain);
+    if (!!address){
+      const code &#x3D; await this.provider.getCode(ensDomain);
+      if (code !&#x3D;&#x3D; &#x27;0x&#x27;) {
+        this.store.update({hasERC1077: true});
+        return address;
+      }
+    }
+    return precomputeAddress(ensDomain, this.provider);
+  }
+
+
+
+  private _requireProvider() {
+    if(!this.provider) {
+      this.provider &#x3D; new InfuraProvider(network);
+    }
+  }
+
+  public async createRandomKeyFromEmail(keyName: string, email: string, password?: string) {
+    const ensDomain &#x3D; emailToEnsDomain(email);
+    const key &#x3D; await this.keyManager.createFromRandom(keyName, ensDomain, password);
+    this.keyManager.storeKey(key);
+    return key;
+  }
+
+  /**
+   * Ask the relayer to deploy the user&#x27;s smart-wallet
+   * @param ensDomain the ens of the user : &#x60;alice.blockframes.eth&#x60;
+   * @param pubKey the address of the first key to put in the smart-wallet
+   * @param orgId the id of the user&#x27;s org, it will be used to put the org address as the recover address
+   */
+  public async deployERC1077(ensDomain: string, pubKey: string, orgId: string) {
+    this._requireProvider();
+    if (this.query.getValue().hasERC1077) {
+      throw new Error(&#x27;Your smart-wallet is already deployed&#x27;);
+    }
+    this.store.setLoading(true);
+    try {
+      const name &#x3D;  getNameFromENS(ensDomain);
+      const erc1077Address &#x3D; await precomputeAddress(ensDomain, this.provider);
+      const result &#x3D; await this.relayer.deploy(name, pubKey, erc1077Address, orgId);
+      this.relayer.registerENSName(name, erc1077Address); // do not wait for ens register, this can be done in the background
+      this.store.update({hasERC1077: true})
+      this.store.setLoading(false);
+      return result;
+    } catch(err) {
+      this.store.setLoading(false);
+      console.error(err);
+      throw new Error(&#x27;Deploy seems to have failed, but firebase function is maybe still running&#x27;);
+    }
+  }
+
+  /** return an instance of an ERC10777 contract */
+  private getUsersERC1077(ensDomainOrAddress: string) {
+    this._requireProvider();
+    return new Contract(ensDomainOrAddress, ERC1077.abi, this.provider);
+  }
+
+  public setDeleteKeyTx(erc1077Address: string, key: Key) {
+    const tx &#x3D; CreateTx.deleteKey(erc1077Address, key.address, () &#x3D;&gt; this.keyManager.deleteKey(key));
+    const feedback &#x3D; {
+      confirmation: &#x27;You are about to delete a key from your smart-wallet&#x27;,
+      success: &#x27;Your key has been successfully deleted !&#x27;,
+      redirectName: &#x27;Back to Wallet&#x27;,
+      redirectRoute: &#x27;/layout/o/account/wallet&#x27;,
+    }
+    this.setTx(tx);
+    this.setTxFeedback(feedback);
+  }
+
+  public setLinkKeyTx(erc1077Address: string, key: Key) {
+    const tx &#x3D; CreateTx.addKey(erc1077Address, key.address, () &#x3D;&gt; this.keyManager.storeKey({...key, isLinked: true}));
+    const feedback &#x3D; {
+      confirmation: &#x27;You are about add a new key to your smart-wallet&#x27;,
+      success: &#x27;Your key has been successfully added !&#x27;,
+      redirectName: &#x27;Back to Wallet&#x27;,
+      redirectRoute: &#x27;/layout/o/account/wallet&#x27;,
+    }
+    this.setTx(tx);
+    this.setTxFeedback(feedback);
+  }
+
+  public setTx(tx: ActionTx) {
+    this.store.update({tx});
+  }
+
+  public setTxFeedback(feedback: TxFeedback) {
+    this.store.update({feedback});
+  }
+
+  public deleteTxFeedback() {
+    this.store.update({feedback: undefined});
+  }
+
+  private hashMetaTx(from: string, metaTx: MetaTx) {
+    return this.getUsersERC1077(from).calculateMessageHash(
+      from, metaTx.to, metaTx.value, metaTx.data, metaTx.nonce, // tx
+      metaTx.gasPrice, metaTx.gasToken, metaTx.gasLimit, // gas
+      metaTx.operationType // op type
+    );
+  }
+
+  private signedMetaTxToData(signedMetaTx: SignedMetaTx) {
+    const abiCoder &#x3D; new AbiCoder();
+    return abiCoder.encode([
+      &#x27;address&#x27;, // to
+      &#x27;uint256&#x27;, // value
+      &#x27;bytes&#x27;, // data
+      &#x27;uint256&#x27;, // nonce
+      &#x27;uint256&#x27;, // gasPrice
+      &#x27;address&#x27;, // address
+      &#x27;uint256&#x27;, // gasLimit
+      &#x27;uint8&#x27;, // operationType
+      &#x27;bytes&#x27;, // signatures
+    ],[
+      signedMetaTx.to, signedMetaTx.value, signedMetaTx.data, signedMetaTx.nonce, // tx
+      signedMetaTx.gasPrice, signedMetaTx.gasToken, signedMetaTx.gasLimit, // gas
+      signedMetaTx.operationType, // op type
+      signedMetaTx.signatures, // signature
+    ]);
+  }
+
+  public async prepareMetaTx(wallet: EthersWallet): Promise&lt;SignedMetaTx&gt; {
+    this._requireProvider();
+    const from &#x3D; this.query.getValue().address;
+    const erc1077 &#x3D; this.getUsersERC1077(from);
+
+    // prepare
+    const metaTx &#x3D; {
+      ...this.query.getValue().tx,
+      nonce: await erc1077.getLastNonce(),
+      gasPrice: await this.provider.getGasPrice().then(bigNum &#x3D;&gt; bigNum.toHexString()),
+      gasLimit: &#x27;0x0&#x27;, // temporary gas limit
+      gasToken: &#x27;0x0000000000000000000000000000000000000000&#x27;, // zero address means ether instead of erc20
+      operationType: &#x27;0x0&#x27;, // required but not used in the contract yet
+    }
+
+    // estimate gas
+    const mockTxHash &#x3D; await this.hashMetaTx(from, metaTx);
+    const mockSignature &#x3D; await wallet.signMessage(mockTxHash);
+    const mockSignedMetaTx: SignedMetaTx &#x3D; {...metaTx, signatures: mockSignature};
+    const mockTx: TransactionRequest &#x3D; {
+      to: from,
+      value: 0,
+      data: this.signedMetaTxToData(mockSignedMetaTx),
+    }
+    const estimatedGasLimit &#x3D; await this.provider.estimateGas(mockTx).then(bigNum &#x3D;&gt; bigNum.toHexString());
+
+    // hash &amp; sign
+    metaTx.gasLimit &#x3D; estimatedGasLimit; // replace temporary gasLimit by its estimation
+    const txHash &#x3D; await this.hashMetaTx(from, metaTx);
+    const signature &#x3D; await wallet.signMessage(arrayify(txHash));
+    return {...metaTx, signatures: signature};
+  }
+
+  public async sendSignedMetaTx(ensDomain: string, signedMetaTx: SignedMetaTx, ...args: any[]) {
+    const address &#x3D; await this.retrieveAddress(getNameFromENS(ensDomain));
+    try {
+      const txReceipt &#x3D; await this.relayer.send(address, signedMetaTx);
+
+      if (txReceipt.status &#x3D;&#x3D;&#x3D; 0) {
+        throw new Error(&#x60;The transaction (${txReceipt.transactionHash}) has been sent but has failed to complete successfully !&#x60;);
+      }
+
+      const actionTx &#x3D; this.query.getValue().tx;
+      const hasCallback &#x3D; !!actionTx.callback;
+      if(hasCallback) {
+        actionTx.callback(...args); // execute tx callback (ex: delete local key)
+      }
+      this.store.update({tx: null});
+    } catch (error) {
+      // store error and throw back to notice the component of the error
+      this.handleError(&#x27;Our relayer as encountered a problem, your transaction hasn\&#x27;t been sent. Please try again later. If the problem persist please contact an admin.&#x27;);
+      throw new Error(error);
+    }
+  }
+
+  public async waitForTx(txHash: string) {
+    this._requireProvider();
+    console.log(&#x27;wait for :&#x27;, txHash);
+    return this.provider.waitForTransaction(txHash);
+  }
+
+  public async checkWallet() {
+    this._requireProvider();
+    const ensDomain &#x3D; this.query.getValue().ensDomain;
+    const walletCode &#x3D; await this.provider.getCode(ensDomain);
+    if (walletCode &#x3D;&#x3D;&#x3D; &#x27;0x&#x27;) { // wallet has been destroyed or is not yet deployed
+      const keys &#x3D; [...this.keyQuery.getKeysOfUser(ensDomain)];
+      keys.forEach(key &#x3D;&gt; this.keyManager.deleteKey(key));
+      throw new Error(&#x27;self-destructed&#x27;);
+    }
+  }
+
+  /** Update the feedback message with the error */
+  public handleError(error: string) {
+    const txFeedback &#x3D; this.query.getValue().feedback;
+    this.store.update({
+      feedback: {
+        ...txFeedback,
+        success: error
+      }
+    })
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'WalletService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

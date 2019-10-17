@@ -1,0 +1,587 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#args" title="apps/backend-ops/src/main.ts"><b>args</b>&nbsp;&nbsp;&nbsp;(apps/.../main.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#sleep" title="apps/backend-ops/src/firebaseSetup.ts"><b>sleep</b>&nbsp;&nbsp;&nbsp;(apps/.../firebaseSetup.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#" title="apps/backend-ops/src/main.ts"><b></b>&nbsp;&nbsp;&nbsp;(apps/.../main.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MIGRATIONS" title="apps/backend-ops/src/firestoreMigrations/index.ts"><b>MIGRATIONS</b>&nbsp;&nbsp;&nbsp;(apps/.../index.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#selectAndMergeValues" title="apps/backend-ops/src/firestoreMigrations/0001.ts"><b>selectAndMergeValues</b>&nbsp;&nbsp;&nbsp;(apps/.../0001.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#USERS" title="apps/backend-ops/src/users.fixture.ts"><b>USERS</b>&nbsp;&nbsp;&nbsp;(apps/.../users.fixture.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#USERS" title="apps/backend-ops/src/users.toronto.fixture.ts"><b>USERS</b>&nbsp;&nbsp;&nbsp;(apps/.../users.toronto.fixture.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#VERSION_ZERO" title="apps/backend-ops/src/migrations.ts"><b>VERSION_ZERO</b>&nbsp;&nbsp;&nbsp;(apps/.../migrations.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#withoutUndefined" title="apps/backend-ops/src/firestoreMigrations/0001.ts"><b>withoutUndefined</b>&nbsp;&nbsp;&nbsp;(apps/.../0001.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>apps/backend-ops/src/main.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="args"></a>
+                        <span class="name">
+                            <b>
+                            args</b>
+                            <a href="#args"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>process.argv.slice(2)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name=""></a>
+                        <span class="name">
+                            <b>
+                            </b>
+                            <a href="#"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>args</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>apps/backend-ops/src/firebaseSetup.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sleep"></a>
+                        <span class="name">
+                            <b>
+                            sleep</b>
+                            <a href="#sleep"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>ms &#x3D;&gt; {
+  return new Promise(resolve &#x3D;&gt; {
+    setTimeout(resolve, ms);
+  });
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>apps/backend-ops/src/firestoreMigrations/index.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MIGRATIONS"></a>
+                        <span class="name">
+                            <b>
+                            MIGRATIONS</b>
+                            <a href="#MIGRATIONS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  1: v0001
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>apps/backend-ops/src/firestoreMigrations/0001.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectAndMergeValues"></a>
+                        <span class="name">
+                            <b>
+                            selectAndMergeValues</b>
+                            <a href="#selectAndMergeValues"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(item, defaultValues) &#x3D;&gt; {
+  const result &#x3D; { ...defaultValues };
+
+  Object.keys(defaultValues).forEach(key &#x3D;&gt; {
+    if (item[key] !&#x3D;&#x3D; undefined) {
+      result[key] &#x3D; item[key];
+    }
+  });
+
+  return result;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Lets you select values from an item while configuring default values.</p>
+<p>Select all the keys from defaultValues in item,
+if a value is undefined, uses the default Value.</p>
+<p>selectAndMergeValues({a: undefined, b: 2, c: true}, {a: 42, c: false}) =&gt; {a: 42, c: true}</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="withoutUndefined"></a>
+                        <span class="name">
+                            <b>
+                            withoutUndefined</b>
+                            <a href="#withoutUndefined"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>x &#x3D;&gt; pickBy(x, identity)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>apps/backend-ops/src/users.fixture.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="USERS"></a>
+                        <span class="name">
+                            <b>
+                            USERS</b>
+                            <a href="#USERS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/UserConfig.html" target="_self" >UserConfig[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  {
+    uid: &#x27;8sIkEsgILVNIk6gET7SyuphCrGp1&#x27;,
+    email: &#x27;cytest@blockframes.com&#x27;,
+    password: &#x27;azerty&#x27;
+  },
+  {
+    uid: &#x27;uJY5HNFXj8PUq8CcQvqni1Ywm0s1&#x27;,
+    email: &#x27;cytest.thejokers@blockframes.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;mykt2DfYNFNvLeslFqY8R2GRnhm1&#x27;,
+    email: &#x27;cytest.cjentertainment@blockframes.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;1H0F5NJqfkMHRwLIqAnYbUECiO22&#x27;,
+    email: &#x27;forfun@vincent.fr&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;1cDhS7rdLeZARDuRDixCxtPBUe42&#x27;,
+    email: &#x27;hello@clockworks.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;3MjmItCZi2Nghuvks91frDP8hQ03&#x27;,
+    email: &#x27;hello@syncopatedfilms.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;CART4GbCHPTrpWgAbZtsmUyfwly1&#x27;,
+    email: &#x27;dazdad@gmail.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;CVE2GVi44SgwtKA0YUaOe5nfamy2&#x27;,
+    email: &#x27;hello@netflix.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;EDIWkg04UeTBgAEyVA88RtTJmUr1&#x27;,
+    email: &#x27;ddada@test.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;LKKobibLhCXxlPuDJwrxqDalSjg2&#x27;,
+    email: &#x27;hello@barunsonea.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;UCcHMvd398TTc3wsJ3KKewdy3t63&#x27;,
+    email: &#x27;hello@empire.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;UsYWmseMoOQVN2hWrJ8oxlaQm0C2&#x27;,
+    email: &#x27;hello@wearefabula.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;bPpo9XhbhpZ1Ic1RGkWKYzP7WBJ2&#x27;,
+    email: &#x27;hello@logicalpictures.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;fqK319OtikZsW4TbV3tnVXVC6hs1&#x27;,
+    email: &#x27;hello@charades.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;jJKxS7Ix2VP1fYeTCaLVSR3sk4F3&#x27;,
+    email: &#x27;hello@volgafilms.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;qMywJAW4VtY4uG5iv44AAxCLK9D3&#x27;,
+    email: &#x27;hello@thejokers.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;XfE8uBoeFRToxrPipXOHPgZJG9U2&#x27;,
+    email: &#x27;hello@cascade8.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;rjcV3BfLGlPalqUrbRX91zWqwqB2&#x27;,
+    email: &#x27;cjentertainment@blockframes.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  }
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>apps/backend-ops/src/users.toronto.fixture.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="USERS"></a>
+                        <span class="name">
+                            <b>
+                            USERS</b>
+                            <a href="#USERS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/UserConfig.html" target="_self" >UserConfig[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  {
+    uid: &#x27;8sIkEsgILVNIk6gET7SyuphCrGp1&#x27;,
+    email: &#x27;cytest@blockframes.com&#x27;,
+    password: &#x27;azerty&#x27;
+  },
+  {
+    uid: &#x27;uJY5HNFXj8PUq8CcQvqni1Ywm0s1&#x27;,
+    email: &#x27;cytest.thejokers@blockframes.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;mykt2DfYNFNvLeslFqY8R2GRnhm1&#x27;,
+    email: &#x27;cytest.cjentertainment@blockframes.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;1H0F5NJqfkMHRwLIqAnYbUECiO22&#x27;,
+    email: &#x27;forfun@vincent.fr&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;1cDhS7rdLeZARDuRDixCxtPBUe42&#x27;,
+    email: &#x27;hello@clockworks.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;3MjmItCZi2Nghuvks91frDP8hQ03&#x27;,
+    email: &#x27;hello@syncopatedfilms.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;CART4GbCHPTrpWgAbZtsmUyfwly1&#x27;,
+    email: &#x27;dazdad@gmail.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;CVE2GVi44SgwtKA0YUaOe5nfamy2&#x27;,
+    email: &#x27;hello@netflix.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;EDIWkg04UeTBgAEyVA88RtTJmUr1&#x27;,
+    email: &#x27;ddada@test.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;LKKobibLhCXxlPuDJwrxqDalSjg2&#x27;,
+    email: &#x27;hello@barunsonea.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;UCcHMvd398TTc3wsJ3KKewdy3t63&#x27;,
+    email: &#x27;hello@empire.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;UsYWmseMoOQVN2hWrJ8oxlaQm0C2&#x27;,
+    email: &#x27;hello@wearefabula.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;bPpo9XhbhpZ1Ic1RGkWKYzP7WBJ2&#x27;,
+    email: &#x27;hello@logicalpictures.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;fqK319OtikZsW4TbV3tnVXVC6hs1&#x27;,
+    email: &#x27;hello@charades.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;jJKxS7Ix2VP1fYeTCaLVSR3sk4F3&#x27;,
+    email: &#x27;hello@volgafilms.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;qMywJAW4VtY4uG5iv44AAxCLK9D3&#x27;,
+    email: &#x27;hello@thejokers.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;XfE8uBoeFRToxrPipXOHPgZJG9U2&#x27;,
+    email: &#x27;hello@cascade8.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  },
+  {
+    uid: &#x27;rjcV3BfLGlPalqUrbRX91zWqwqB2&#x27;,
+    email: &#x27;cjentertainment@blockframes.com&#x27;,
+    password: &#x27;blockframes&#x27;
+  }
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>apps/backend-ops/src/migrations.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="VERSION_ZERO"></a>
+                        <span class="name">
+                            <b>
+                            VERSION_ZERO</b>
+                            <a href="#VERSION_ZERO"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

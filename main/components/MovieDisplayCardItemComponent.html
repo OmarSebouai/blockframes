@@ -1,0 +1,308 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blockframes documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blockframes documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MovieDisplayCardItemComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/movie/src/lib/movie/components/display-card-item/display-card-item.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>[movie] movie-display-card-item</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;mat-card&gt;
+  &lt;img mat-card-image [src]&#x3D;&quot;movie.poster&quot; alt&#x3D;&quot;Movie&#x27;s poster&quot; /&gt;
+  &lt;mat-card-content&gt;
+    &lt;mat-card-title-group&gt;
+      &lt;mat-card-title&gt;{{ movie.title.original }}&lt;/mat-card-title&gt;
+      &lt;mat-card-subtitle *ngFor&#x3D;&quot;let director of movie.directors&quot;&gt;
+      {{ director.firstName }} {{ director.lastName }}
+      &lt;/mat-card-subtitle&gt;
+    &lt;/mat-card-title-group&gt;
+
+    &lt;span&gt;Production Year&lt;/span&gt;&lt;span&gt;{{ movie.productionYear }}&lt;/span&gt;
+  &lt;/mat-card-content&gt;
+&lt;/mat-card&gt;
+</code></pre></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#movie">movie</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movie"></a>
+                        <b>movie</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/MovieMain.html" target="_self" >MovieMain</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">libs/movie/src/lib/movie/components/display-card-item/display-card-item.component.ts:24</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { MovieMain } from &#x27;./../../+state/movie.model&#x27;;
+import { Component, ChangeDetectionStrategy, Input } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;[movie] movie-display-card-item&#x27;,
+  template: &#x60;
+    &lt;mat-card&gt;
+      &lt;img mat-card-image [src]&#x3D;&quot;movie.poster&quot; alt&#x3D;&quot;Movie&#x27;s poster&quot; /&gt;
+      &lt;mat-card-content&gt;
+        &lt;mat-card-title-group&gt;
+          &lt;mat-card-title&gt;{{ movie.title.original }}&lt;/mat-card-title&gt;
+          &lt;mat-card-subtitle *ngFor&#x3D;&quot;let director of movie.directors&quot;&gt;
+          {{ director.firstName }} {{ director.lastName }}
+          &lt;/mat-card-subtitle&gt;
+        &lt;/mat-card-title-group&gt;
+
+        &lt;span&gt;Production Year&lt;/span&gt;&lt;span&gt;{{ movie.productionYear }}&lt;/span&gt;
+      &lt;/mat-card-content&gt;
+    &lt;/mat-card&gt;
+  &#x60;,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class MovieDisplayCardItemComponent {
+  @Input() movie: MovieMain;
+}
+</code></pre>
+    </div>
+
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-card>  <img mat-card-image [src]="movie.poster" alt="Movie\'s poster" />  <mat-card-content>    <mat-card-title-group>      <mat-card-title>{{ movie.title.original }}</mat-card-title>      <mat-card-subtitle *ngFor="let director of movie.directors">      {{ director.firstName }} {{ director.lastName }}      </mat-card-subtitle>    </mat-card-title-group>    <span>Production Year</span><span>{{ movie.productionYear }}</span>  </mat-card-content></mat-card></div>'
+    var COMPONENTS = [{'name': 'ActionsListComponent', 'selector': 'actions-list'},{'name': 'ActionsPickerComponent', 'selector': 'actions-picker'},{'name': 'ActionsPickerListComponent', 'selector': 'actions-picker-list'},{'name': 'AddComponent', 'selector': 'ip-add'},{'name': 'AppComponent', 'selector': 'delivery-root'},{'name': 'AppGridComponent', 'selector': 'app-grid'},{'name': 'AvatarListComponent', 'selector': 'avatar-list'},{'name': 'ButtonUploadComponent', 'selector': 'button-upload'},{'name': 'CalendarComponent', 'selector': 'month-calendar'},{'name': 'ChipsAutocompleteComponent', 'selector': 'chips-autocomplete'},{'name': 'ConfirmComponent', 'selector': 'blockframes-confirm'},{'name': 'ContextMenuComponent', 'selector': 'context-menu'},{'name': 'DatepickerRangeComponent', 'selector': 'datepicker-range'},{'name': 'DeliveryActionsComponent', 'selector': 'delivery-actions'},{'name': 'DeliveryAddChooseStarterComponent', 'selector': 'delivery-add-choose-starter'},{'name': 'DeliveryAddFindMovieComponent', 'selector': 'delivery-add-find-movie'},{'name': 'DeliveryAddSettingsComponent', 'selector': 'delivery-add-settings'},{'name': 'DeliveryAddSpecificDeliveryListPickerComponent', 'selector': 'delivery-add-specific-delivery-list-picker'},{'name': 'DeliveryAddTemplatePickerComponent', 'selector': 'delivery-add-template-picker'},{'name': 'DeliveryEditableComponent', 'selector': 'delivery-editable'},{'name': 'DeliveryInformationsDatesDisplayComponent', 'selector': 'delivery-informations-dates-display'},{'name': 'DeliveryInformationsDatesFormComponent', 'selector': '[formGroup] delivery-informations-dates-form'},{'name': 'DeliveryInformationsDeadlinesFormComponent', 'selector': '[formGroup] delivery-informations-deadlines-form'},{'name': 'DeliveryInformationsDeadlinesRepertoryComponent', 'selector': 'delivery-informations-deadlines-repertory'},{'name': 'DeliveryInformationsEditableComponent', 'selector': 'delivery-informations-editable'},{'name': 'DeliveryInformationsStakeholdersComponent', 'selector': 'delivery-informations-stakeholders'},{'name': 'DeliveryInformationsStepsFormComponent', 'selector': '[formGroup] delivery-informations-steps-form'},{'name': 'DeliveryInformationsStepsRepertoryComponent', 'selector': 'delivery-informations-steps-repertory'},{'name': 'DeliveryListComponent', 'selector': 'delivery-list'},{'name': 'DeliveryMaterialFormComponent', 'selector': '[formGroupName] delivery-material-form, [formGroup] delivery-material-form, delivery-material-form'},{'name': 'DeliveryMaterialListComponent', 'selector': 'delivery-material-list'},{'name': 'DeliveryRepertoryComponent', 'selector': 'delivery-repertory'},{'name': 'DeliveryStakeholdersEditableComponent', 'selector': 'delivery-stakeholders-editable'},{'name': 'DeliveryStakeholdersRepertoryComponent', 'selector': 'delivery-stakeholders-repertory'},{'name': 'DeliveryStatusesComponent', 'selector': 'delivery-statuses'},{'name': 'EditableComponent', 'selector': 'ui-editable'},{'name': 'EditableSidenavComponent', 'selector': 'editable-sidenav'},{'name': 'EmailVerifyComponent', 'selector': 'auth-email-verify'},{'name': 'ExplorerComponent', 'selector': 'ip-explorer'},{'name': 'FeedbackMessageComponent', 'selector': 'feedback-message'},{'name': 'FileUploadComponent', 'selector': 'file-upload'},{'name': 'HeaderComponent', 'selector': 'toolbar-header'},{'name': 'HomeComponent', 'selector': 'blockframes-home'},{'name': 'HomeEmptyComponent', 'selector': 'movie-home-empty'},{'name': 'IdentityComponent', 'selector': 'auth-identity'},{'name': 'IdentityFeedbackComponent', 'selector': 'auth-identity-feedback'},{'name': 'ImportSpreadsheetComponent', 'selector': 'movie-import-spreadsheet'},{'name': 'ImportStepperComponent', 'selector': 'movie-import-stepper'},{'name': 'InvitationItemComponent', 'selector': 'invitation-item'},{'name': 'InvitationListComponent', 'selector': 'invitation-list'},{'name': 'KeyManagerItemComponent', 'selector': 'key-manager-item'},{'name': 'KeyManagerListComponent', 'selector': 'key-manager-list'},{'name': 'LayoutComponent', 'selector': 'delivery-layout'},{'name': 'LeftMenuComponent', 'selector': 'toolbar-left-menu'},{'name': 'LoginViewComponent', 'selector': 'auth-login-view'},{'name': 'MemberAddComponent', 'selector': 'member-add'},{'name': 'MemberEditableComponent', 'selector': 'member-editable'},{'name': 'MemberFormRoleComponent', 'selector': '[formGroup] member-form-role'},{'name': 'MemberInvitationComponent', 'selector': 'member-invitation'},{'name': 'MemberPendingComponent', 'selector': 'member-pending'},{'name': 'MemberRepertoryComponent', 'selector': 'member-repertory'},{'name': 'MovieCardComponent', 'selector': '[movie] movie-card'},{'name': 'MovieCreateComponent', 'selector': 'movie-movie-create'},{'name': 'MovieDisplayAssetsComponent', 'selector': '[assets] movie-display-assets'},{'name': 'MovieDisplayAvailabilitiesComponent', 'selector': '[rights] movie-display-availabilities'},{'name': 'MovieDisplayCardItemComponent', 'selector': '[movie] movie-display-card-item'},{'name': 'MovieDisplayComponent', 'selector': '[movie] movie-display-root'},{'name': 'MovieDisplayFestivalPrizesComponent', 'selector': '[festivalprizes] movie-display-festivalprizes'},{'name': 'MovieDisplayFilmDetailsComponent', 'selector': 'movie-display-film-details'},{'name': 'MovieDisplayKeywordsComponent', 'selector': '[keywords] movie-display-keywords'},{'name': 'MovieDisplayListComponent', 'selector': '[movies] movie-display-list'},{'name': 'MovieDisplayMainComponent', 'selector': '[main] movie-display-main'},{'name': 'MovieDisplayPrincipalInformationsComponent', 'selector': 'movie-display-principal-informations'},{'name': 'MovieDisplayPrizesComponent', 'selector': '[prizes] movie-display-prizes'},{'name': 'MovieDisplayProductionComponent', 'selector': 'movie-display-production'},{'name': 'MovieDisplayPromotionalDescriptionComponent', 'selector': '[description] movie-display-promotional-description'},{'name': 'MovieDisplayPromotionalElementsComponent', 'selector': '[elements] movie-display-promotional-elements'},{'name': 'MovieDisplaySalesAgentDealComponent', 'selector': '[deal] movie-display-salesdeal'},{'name': 'MovieDisplaySalesCastComponent', 'selector': '[cast] movie-display-sales-cast'},{'name': 'MovieDisplaySalesInfoComponent', 'selector': '[info] movie-display-sales-info'},{'name': 'MovieDisplayStoryComponent', 'selector': '[story] movie-display-story'},{'name': 'MovieDisplaySynopsisComponent', 'selector': '[synopsis] movie-display-synopsis'},{'name': 'MovieDisplayVersionInfoComponent', 'selector': 'movie-display-version-info'},{'name': 'MovieDisplayVersionInfoComponent', 'selector': '[info] movie-display-version-info'},{'name': 'MovieEditableComponent', 'selector': 'movie-editable'},{'name': 'MovieEditableComponent', 'selector': 'movie-editable'},{'name': 'MovieEmptyComponent', 'selector': 'movie-empty'},{'name': 'MovieFormFestivalPrizesComponent', 'selector': '[formGroup] movie-form-festivalprizes, [formGroupName] movie-form-festivalprizes'},{'name': 'MovieFormMainComponent', 'selector': '[formGroup] movie-form-main, [formGroupName] movie-form-main'},{'name': 'MovieFormPromotionalDescriptionComponent', 'selector': '[formGroup] movie-form-promotional-description, [formGroupName] movie-form-promotional-description'},{'name': 'MovieFormPromotionalElementsComponent', 'selector': '[formGroup] movie-form-promotional-elements, [formGroupName] movie-form-promotional-elements'},{'name': 'MovieFormRootComponent', 'selector': '[form] movie-form-root'},{'name': 'MovieFormSalesAgentDealComponent', 'selector': '[formGroup] movie-form-salesdeal, [formGroupName] movie-form-salesdeal'},{'name': 'MovieFormSalesCastComponent', 'selector': '[formGroup] movie-form-sales-cast, [formGroupName] movie-form-sales-cast'},{'name': 'MovieFormSalesInfoComponent', 'selector': '[formGroup] movie-form-sales-info, [formGroupName] movie-form-sales-info'},{'name': 'MovieFormStoryComponent', 'selector': '[formGroup] movie-form-story, [formGroupName] movie-form-story'},{'name': 'MovieFormVersionInfoComponent', 'selector': '[formGroup] movie-form-version-info, [formGroupName] movie-form-version-info'},{'name': 'MovieImdbSearchComponent', 'selector': 'movie-imdb-search'},{'name': 'MovieListComponent', 'selector': 'movie-list'},{'name': 'MovieMaterialFormComponent', 'selector': '[formGroupName] movie-material-form,[formGroup] movie-material-form, movie-material-form'},{'name': 'MovieMaterialListComponent', 'selector': 'movie-material-list'},{'name': 'MoviePickerComponent', 'selector': 'movie-picker'},{'name': 'MovieTitleFormComponent', 'selector': 'movie-title-form'},{'name': 'MovieViewComponent', 'selector': 'movie-view'},{'name': 'NewTemplateComponent', 'selector': 'delivery-new-template'},{'name': 'NotFoundComponent', 'selector': 'error-not-found'},{'name': 'NotificationItemComponent', 'selector': 'notification-item'},{'name': 'NotificationListComponent', 'selector': 'notification-list'},{'name': 'NotificationWidgetComponent', 'selector': 'notification-widget'},{'name': 'OrganizationActivityViewComponent', 'selector': 'org-activity-view'},{'name': 'OrganizationAdminViewComponent', 'selector': 'org-admin-view'},{'name': 'OrganizationCreateComponent', 'selector': 'organization-create'},{'name': 'OrganizationDisplayActionsComponent', 'selector': 'org-display-actions'},{'name': 'OrganizationDisplayComponent', 'selector': 'organization-display'},{'name': 'OrganizationDisplayOperationsComponent', 'selector': 'org-display-operations'},{'name': 'OrganizationEditableComponent', 'selector': 'organization-editable'},{'name': 'OrganizationFeedbackComponent', 'selector': 'organization-feedback'},{'name': 'OrganizationFindComponent', 'selector': 'organization-find'},{'name': 'OrganizationFormComponent', 'selector': '[formGroupName] organization-form, [formGroup] organization-form, organization-form'},{'name': 'OrganizationFormOperationComponent', 'selector': '[formGroup] organization-form-operation, [formGroupName] organization-form-operation'},{'name': 'OrganizationHomeComponent', 'selector': 'organization-home'},{'name': 'OrganizationSearchComponent', 'selector': 'organization-search'},{'name': 'OrganizationSignerFormComponent', 'selector': 'organization-signer-form'},{'name': 'OrganizationSignerRepertoryComponent', 'selector': 'org-signer-repertory'},{'name': 'OrganizationWidgetComponent', 'selector': 'organization-widget'},{'name': 'PasswordConfirmComponent', 'selector': 'password-confirm'},{'name': 'PasswordFormComponent', 'selector': '[formGroup] editPasswordForm, profile-password-form'},{'name': 'PreviewMovieComponent', 'selector': 'movie-import-preview-movie'},{'name': 'PreviewSheetComponent', 'selector': 'movie-import-preview-sheet'},{'name': 'ProfileDeleteComponent', 'selector': 'account-profile-delete'},{'name': 'ProfileDisplayComponent', 'selector': 'profile-display'},{'name': 'ProfileEditableComponent', 'selector': 'profile-editable'},{'name': 'ProfileFormComponent', 'selector': '[formGroupName] profile-form, [formGroup] profile-form, profile-form'},{'name': 'ProfileMenuComponent', 'selector': 'account-profile-menu'},{'name': 'ProfileWidgetComponent', 'selector': 'account-profile-widget'},{'name': 'SigninFormComponent', 'selector': 'auth-login-form'},{'name': 'SignupFormComponent', 'selector': 'auth-signup-form'},{'name': 'TableExtractedMoviesComponent', 'selector': 'movie-table-extracted-movies'},{'name': 'TableExtractedSalesComponent', 'selector': 'movie-table-extracted-sales'},{'name': 'TemplateAddComponent', 'selector': 'material-template-add'},{'name': 'TemplateCreateComponent', 'selector': 'template-create'},{'name': 'TemplateEditableComponent', 'selector': 'template-editable'},{'name': 'TemplateListComponent', 'selector': 'template-list'},{'name': 'TemplateMaterialFormComponent', 'selector': '[formGroup] template-material-form'},{'name': 'TemplateMaterialListComponent', 'selector': 'template-material-list'},{'name': 'TemplateRepertoryComponent', 'selector': 'template-repertory'},{'name': 'ViewExtractedElementsComponent', 'selector': 'movie-view-extracted-elements'},{'name': 'ViewImportErrorsComponent', 'selector': 'movie-view-import-errors'},{'name': 'WalletAddKeyTunnelComponent', 'selector': 'wallet-add-key-tunnel'},{'name': 'WalletAddressViewComponent', 'selector': 'wallet-address-view'},{'name': 'WalletAskPasswordFormComponent', 'selector': 'wallet-ask-password-form'},{'name': 'WalletBlockieComponent', 'selector': 'wallet-blockie'},{'name': 'WalletCreatePasswordFormComponent', 'selector': 'wallet-create-password-form'},{'name': 'WalletImportKeyComponent', 'selector': 'wallet-import-key'},{'name': 'WalletImportKeyFormComponent', 'selector': 'wallet-import-key-form'},{'name': 'WalletNoKeyComponent', 'selector': 'wallet-no-key'},{'name': 'WalletRevealMnemonicComponent', 'selector': 'wallet-reveal-mnemonic'},{'name': 'WalletSendTxTunnelComponent', 'selector': 'wallet-send-tx'},{'name': 'WalletViewComponent', 'selector': 'wallet-view'},{'name': 'WalletWidgetComponent', 'selector': 'wallet-widget'},{'name': 'WelcomeViewComponent', 'selector': 'auth-welcome-view'}];
+    var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'EditModeDirective', 'selector': '[materialEditMode]'},{'name': 'ViewModeDirective', 'selector': '[materialViewMode]'}];
+    var ACTUAL_COMPONENT = {'name': 'MovieDisplayCardItemComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MovieDisplayCardItemComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
