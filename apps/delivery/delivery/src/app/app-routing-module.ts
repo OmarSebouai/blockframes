@@ -1,7 +1,6 @@
 // Angular
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { App } from '@blockframes/organization';
+import { RouterModule } from '@angular/router';
 
 // Components
 import { LayoutComponent } from './layout/layout.component';
@@ -12,7 +11,7 @@ import { AuthGuard } from '@blockframes/auth';
 import { PermissionsGuard, OrganizationGuard } from '@blockframes/organization';
 import { NotificationsGuard } from '@blockframes/notification';
 
-export const routes: Routes = [
+export const routes = [
   { path: '', redirectTo: 'layout', pathMatch: 'full' },
   {
     path: 'auth',
@@ -21,7 +20,7 @@ export const routes: Routes = [
   {
     path: 'layout',
     component: LayoutComponent,
-    data: { app: App.mediaDelivering },
+    data: { app: 'delivery' },
     canActivate: [AuthGuard],
     canDeactivate: [AuthGuard],
     children: [
