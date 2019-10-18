@@ -65,7 +65,7 @@
                                     <a href="../modules/AppModule.html" >AppModule</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
+                                    <a href="../modules/AppRoutingModule.html"  class="active" >AppRoutingModule</a>
                                 </li>
                         </ul>
                     </li>
@@ -82,7 +82,7 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
-                                    <a href="../components/AppComponent.html"  class="active" >AppComponent</a>
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/LayoutComponent.html" >LayoutComponent</a>
@@ -166,7 +166,7 @@
                                            <a href="../modules/AppModule.html" >AppModule</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
+                                           <a href="../modules/AppRoutingModule.html"  class="active" >AppRoutingModule</a>
                                        </li>
                                </ul>
                            </li>
@@ -183,7 +183,7 @@
                                        id="components-links"
                    >
                                        <li class="link">
-                                           <a href="../components/AppComponent.html"  class="active" >AppComponent</a>
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/LayoutComponent.html" >LayoutComponent</a>
@@ -216,112 +216,149 @@
                    
                    </nav>
                </div>
-               <div class="content component">
+               <div class="content module">
                    <div class="content-data">
 
-
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li>AppComponent</li>
+  <li>Modules</li>
+  <li>AppRoutingModule</li>
 </ol>
 
-
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
-        </li>
-        <li>
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
-        </li>
-    </ul>
-
-    <div class="tab-content">
-        <div class="tab-pane fade active in" id="infos"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>apps/delivery/delivery/src/app/app.component.ts</code>
-</p>
-
-
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
-        <tbody>
-
-            <tr>
-                <td class="col-md-3">changeDetection</td>
-                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>delivery-root</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code></td>
-            </tr>
-
-
-
-        </tbody>
-    </table>
-</section>
-
-
-
-    <section>
-        <h3 id="constructor">Constructor</h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>constructor(query: any, icons: any)</code>
-                        </td>
-                    </tr>
-    
-                </tbody>
-            </table>
-    </section>
-
-
+<div class="text-center">
+    <object id="demo-svg" type="image/svg+xml" data="../modules/AppRoutingModule/dependencies.svg" style="width: 100%; height: 250px;">
+            Your browser does not support SVG
+    </object>
+    <div class="btn-group">
+        <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
+        <button id="reset" class="btn btn-default btn-sm">Reset</button>
+        <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
+    </div>
 </div>
-        <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import { ChangeDetectionStrategy, Component, HostListener } from &#x27;@angular/core&#x27;;
-import { AuthQuery } from &#x27;@blockframes/auth&#x27;;
-import { IconComponent } from &#x27;@blockframes/ui&#x27;;
+<script src="../js/libs/svg-pan-zoom.min.js"></script>
+<script src="../js/svg-pan-zoom.controls.js"></script>
 
-@Component({
-  selector: &#x27;delivery-root&#x27;,
-  template: &#x60;
-    &lt;router-outlet&gt;&lt;/router-outlet&gt;&#x60;,
-  changeDetection: ChangeDetectionStrategy.OnPush
-})
-export class AppComponent {
-  constructor(
-    private query: AuthQuery,
-    private icons: IconComponent // even if not used in component, keep this to load icons
-  ) {
-  }
-}
-</code></pre>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>apps/delivery/delivery/src/app/app-routing-module.ts</code>
+        </p>
+
+
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
         </div>
     </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { RouterModule } from &#x27;@angular/router&#x27;;
+
+// Components
+import { LayoutComponent } from &#x27;./layout/layout.component&#x27;;
+import { MovieEmptyComponent } from &#x27;@blockframes/movie&#x27;;
+
+// Guards
+import { AuthGuard } from &#x27;@blockframes/auth&#x27;;
+import { PermissionsGuard, OrganizationGuard } from &#x27;@blockframes/organization&#x27;;
+import { NotificationsGuard } from &#x27;@blockframes/notification&#x27;;
+
+export const routes &#x3D; [
+  { path: &#x27;&#x27;, redirectTo: &#x27;layout&#x27;, pathMatch: &#x27;full&#x27; },
+  {
+    path: &#x27;auth&#x27;,
+    loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/auth&#x27;).then(m &#x3D;&gt; m.AuthModule)
+  },
+  {
+    path: &#x27;layout&#x27;,
+    component: LayoutComponent,
+    data: { app: &#x27;delivery&#x27; },
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard],
+    children: [
+      {
+        path: &#x27;&#x27;,
+        redirectTo: &#x27;o&#x27;,
+        pathMatch: &#x27;full&#x27;
+      },
+      {
+        // The redirection route when user has no organization
+        path: &#x27;organization&#x27;,
+        loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/organization&#x27;).then(m &#x3D;&gt; m.NoOrganizationModule)
+      },
+      {
+        path: &#x27;o&#x27;,
+        canActivate: [NotificationsGuard, PermissionsGuard, OrganizationGuard],
+        canDeactivate: [NotificationsGuard, PermissionsGuard, OrganizationGuard],
+        children: [
+          {
+            path: &#x27;&#x27;,
+            redirectTo: &#x27;home&#x27;,
+            pathMatch: &#x27;full&#x27;
+          },
+          {
+            path: &#x27;no-movies&#x27;,
+            component: MovieEmptyComponent
+          },
+          {
+            path: &#x27;organization&#x27;,
+            loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/organization&#x27;).then(m &#x3D;&gt; m.OrganizationModule)
+          },
+          {
+            path: &#x27;account&#x27;,
+            loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/account&#x27;).then(m &#x3D;&gt; m.AccountModule)
+          },
+          {
+            path: &#x27;home&#x27;,
+            loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/movie&#x27;).then(m &#x3D;&gt; m.MovieModule)
+          },
+          {
+            path: &#x27;templates&#x27;,
+            loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/material&#x27;).then(m &#x3D;&gt; m.TemplateModule)
+          },
+          {
+            path: &#x27;delivery&#x27;,
+            loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/material&#x27;).then(m &#x3D;&gt; m.DeliveryModule)
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: &#x27;not-found&#x27;,
+    loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/ui&#x27;).then(m &#x3D;&gt; m.ErrorNotFoundModule)
+  },
+  {
+    path: &#x27;**&#x27;,
+    loadChildren: () &#x3D;&gt; import(&#x27;@blockframes/ui&#x27;).then(m &#x3D;&gt; m.ErrorNotFoundModule)
+  }
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes, {
+      anchorScrolling: &#x27;enabled&#x27;,
+      onSameUrlNavigation: &#x27;reload&#x27;,
+      paramsInheritanceStrategy: &#x27;always&#x27;
+    })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
+</code></pre>
+    </div>
+</div>
 
 
 
