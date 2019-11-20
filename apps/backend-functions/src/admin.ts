@@ -11,8 +11,9 @@ import {
   ADMIN_ACCEPT_ORG_PATH,
   ADMIN_ACCESS_TO_APP_PATH,
   ADMIN_DATA_PATH,
+  ADMIN_PATH,
   organizationCanAccessApp,
-  organizationRequestedAccessToApp,
+  organizationRequestedAccessToApp
 } from './assets/mail-templates';
 import {
   acceptNewOrgPage,
@@ -56,6 +57,13 @@ export async function onRequestAccessToAppWrite(
 // We serve an express app at the /admin URL
 // this let us deal easily with get / post, url params, etc.
 export const adminApp = express();
+
+// Home and Login
+// ==============
+
+adminApp.get(`${ADMIN_PATH}`, async (req: express.Request, res: express.Response) => {
+  res.send('gg');
+});
 
 // Organization Administration: Accept new orgs
 // ============================================
