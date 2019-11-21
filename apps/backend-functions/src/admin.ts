@@ -62,7 +62,15 @@ export const adminApp = express();
 // ==============
 
 adminApp.get(`${ADMIN_PATH}`, async (req: express.Request, res: express.Response) => {
-  res.send('gg');
+  const headers = JSON.stringify(req.headers);
+  // const tokenId = req.get('Authorization')!.split('Bearer ')[1];
+  const r = `
+  GG
+  <br/>
+  headers: ${headers}
+  <br/>
+  `;
+  res.send(r);
 });
 
 // Organization Administration: Accept new orgs
