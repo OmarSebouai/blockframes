@@ -1,4 +1,5 @@
 import { Firestore } from '../admin';
+import { withoutUndefined } from './0001';
 
 
 /**
@@ -20,13 +21,13 @@ export async function updateAdressesOrganizationDocument(db: Firestore) {
     const newData = {
       ...orgData,
       addresses: {
-        main : {
+        main : withoutUndefined({
           city: address,
           country: '',
           phoneNumber: phoneNumber,
           street: '',
           zipCode: ''
-        }
+        })
       },
       created: new Date(created),
       updated: new Date(updated)
