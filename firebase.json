@@ -12,22 +12,6 @@
         "function": "admin"
       },
       {
-        "source": "/delivery{,/**}",
-        "destination": "/delivery/index.html"
-      },
-      {
-        "source": "/catalog-marketplace{,/**}",
-        "destination": "/catalog-marketplace/index.html"
-      },
-      {
-        "source": "/catalog-dashboard{,/**}",
-        "destination": "/catalog-dashboard/index.html"
-      },
-      {
-        "source": "/movie-financing{,/**}",
-        "destination": "/movie-financing/index.html"
-      },
-      {
         "source": "**",
         "destination": "/index.html"
       }
