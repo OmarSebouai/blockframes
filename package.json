@@ -101,6 +101,7 @@
     "@types/sendgrid": "^4.3.0",
     "akita-ng-fire": "^2.0.0-alpha.22",
     "algoliasearch": "^3.33.0",
+    "apexcharts": "^3.15.2",
     "core-js": "^3.3.2",
     "ethereum-blockies-base64": "^1.0.2",
     "express": "4.17.1",
