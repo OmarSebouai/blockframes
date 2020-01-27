@@ -3,7 +3,7 @@
 </ng-template>
 <div *ngIf="(movie$ | async) as movie;" test-id="content">
   <!-- TODO(issue#1309) create image directive for background image -->
-  <header [style.background-image]="getBackgroundImage(movie.promotionalElements.promotionalElements)" class="banner">
+  <header [style.background-image]="getBackgroundImage(movie.promotionalElements)" class="banner">
     <section fxLayout="row" fxLayoutAlign="center">
       <article class="titles" fxLayout="column" fxLayoutAlign="start start">
         <h1>{{movie.main.title.international}}</h1>
@@ -46,8 +46,8 @@
           <img class="movie-poster" [imgRef]="poster" alt="movie poster" />
         </ng-container>
         <!-- Promotional elements -->
-        <ng-container *ngIf="movie.promotionalElements.promotionalElements.length">
-          <catalog-promotional-elements (promoReelOpened)="sendPromoReelAnalytic()" [promotionalElements]="movie.promotionalElements.promotionalElements">
+        <ng-container *ngIf="movie.promotionalElements">
+          <catalog-promotional-elements (promoReelOpened)="sendPromoReelAnalytic()" [promotionalElements]="movie.promotionalElements">
           </catalog-promotional-elements>
         </ng-container>
         <!-- Reserved territories -->
@@ -86,7 +86,7 @@
           [prizes]="movie.festivalPrizes.prizes"
           [synopsis]="movie.main.shortSynopsis"
           [keywords]="movie.promotionalDescription.keywords"
-          [releaseDate]="movie.AFMOriginCountryReleaseDate"
+          [releaseDate]="movie.salesInfo.originalRelease"
           [stakeholders]="movie.main.stakeholders.executiveProducer"
           [salesAgent]="movie.salesAgentDeal.salesAgent">
         </movie-display-film-info-card>
