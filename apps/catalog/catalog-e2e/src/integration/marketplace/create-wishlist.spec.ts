@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
-import { HomePage, WishlistPage, SearchPage, ViewPage } from "../../support/pages/marketplace";
-import { User } from "../../support/utils/type";
-import { USERS } from "../../support/utils/users";
-import { MOVIENAMELIST } from "../../support/utils/movies";
-import { WelcomeViewPage, LoginViewPage } from "../../support/pages/auth";
+import { HomePage, SearchPage, ViewPage, WishlistPage } from '../../support/pages/marketplace';
+import { User } from '../../support/utils/type';
+import { USERS } from '../../support/utils/users';
+import { MOVIENAMELIST } from '../../support/utils/movies';
+import { LoginViewPage, WelcomeViewPage } from '../../support/pages/auth';
 
 // Select user: cytest.thejokers@blockframes.com
 const LOGIN_CREDENTIALS: Partial<User> = USERS[1];
@@ -17,6 +17,8 @@ beforeEach(() => {
 });
 
 describe('Test wishlist icon from line-up page', () => {
+  // https://github.com/blockframes/blockframes/issues/1264
+
   it('Login into an existing account, add two movies on wishlist from line-up page, check the wishlist.', () => {
     // Connexion
     const p1: WelcomeViewPage = new WelcomeViewPage();
@@ -35,13 +37,13 @@ describe('Test wishlist icon from line-up page', () => {
     const p5: WishlistPage = p4.clickWishlist();
     MOVIENAMELIST.forEach(movieName => {
       p5.assertMovieInCurrentWishlist(movieName);
-    })
+    });
     p5.checkWishListCount(MOVIENAMELIST.length);
 
     // Remove movies from the current wishlist
     MOVIENAMELIST.forEach(movieName => {
       p5.removeMovieFromWishlist(movieName);
-    })
+    });
 
     // Check that current wishlist is empty
     p5.assertNoMovieInWishlist();
@@ -70,13 +72,13 @@ describe('Test wishlist icon from movie view page', () => {
     const p6: WishlistPage = p4.clickWishlist();
     MOVIENAMELIST.forEach(movieName => {
       p6.assertMovieInCurrentWishlist(movieName);
-    })
+    });
     p6.checkWishListCount(MOVIENAMELIST.length);
 
     // Remove movies from the current wishlist
     MOVIENAMELIST.forEach(movieName => {
       p6.removeMovieFromWishlist(movieName);
-    })
+    });
 
     // Check that current wishlist is empty
     p6.assertNoMovieInWishlist();
@@ -140,6 +142,5 @@ describe('Test wishlist icon from movie view page', () => {
       });
       p4.checkWishListCount(0);
     });
-  })
-
+  });
 });
