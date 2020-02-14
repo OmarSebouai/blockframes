@@ -98,16 +98,16 @@ export async function clearUsers(): Promise<any> {
   return removeUnexpectedUsers([], auth);
 }
 
-function readUsersFromSTDIN(): Promise<UserConfig[]> {
+export function readJSONLinesFromSTDIN(): Promise<any[]> {
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
     terminal: false
   });
 
-  // We push all the users from stdin to this array.
+  // We push all the items from stdin to this array.
   // Later use a worker queue or a generator.
-  const users = [];
+  const lines = [];
   let failed = false;
 
   return new Promise((resolve, reject) => {
@@ -119,7 +119,7 @@ function readUsersFromSTDIN(): Promise<UserConfig[]> {
       }
 
       try {
-        users.push(JSON.parse(line));
+        lines.push(JSON.parse(line));
       } catch (error) {
         reject(error);
         failed = true;
@@ -134,9 +134,13 @@ function readUsersFromSTDIN(): Promise<UserConfig[]> {
       }
 
       // When stdin gets closed
-      resolve(users);
+      resolve(lines);
     });
   });
+}
+
+function readUsersFromSTDIN(): Promise<UserConfig[]> {
+  return readJSONLinesFromSTDIN();
 }
 
 export async function createUsers(): Promise<any> {

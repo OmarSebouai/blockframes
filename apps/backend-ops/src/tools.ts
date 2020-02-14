@@ -4,9 +4,9 @@
  *
  * @param f
  */
-export const exitable = (f: () => Promise<any | void>) => {
-  return () =>
-    f()
+export const exitable = (f: (...args: any[]) => Promise<any | void>) => {
+  return (...args) =>
+    f(...args)
       .then(() => process.exit(0))
       .catch(e => {
         console.error(e);
