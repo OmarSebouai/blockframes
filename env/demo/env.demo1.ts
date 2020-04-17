@@ -30,7 +30,8 @@ export const firebase = {
 export const algolia = {
   appId: '8E9YO1I9HB',
   searchKey: '4a2990a293c0ee0bfde9ebd66270a47f',
-  indexNameOrganizations: 'demo1_orgs'
+  indexNameOrganizations: 'demo1_orgs',
+  indexNameMovies: 'demo1_movies'
 };
 
 // Ethereum
@@ -65,3 +66,40 @@ export const relayer = {
 
 export const backupBucket = 'demo1-backups';
 export const sendgridAPIKey = null; // defined in functions.config, see backend-functions/environments
+
+
+// Sendgrid Emails
+
+export const templateIds = {
+  welcomeMessage: 'd-eb8e1eb7c5a24eb8af1d2d32539ad714',
+  userVerifyEmail: 'd-81438bdf511b43cfa866ca63a45a02ae',
+  orgInviteUser: 'd-7a0edb51795c493d9514fe4a595b40ac',
+  userCredentials: 'd-a34ce9ea59c5477f9feae8f556157b6b',
+  orgAccepted: 'd-8c5f7009cd2f4f1b877fa168b4efde48',
+  joinAnOrgPending: 'd-88665c2583dc46ea85588a39fa8ca1ee',
+  joinYourOrg: 'd-b1ab5d21def145ccb759520e2d984436',
+  resetPassword: 'd-6a0710945bc841ffb6955e3dc202704c',
+  userHasJoined: 'd-f84d8c5a70884316870ca4ef657e368f',
+  userRequestAccepted: 'd-d32b25a504874a708de6bfc50a1acba7',
+  wishlistPending: 'd-e0cd8970d19346eea499a81f67f1a557',
+}
+
+// Yandex Metrika Id
+export const yandexId = 0;
+
+// Intercom
+// ========
+export const intercomId = 'srwfltp4';
+
+// Quorum
+// ========
+export const quorum = {
+}
+
+// BigQuery
+// ========
+export const bigQueryAnalyticsTable = 'blockframes-staging.analytics_194475853.events_';
+
+// Archipel Content OrgId
+// ======================
+export const centralOrgID = "jnbHKBP5YLvRQGcyQ8In";
