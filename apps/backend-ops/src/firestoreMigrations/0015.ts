@@ -4,26 +4,28 @@ import { Firestore } from '../admin';
  * Update user and organization in notifications and invitations collections
  */
 export async function upgrade(db: Firestore) {
-  const notifications = await db.collection('notifications').get();
-  const invitations = await db.collection('invitations').get();
   const batch = db.batch();
 
+  const notifications = await db.collection('notifications').get();
   notifications.docs.forEach(doc => {
     const notification = doc.data();
     const { organization, user } = notification;
 
     if (organization || user) {
       const newData = updateUserAndOrganization(notification);
+      console.log(doc.ref, ':', newData);
       return batch.set(doc.ref, newData);
     }
   });
 
+  const invitations = await db.collection('invitations').get();
   invitations.docs.forEach(doc => {
     const invitation = doc.data();
     const { organization, user } = invitation;
 
     if (organization || user) {
       const newData = updateUserAndOrganization(invitation);
+      console.log(doc.ref, ':', newData);
       return batch.set(doc.ref, newData);
     }
   });
