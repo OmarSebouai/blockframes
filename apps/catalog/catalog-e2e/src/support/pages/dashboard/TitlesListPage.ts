@@ -1,5 +1,5 @@
 import StartTunnelPage from "./StartTunnelPage";
-import TitlesActivityPage from "./TitlesActivityPage";
+import TunnelMainPage from "./TunnelMainPage";
 
 export default class TitlesListPage {
   constructor() {
@@ -18,7 +18,7 @@ export default class TitlesListPage {
 
   public clickMovieLigne(title: string) {
     cy.get('catalog-title-list table tr').contains(title).click();
-    return new TitlesActivityPage();
+    return new TunnelMainPage();
   }
 
   public clickLastPageTable() {

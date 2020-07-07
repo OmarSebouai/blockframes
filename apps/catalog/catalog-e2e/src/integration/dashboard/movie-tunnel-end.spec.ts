@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import { signInAndNavigateToMain } from "../../support/utils/utils";
-import { TunnelMainPage, TunnelStorylinePage, TunnelCreditsPage, TunnelSummaryPage, TitlesDetailsPage, TitlesListPage, TitlesActivityPage } from "../../support/pages/dashboard";
+import { TunnelMainPage, TunnelStorylinePage, TunnelCreditsPage, TunnelSummaryPage, TitlesDetailsPage, TitlesListPage } from "../../support/pages/dashboard";
 import { clearDataAndPrepareTest } from "@blockframes/e2e/utils/functions";
 
 const NAVIGATION = ['Summary', 'Summary & Submission'];
@@ -59,7 +59,7 @@ describe('User can navigate to the movie tunnel, complete required fields, and s
 
     // Go on TitlesActivityPage
     p6.clickLastPageTable();
-    const p7: TitlesActivityPage = p6.clickMovieLigne(TITLES[0]);
-    p7.assertTitleExists(TITLES[0]);
+    const p7: TunnelMainPage = p6.clickMovieLigne(TITLES[0]);
+    p7.assertInternationalTitleExists(TITLES[0]);
   });
 });
