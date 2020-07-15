@@ -1,5 +1,8 @@
 <main fxLayout="column">
   <h1><a routerLink="/c/o/admin/panel/">Administration panel</a> > Users</h1>
+  <article>
+    <span>I want to put here number of new connexion : {{ connexionAnalytics$ | async }}</span>
+  </article>
   <article fxLayout="column" fxLayoutAlign="center center">
     <button [disabled]="!userListLoaded" mat-flat-button color="primary" (click)="exportTable()">
       <span>Export to CSV</span>
@@ -31,9 +34,9 @@
     <ng-template colRef="lastConnexion" let-lastConnexion>
       {{ lastConnexion | date }}
     </ng-template>
-    <ng-template colRef="org.addresses.main.country" let-country>
+    <!-- <ng-template colRef="org.addresses.main.country" let-country>
       {{ country ? country : '--' }}
-    </ng-template>
+    </ng-template> -->
   </bf-table-filter>
 
 </main>

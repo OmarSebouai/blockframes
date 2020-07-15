@@ -62,7 +62,7 @@ ORDER BY
 
 const queryAnalyticsActiveUsers = `
   SELECT
-    count(*) as page_view, 
+    count(*) as page_view,
     user_id,
     MIN(event_date) as first_connexion,
     MAX(event_date) as last_connexion
@@ -74,6 +74,12 @@ const queryAnalyticsActiveUsers = `
   GROUP BY user_id
   ORDER BY last_connexion DESC
   LIMIT 1000
+`
+
+const queryFirstConnexion = `
+  SELECT COUNT(*) AS count
+  FROM \`${bigQueryAnalyticsTable}*\`
+  WHERE event_name = "first_visit" AND event_date BETWEEN @dateOne AND @dateTwo
 `
 
 async function executeQueryEventAnalytics(query: any, eventIds: string[]) {
@@ -90,6 +96,42 @@ async function executeQueryEventAnalytics(query: any, eventIds: string[]) {
   };
 
   return bigqueryClient.query(options);
+}
+
+// Get number of first connexion the last month
+function getConnexionOfLastMonth(query: any) {
+  const biqueryClient = new BigQuery();
+
+  const dateNow = Date.now();
+
+  const currentMonth = new Date(dateNow).getMonth()+ 1;
+  let month: number;
+  if (currentMonth === 1 ) {
+    month = 12;
+  } else {
+    month = currentMonth - 1;
+  }
+
+  let year: number;
+  const currentYear = new Date(dateNow).getFullYear();
+  if (currentMonth === 0) {
+    year = currentYear - 1;
+  } else {
+    year = currentYear;
+  }
+
+  const lastDay = new Date(year, month, 0).getDate();
+
+  const option = {
+    query,
+    timeoutMs: 100000,
+    useLegacySql: false,
+    params: {
+      dateOne: `${year}${month < 10 ? `0${month}` : `${month}`}01`,
+      dateTwo: `${year}${month < 10 ? `0${month}` : `${month}`}${lastDay}`
+    }
+  }
+  return biqueryClient.query(option);
 }
 
 async function executeQueryMovieAnalytics(query: any, movieIds: string[], daysPerRange: number) {
@@ -157,7 +199,13 @@ const createEventAnalytics = (result: any, user: PublicUser | undefined): EventA
   }
 };
 
-/** Call bigQuery with an array of eventId to tet their analytics. */
+/** Get the number of first connexion during the last month */
+export const getFirstConnexion = async (): Promise<any> => {
+  const [rows] = await getConnexionOfLastMonth(queryFirstConnexion);
+  return rows[0].count;
+}
+
+/** Call bigQuery with an array of eventId to get their analytics. */
 export const requestEventAnalytics = async (
   data: { eventIds: string[] },
   context: CallableContext
@@ -205,7 +253,7 @@ export const requestEventAnalytics = async (
       };
     });
   } else {
-    throw new Error('Unexepected error.');
+    throw new Error('Unexpected error.');
   }
 };
 

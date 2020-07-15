@@ -104,6 +104,10 @@ export const getEventAnalytics = functions.https.onCall(logErrors(bigQuery.reque
 /** Trigger: REST call bigQuery to fetch analytics active users */
 export const getAnalyticsActiveUsers = functions.https.onCall(logErrors(bigQuery.getAnalyticsActiveUsers));
 
+/** Trigger: REST call bigQuery to fetch number of first connexion */
+// TODO improve and add the name of user if they create an account
+export const getFirstConnexions = functions.https.onCall(logErrors(bigQuery.getFirstConnexion));
+
 //--------------------------------
 //      Player  Management      //
 //--------------------------------

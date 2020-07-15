@@ -7,6 +7,8 @@ import { Organization } from '@blockframes/organization/+state/organization.mode
 import { OrganizationService } from '@blockframes/organization/+state/organization.service';
 import { orgName } from '@blockframes/organization/+state';
 import { getOrgModuleAccess } from '@blockframes/utils/apps';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'admin-users',
@@ -22,7 +24,7 @@ export class UsersComponent implements OnInit {
     'lastName': 'LastName',
     'org': 'Organization',
     'type': 'Type',
-    'org.addresses.main.country': 'Country',
+    // 'org.addresses.main.country': 'Country',
     'userOrgRole': 'Role',
     'position': 'Position',
     'email': 'Email',
@@ -38,7 +40,7 @@ export class UsersComponent implements OnInit {
     'lastName',
     'org',
     'type',
-    'org.addresses.main.country',
+    // 'org.addresses.main.country',
     'userOrgRole',
     'position',
     'email',
@@ -49,6 +51,7 @@ export class UsersComponent implements OnInit {
   public rows: any[] = [];
   public userListLoaded = false;
   public orgs: Record<string, Organization> = {};
+  public connexionAnalytics$: Observable<number>;
 
   constructor(
     private userService: UserService,
@@ -59,6 +62,8 @@ export class UsersComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
+    this.connexionAnalytics$ = this.adminService.getFirstConnexions();
+    this.connexionAnalytics$.subscribe(analitycs => console.log(analitycs));
     await this.adminService.loadAnalyticsData();
 
     const users = await this.userService.getAllUsers();

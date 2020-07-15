@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AdminStore } from './admin.store';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AdminService {
@@ -33,9 +34,14 @@ export class AdminService {
   /**
   * Send email from Google Firebase to reset password
   * @dev This is the "hard" reset password link, sent directly from Google.
-  * @param email 
+  * @param email
   */
   public sendPasswordResetEmail(email: string): Promise<void> {
     return this.auth.sendPasswordResetEmail(email);
+  }
+
+  public getFirstConnexions(): Observable<number> {
+    const f = this.functions.httpsCallable('getFirstConnexions');
+    return f({});
   }
 }
