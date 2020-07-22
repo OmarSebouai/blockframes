@@ -46,7 +46,7 @@ const routes: Routes = [{
     },
     {
       path: 'notifications',
-      loadChildren: () => import('./notification/notification.module').then(m => m.NotificationModule),
+      loadChildren: () => import('@blockframes/notification/notification.module').then(m => m.NotificationModule),
       data: { animation: 'notifications' }
     },
     {
