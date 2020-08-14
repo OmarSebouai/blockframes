@@ -1,6 +1,14 @@
 import {transition, trigger, query, style, animate, group, animateChild, stagger, sequence } from '@angular/animations';
 import { Easing } from './animation-easing';
 
+
+const homeToList = [
+    'home => title-list',
+    'home => wishlist',
+    'home => organization-list',
+    'home => event-list',
+].join(',');
+
 const listToList = [
     'notifications <=> title-list',
     'notifications <=> wishlist',
@@ -14,21 +22,21 @@ const listToList = [
     'organization-list <=> event-list',
 ].join(',');
 
-// List <=> View
+// List => View
 const listToView = [
-    'notifications <=> title-view',
-    'notifications <=> organization-view',
-    'notifications <=> event-view',
-    'wishlist <=> title-view',
-    'wishlist <=> organization-view',
-    'wishlist <=> event-view',
-    'title-list <=> title-view',
-    'title-list <=> organization-view',
-    'organization-list <=> organization-view',
-    // View <=> View
-    'title-view <=> organization-view',
+    'notifications => title-view',
+    'notifications => organization-view',
+    'notifications => event-view',
+    'wishlist => title-view',
+    'wishlist => organization-view',
+    'wishlist => event-view',
+    'title-list => title-view',
+    'title-list => organization-view',
+    'organization-list => organization-view',
 ].join(', ')
 
+// View <=> View
+// 'title-view <=> organization-view',
 
 /** Prepare page before leaving/entering (use absolute to get out of the page flow) */
 const prepare = [
@@ -54,30 +62,44 @@ const prepare = [
 export const routeAnimation = trigger('routeAnimation', [
     transition('* => home', [
         ...prepare,
-        query(':enter', [ style({ transform: 'translateY(100vh)', opacity: 1 }) ], { optional: true }),
+        query(':enter', [ style({ opacity: 0 }) ], { optional: true }),
         group([
-            query(':leave', [ animate('200ms ease-out', style({ opacity: 0 })) ], { optional: true }),
-            query(':enter', [ animate(`600ms ${Easing.easeOutExpo}`, style({ transform: 'translateY(0)', opacity: 1 })) ], { optional: true })
+            query(':leave', [ animate('200ms ease-in', style({ opacity: 0 })) ], { optional: true }),
+            query(':enter', [ animate(`400ms 100ms ease-out`, style({ opacity: 1 })) ], { optional: true })
+        ]),
+    ]),
+    // Home => List
+    transition(homeToList, [
+        ...prepare,
+        query(':enter', [ style({ transform: 'translateY(100%)', opacity: 1 }) ], { optional: true }),
+        sequence([
+            query(':leave', [ animate('400ms ease-in', style({ transform: 'scale(0.98)' })) ], { optional: true }),
+            query(':enter', [ animate(`400ms ease-out`, style({ transform: 'translateY(0)' })) ], { optional: true })
         ]),
     ]),
     // List <=> List
     transition(listToList, [
         ...prepare,
-        query(':enter', [ style({  left: '-100%', opacity: 0}) ]),
+        query(':enter', [ style({ opacity: 0 }) ], { optional: true }),
         group([
-            query(':leave', [
-              animate('200ms ease-out', style({  left: '50%', opacity: 0 }))
-            ], { optional: true }),
-            query(':enter', [
-              animate('300ms ease-out', style({  left: '0%', opacity: 1 }))
-            ], { optional: true })
-        ]),
+            query(':leave', [ animate('200ms ease-in', style({ opacity: 0 })) ], { optional: true }),
+            query(':enter', [ animate(`200ms 100ms ease-out`, style({ opacity: 1 })) ], { optional: true })
+        ])
     ]),
-    // List <=> view
+    // List => View
     transition(listToView, [
         ...prepare,
-        query(':enter', [ style({ opacity: 0 }) ], { optional: true }),
-        query(':leave', animateChild(), { optional: true }),
-        query(':enter', animateChild(), { optional: true }),
+        query(':enter', [ style({ transform: 'scale(0.95)', opacity: 1 }) ], { optional: true }),
+        group([
+            query(':leave', [ animate('200ms ease-in', style({ opacity: 0 })) ], { optional: true }),
+            query(':enter', [ animate(`200ms 100ms ${Easing.easeOutcubic}`, style({ transform: 'scale(1)', opacity: 1 })) ], { optional: true })
+        ])
     ]),
+    // List <=> view
+    // transition(listToView, [
+    //     ...prepare,
+    //     query(':enter', [ style({ opacity: 0 }) ], { optional: true }),
+    //     query(':leave', animateChild(), { optional: true }),
+    //     query(':enter', animateChild(), { optional: true }),
+    // ]),
 ]);
