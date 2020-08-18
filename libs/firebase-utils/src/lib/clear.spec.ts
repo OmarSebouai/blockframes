@@ -1,12 +1,22 @@
-import { initFunctionsTestMock } from '@blockframes/testing/firebase/functions';
+import { clearFirestoreData, firestore, initializeTestApp } from '@firebase/testing';
 
 describe('Clear DB', () => {
+  let db: firestore.Firestore;
   beforeAll(async () => {
-    //Init local emulator
-    initFunctionsTestMock();
+    const app = initializeTestApp({ projectId: 'test' });
+    db = app.firestore();
+  });
+  beforeEach(async () => {
+    await db.collection('users').add({});
+  })
+  afterEach(() => clearFirestoreData({ projectId: 'test' }));
 
-  })
-  it('Should clear everything', async () => {
-    expect(true).toBeFalsy();
-  })
+  it('Should have data', async () => {
+    try {
+      const ref = await db.collection('users').get();
+      expect(ref.docs.length).toEqual(1);
+    } catch(err) {
+      console.error(err);
+    }
+  });
 })

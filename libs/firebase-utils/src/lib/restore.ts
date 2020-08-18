@@ -2,7 +2,7 @@ import { backupBucket } from '@env';
 import * as readline from 'readline';
 import { storage, firestore } from 'firebase-admin';
 import { startMaintenance, endMaintenance } from './maintenance';
-import { clear } from './clear';
+import { clearDB } from './clear';
 
 export async function restore() {
   const db = firestore();
@@ -19,7 +19,7 @@ export async function restore() {
   await startMaintenance();
 
   console.info('Clearing the database');
-  await clear();  // Clear the database after getting the content just in case.
+  await clearDB();  // Clear the database after getting the content just in case.
 
   console.info('restoring file:', file.name);
   const stream = file.createReadStream();
