@@ -6,10 +6,10 @@
       Please verify that all the information you have entered is correct before submitting to Archipel Content for validation.
     </p>
 
-    <div *ngIf="missingFields.length || invalidFields.length" class="mat-body">
+    <!-- <div *ngIf="missingFields.length || invalidFields.length" class="mat-body">
       <span *ngIf="missingFields.length" class="missing-control">You have {{ missingFields.length }} missing fields below.</span>
       <span *ngIf="invalidFields.length" class="mandatory-control">You have {{ invalidFields.length }} mandatory fields to fill in.</span>
-    </div>
+    </div> -->
 
     <!-- MAIN INFORMATION -->
     <section id="main-information">
@@ -32,7 +32,7 @@
         </h6>
         <ul>
           <li>
-            <missing-control [control]="form.get('logline')"></missing-control>
+            <missing-control [control]="form.get('logline')" (change)="states.logline = $event"></missing-control>
           </li>
         </ul>
       </article>
@@ -65,20 +65,13 @@
         </h6>
         <ul>
           <li>
-            <mat-chip-list fxLayout="row" fxLayoutGap="5px">
-              <ng-container *ngIf="!form.get('keywords').value.length else display">
-                <a [routerLink]="getPath('synopsis')" fragment="keywords" class="missing-control">
-                  Missing
-                </a>
+            <missing-control [control]="form.get('keywords')" [link]="getPath('synopsis')" fragment="keywords">
+              <ng-container *ngFor="let keyword of form.get('keywords').value">
+                <mat-chip>
+                  {{ keyword }}
+                </mat-chip>
               </ng-container>
-              <ng-template #display>
-                <ng-container *ngFor="let keyword of form.get('keywords').value">
-                  <mat-chip>
-                    {{ keyword }}
-                  </mat-chip>
-                </ng-container>
-              </ng-template>
-            </mat-chip-list>
+            </missing-control>
           </li>
         </ul>
       </article>

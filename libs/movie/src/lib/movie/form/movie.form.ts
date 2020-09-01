@@ -698,6 +698,10 @@ export class MoviePromotionalElementsForm extends FormEntity<MoviePromotionalEle
   constructor(promotionalElements?: MoviePromotionalElements) {
     super(createMoviePromotionalElementsControls(promotionalElements));
   }
+
+  get other_links() {
+    return this.other_links;
+  }
 }
 
 // ------------------------------

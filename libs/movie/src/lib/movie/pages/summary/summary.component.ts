@@ -1,9 +1,8 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MovieService, MovieQuery, Movie } from '@blockframes/movie/+state';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MovieFormShellComponent } from '../shell/shell.component';
-import { FormGroup, FormArray } from '@angular/forms';
 import { getMoviePublishStatus, getCurrentApp } from '@blockframes/utils/apps';
 import { RouterQuery } from '@datorama/akita-ng-router-store';
 import { mergeDeep } from '@blockframes/utils/helpers';
@@ -11,17 +10,17 @@ import { map } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 import { MovieReviewForm } from '@blockframes/movie/form/movie.form';
 
+const fields = ['title.original', ''];
+
 @Component({
   selector: 'movie-form-summary',
   templateUrl: './summary.component.html',
   styleUrls: ['./summary.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MovieFormSummaryComponent implements OnInit {
+export class MovieFormSummaryComponent {
   form = this.shell.form;
   subscription: Subscription;
-  missingFields: string[] = [];
-  invalidFields: string[] = [];
   isPublished$ = this.query.selectActive(movie => movie.storeConfig.status).pipe(
     map(status => status === 'accepted' || status === 'submitted')
     )
@@ -35,10 +34,6 @@ export class MovieFormSummaryComponent implements OnInit {
     private snackBar: MatSnackBar,
     private routerQuery: RouterQuery
   ) {
-  }
-
-  ngOnInit(): void {
-    this.findInvalidControlsRecursive(this.form);
   }
 
   get stillPhoto() {
@@ -82,27 +77,6 @@ export class MovieFormSummaryComponent implements OnInit {
       // Log the invalid forms
       this.snackBar.open('Fill all mandatory fields before submitting', '', { duration: 2000 });
     }
-  }
-
-  /* Utils function to get the list of invalid form. Not used yet, but could be useful later */
-  public findInvalidControlsRecursive(formToInvestigate: FormGroup | FormArray) {
-    this.invalidFields = [];
-    this.missingFields = [];
-    const recursiveFunc = (form: FormGroup | FormArray) => {
-      Object.keys(form.controls).forEach(field => {
-        const control = form.get(field);
-        if (control.invalid) {
-          this.invalidFields.push(field);
-        }
-        if (!control.value) {
-          this.missingFields.push(field);
-        }
-        if (control instanceof FormArray || control instanceof FormGroup) {
-          recursiveFunc(control);
-        }
-      });
-    }
-    recursiveFunc(formToInvestigate);
   }
 
   public reviewHasNoValue(review: MovieReviewForm) {

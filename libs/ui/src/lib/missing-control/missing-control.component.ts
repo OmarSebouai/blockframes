@@ -1,6 +1,5 @@
-import { Component, ChangeDetectionStrategy, Input, ChangeDetectorRef, OnInit, TemplateRef, ContentChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Scope } from '@blockframes/utils/static-model/staticModels';
 
 @Component({
   selector: '[control] missing-control',
@@ -8,19 +7,8 @@ import { Scope } from '@blockframes/utils/static-model/staticModels';
   styleUrls: ['./missing-control.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MissingControlComponent implements OnInit {
+export class MissingControlComponent {
   @Input() control: FormControl;
-  @Input() scope: Scope;
-  @Input() type: string;
   @Input() link: string;
   @Input() fragment: string;
-  @Input() isLast = true;
-
-  @ContentChild(TemplateRef) child: TemplateRef<any>;
-
-  constructor(private cdr: ChangeDetectorRef) {}
-
-  ngOnInit() {
-    this.control.valueChanges.subscribe(_ => this.cdr.markForCheck());
-  }
 }
