@@ -2,7 +2,9 @@
   <li>
     <strong>Original Languages </strong>
     <ng-container *ngFor="let language of movie.originalLanguages.controls; let isLast = last">
-      <missing-control [control]="language" scope="LANGUAGES" [link]="link" [isLast]="isLast"></missing-control>
+      <missing-control [control]="language" [link]="link">
+        {{ language | translateSlug:'LANGUAGES' }}
+      </missing-control>
     </ng-container>
   </li>
   <li>
@@ -10,7 +12,9 @@
     <ng-container *ngFor="let genre of genres; let isLast = last">
       <!-- We don't want to display missing for custom genres so we display the value without missing-control -->
       <ng-container *ngIf="!isLast else last">
-        <missing-control [control]="genre" scope="GENRES" [link]="link" [isLast]="isLast"></missing-control>
+        <missing-control [control]="genre" scope="GENRES" [link]="link">
+          {{ genre | translateSlug:'GENRES' }}
+        </missing-control>
       </ng-container>
       <ng-template #last>
         {{ genre.value }}
