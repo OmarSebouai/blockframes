@@ -4,7 +4,7 @@ import { MissingControlComponent } from './missing-control.component';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { TranslateSlugModule } from '@blockframes/utils/pipes/translate-slug.pipe';
-import { ToLabelModule } from '@blockframes/utils/pipes';
+import { ToLabelModule, ControlEmptyPipeModule } from '@blockframes/utils/pipes';
 
 @NgModule({
   imports: [
@@ -13,6 +13,7 @@ import { ToLabelModule } from '@blockframes/utils/pipes';
     TranslateSlugModule,
     RouterModule,
     ToLabelModule,
+    ControlEmptyPipeModule
   ],
   declarations: [MissingControlComponent],
   exports: [MissingControlComponent]

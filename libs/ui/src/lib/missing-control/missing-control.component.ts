@@ -12,3 +12,4 @@ export class MissingControlComponent {
   @Input() link: string;
   @Input() fragment: string;
 }
+

@@ -3,7 +3,7 @@
 </ng-container>
 <ng-template #empty>
   <!-- TODO: Pipe -->
-   <ng-container *ngIf="!control.value; else value">
+   <ng-container *ngIf="!control | isEmpty; else value">
     Missing
   </ng-container>
   <ng-template #value>
