@@ -18,7 +18,7 @@ import {
   UnitBox,
 } from "@blockframes/utils/static-model";
 import { NumberRange } from "@blockframes/utils/common-interfaces/range";
-import { Producer, Crew, Cast, Stakeholder, Director } from "@blockframes/utils/common-interfaces/identity";
+import { Producer, Crew, Cast, Stakeholder, Director, Person } from "@blockframes/utils/common-interfaces/identity";
 import { firestore } from "firebase/app";
 import { AnalyticsEvents } from '@blockframes/utils/analytics/analyticsEvents';
 import { LegalDocument } from "@blockframes/contract/contract/+state/contract.firestore";
@@ -107,7 +107,7 @@ export interface PublicMovie {
 export interface MoviePromotionalElements {
   clip_link: string,
   moodboard: string,
-  notes: string,
+  notes: Record<string, MovieNote>,
   presentation_deck: string,
   promo_reel_link: string,
   scenario: string,
@@ -220,6 +220,10 @@ export interface MovieRunningTime {
 export interface OtherLink {
   name: string;
   url: string;
+}
+
+export interface MovieNote extends Person{
+  note: string
 }
 
 /////////////////////

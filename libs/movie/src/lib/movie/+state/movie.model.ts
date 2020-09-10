@@ -18,6 +18,7 @@ import {
   MovieRelease,
   MovieRunningTime,
   OtherLink,
+  MovieNote,
 } from './movie.firestore';
 import { DistributionRight } from '@blockframes/distribution-rights/+state/distribution-right.model';
 import { Contract, getValidatedContracts } from '@blockframes/contract/contract/+state/contract.model';
@@ -106,11 +107,16 @@ export function createMoviePromotional(
     newStills[key] = params.still_photo[key];
   }
 
+  const newNotes: Record<string, MovieNote> = {};
+  for (const key in params.notes) {
+    newNotes[key] = params.notes[key];
+  }
+
   const elements: MoviePromotionalElements = {
     ...params,
     clip_link: params.clip_link ?? '',
     moodboard: params.moodboard ?? '',
-    notes: params.notes ?? '',
+    notes: newNotes,
     still_photo: newStills,
     presentation_deck: params.presentation_deck ?? '',
     scenario: params.scenario ?? '',

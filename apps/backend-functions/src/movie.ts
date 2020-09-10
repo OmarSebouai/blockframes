@@ -6,6 +6,7 @@ import { removeAllSubcollections } from './utils';
 import { storeSearchableMovie, deleteObject } from './internals/algolia';
 import { centralOrgID, algolia } from './environments/environment';
 import { orgName } from '@blockframes/organization/+state/organization.firestore';
+import { MovieNote } from '@blockframes/movie/+state/movie.firestore';
 
 /** Function triggered when a document is added into movies collection. */
 export async function onMovieCreate(
@@ -111,7 +112,7 @@ export async function onMovieUpdate(
   }
 
 
-  // REMOVING EMPTY STILL_PHOTOs
+  // REMOVING EMPTY STILL_PHOTOS
   const hasEmptyStills = Object.keys(after.promotional.still_photo)
     .some(key => !after.promotional.still_photo[key]);
 
@@ -124,6 +125,21 @@ export async function onMovieUpdate(
       .forEach(key => notEmptyStills[key] = after.promotional.still_photo[key]);
 
     change.after.ref.update({ 'promotional.still_photo': notEmptyStills });
+  }
+
+  // REMOVING EMPTY NOTES
+  const hasEmptyNotes = Object.keys(after.promotional.notes)
+  .some(key => !after.promotional.notes[key]);
+
+  // if we found at least one empty note, we update with only the none empty ones
+  if (hasEmptyNotes) {
+    const notEmptyNotes: Record<string, MovieNote> = {};
+
+    Object.keys(after.promotional.notes)
+      .filter(key => !!after.promotional.notes[key])
+      .forEach(key => notEmptyNotes[key] = after.promotional.notes[key]);
+
+    change.after.ref.update({ 'promotional.notes': notEmptyNotes });
   }
 
 }

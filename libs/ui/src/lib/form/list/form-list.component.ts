@@ -12,10 +12,11 @@ import {
 
 // RxJs
 import { Observable } from 'rxjs';
-import { startWith, distinctUntilChanged } from 'rxjs/operators';
+import { startWith, distinctUntilChanged, map } from 'rxjs/operators';
 
 // Blockframes
 import { EntityControl, FormEntity, FormList } from '@blockframes/utils/form';
+import { MediaFormList } from '@blockframes/media/form/media-list.form';
 
 @Directive({ selector: '[formView]' })
 export class FormViewDirective { }
@@ -31,7 +32,7 @@ export class ItemRefDirective { }
 })
 export class FormListComponent<T> implements OnInit {
 
-  @Input() form: FormList<T>;
+  @Input() form: FormList<T> | MediaFormList<EntityControl<Record<string, T>>, T>;
   @Input() buttonText = 'Add';
   @Input() saveButtonText = 'Save'
 
@@ -46,9 +47,20 @@ export class FormListComponent<T> implements OnInit {
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.list$ = this.form.valueChanges.pipe(
-      startWith(this.form.value),
-      distinctUntilChanged())
+    if (this.form instanceof FormList) {
+      this.list$ = this.form.valueChanges.pipe(
+        startWith(this.form.value),
+        distinctUntilChanged(),
+      );
+    } else if (this.form instanceof MediaFormList) {
+      this.list$ = this.form.valueChanges.pipe(
+        distinctUntilChanged(),
+        map((values) => Object.keys(values).map(key => values[key])),
+        startWith(
+          Object.keys(this.form.value).map(key => this.form.value[key])
+        ),
+      )
+    }
 
     /* If form is empty, we need a placeholder for the ngTemplateOutletContext */
     if (this.isFormEmpty) {

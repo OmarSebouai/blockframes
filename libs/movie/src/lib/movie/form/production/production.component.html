@@ -8,7 +8,8 @@
 
       <bf-form-table [columns]="productionColumns" [form]="productionCompany" buttonText="Add Production Company">
         <ng-template colRef="countries" let-productionCompany>
-          {{ productionCompany.countries | translateSlug: 'TERRITORIES' }}</ng-template>
+          {{ productionCompany.countries | translateSlug: 'TERRITORIES' }}
+        </ng-template>
         <ng-template formView let-productionForm>
           <article [formGroup]="productionForm" fxLayout fxLayoutGap="24px">
             <mat-form-field appearance="outline" fxFlex>
@@ -34,7 +35,8 @@
       <bf-form-table [columns]="coProductionColumns" [form]="coProductionCompany"
         buttonText="Add Co-Production Company">
         <ng-template colRef="countries" let-coProductionCompany>
-          {{ coProductionCompany.countries | translateSlug: 'TERRITORIES' }}</ng-template>
+          {{ coProductionCompany.countries | translateSlug: 'TERRITORIES' }}
+        </ng-template>
         <ng-template formView let-coProductionForm>
           <article [formGroup]="coProductionForm" fxLayout fxLayoutGap="24px">
 
@@ -58,7 +60,9 @@
     <section id="producers">
       <h6 class="mat-caption">Producer(s)</h6>
       <bf-form-table [columns]="producerColumns" [form]="form.producers" buttonText="Add Producer">
-        <ng-template colRef="role" let-producer>{{ producer.role | translateSlug: 'PRODUCER_ROLES' }}</ng-template>
+        <ng-template colRef="role" let-producer>
+          {{ producer.role | translateSlug: 'PRODUCER_ROLES' }}
+        </ng-template>
         <ng-template formView let-producerForm>
           <article [formGroup]="producerForm">
 
@@ -92,7 +96,8 @@
     <section id="distributors">
 
       <bf-form-table [columns]="distributorColumns" [form]="distributors" buttonText="Add Distribution Company">
-        <ng-template colRef="countries" let-distributor>{{ distributor.countries | translateSlug: 'TERRITORIES' }}
+        <ng-template colRef="countries" let-distributor>
+          {{ distributor.countries | translateSlug: 'TERRITORIES' }}
         </ng-template>
         <ng-template formView let-distributorForm>
           <article [formGroup]="distributorForm" fxLayout fxLayoutGap="24px">

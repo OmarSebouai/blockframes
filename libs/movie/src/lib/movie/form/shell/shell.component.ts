@@ -69,6 +69,9 @@ function getSteps(status: FormControl): TunnelStep[] {
         path: 'media-files',
         label: 'Files'
       }, {
+        path: 'notes-statements',
+        label: 'Notes & Statements'
+      }, {
         path: 'media-images',
         label: 'Images'
       }, {

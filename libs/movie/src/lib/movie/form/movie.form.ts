@@ -9,6 +9,7 @@ import {
   MovieRating,
   MovieLanguageSpecification,
   OtherLink,
+  MovieNote,
 } from '../+state/movie.firestore';
 import {
   Movie,
@@ -672,6 +673,11 @@ function createMoviePromotionalElementsControls(promotionalElements?: Partial<Mo
     stillPhotoControls[key] = new HostedMediaForm(entity.still_photo[key]);
   }
 
+  const notesControls: Record<string, MovieNoteForm> = {};
+  for (const key in entity.notes) {
+    notesControls[key] = new MovieNoteForm(entity.notes[key]);
+  }
+
   return {
     // Images
     still_photo: new MediaFormList<Record<string, HostedMediaForm>>(stillPhotoControls),
@@ -680,7 +686,8 @@ function createMoviePromotionalElementsControls(promotionalElements?: Partial<Mo
     presentation_deck: new HostedMediaForm(entity.presentation_deck),
     scenario: new HostedMediaForm(entity.scenario),
     moodboard: new HostedMediaForm(entity.moodboard),
-    notes: new HostedMediaForm(entity.notes),
+    notes: new MediaFormList<Record<string, MovieNoteForm>>(notesControls),
+//    notes: FormList.factory<MovieNoteForm>(entity.notes, el => new MovieNoteForm(el)),
 
     // External Media
     clip_link: new FormControl(entity.clip_link),
@@ -699,6 +706,39 @@ export class MoviePromotionalElementsForm extends FormEntity<MoviePromotionalEle
     super(createMoviePromotionalElementsControls(promotionalElements));
   }
 }
+
+// ------------------------------
+//       NOTES AND STATEMENTS
+// ------------------------------
+
+export function createMovieNote(params: Partial<MovieNote> = {}): MovieNote {
+  return {
+    firstName: '',
+    lastName: '',
+    role: '',
+    note: '',
+    ...params
+  };
+}
+
+function createNotesFormControl(entity?: Partial<MovieNote>) {
+  const { firstName, lastName, role, note } = createMovieNote(entity);
+  return {
+    firstName: new FormControl(firstName),
+    lastName: new FormControl(lastName),
+    role: new FormControl(role),
+    note: new HostedMediaForm(note)
+  }
+}
+
+type MovieNoteFormControl = ReturnType<typeof createNotesFormControl>;
+
+export class MovieNoteForm extends FormEntity<MovieNoteFormControl, MovieNote> {
+  constructor(notes?: Partial<MovieNote>) {
+    super(createNotesFormControl(notes));
+  }
+}
+
 
 // ------------------------------
 //           REVIEWS

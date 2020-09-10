@@ -1,10 +1,6 @@
 section {
   margin: 0 16px;
 
-  h4 {
-    text-transform: uppercase;
-  }
-
   article {
     margin: 24px 0;
   }
@@ -20,6 +16,10 @@ section {
       white-space: nowrap;
     }
   }
+}
+
+h4 {
+  text-transform: uppercase;
 }
 
 drop-cropper {
