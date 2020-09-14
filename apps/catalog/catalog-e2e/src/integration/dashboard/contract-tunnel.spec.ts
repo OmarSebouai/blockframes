@@ -4,12 +4,12 @@ import { HomePage } from "../../support/pages/marketplace";
 import { LandingPage } from '../../support/pages/landing';
 import { TunnelContractLobbyPage, TunnelContractPage, TunnelContractSummaryPage } from "../../support/pages/dashboard";
 import { User } from "@blockframes/e2e/utils/type";
-import { USERS } from "@blockframes/e2e/utils/users";
+//import { USERS } from "@blockframes/e2e/utils/users";
 import { clearDataAndPrepareTest } from "@blockframes/e2e/utils/functions";
 import { AuthLoginPage } from "@blockframes/e2e/pages/auth";
 
 // Select user: david.ewing@gillespie-lawrence.fake.cascade8.com
-const LOGIN_CREDENTIALS: Partial<User> = USERS[0];
+const LOGIN_CREDENTIALS: Partial<User> = null; //USERS[0];
 
 const EVENT = 'Contract Signature Date';
 const EVENT_SUMMARY = 'ContractSignatureDate';

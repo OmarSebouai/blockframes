@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+/// <reference path="../../support/index.d.ts" />
 
 import { LandingPage } from '../../support/pages/landing';
 import { HomePage, SearchPage, ViewPage, DistributionPage, SelectionPage, FeedbackPage } from '../../support/pages/marketplace';
@@ -36,11 +37,16 @@ beforeEach(() => {
   cy.clearLocalStorage();
   cy.visit('/');
   const p1 = new LandingPage();
-  p1.clickSignup();
+  //p1.clickSignup();
+  cy.getTestID('landing-toolbar a', 'signup').click()
   cy.viewport('ipad-2', 'landscape');
 });
 
 describe('test select movie from catalog', () => {
+  it('Dummy Test', () => {
+    cy.log("Does something");
+  });
+
   it.skip('login into an existing account, go to movie catalog, search movie, create distribution rights, add distribution rights', () => {
     // Connexion
     const p2: AuthLoginPage = new AuthLoginPage();

@@ -56,3 +56,5 @@ export function getTomorrowDay(date: Date) {
   const tomorrowDay = date.getDay() === 6 ? 0 : date.getDay() + 1;
   return tomorrowDay;
 }
+
+export const getTestID = (sel:string, testID?:string) => cy.get(`${sel}[test-id=${testID}]`);

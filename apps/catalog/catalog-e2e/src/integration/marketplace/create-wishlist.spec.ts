@@ -2,12 +2,12 @@
 
 import { HomePage, SearchPage, ViewPage, WishlistPage } from '../../support/pages/marketplace';
 import { User } from '@blockframes/e2e/utils/type';
-import { USERS } from '@blockframes/e2e/utils/users';
+//import { USERS } from '@blockframes/e2e/utils/users';
 import { MOVIES } from '@blockframes/e2e/utils/movies';
 import { clearDataAndPrepareTest, signIn } from '@blockframes/e2e/utils/functions';
 
 // Select user: john.bryant@love-and-sons.fake.cascade8.com
-const LOGIN_CREDENTIALS: Partial<User> = USERS[4];
+const LOGIN_CREDENTIALS: Partial<User> = null; //USERS[4];
 
 const MOVIES_LIST = [MOVIES[0], MOVIES[1]];
 const MOVIENAMELIST: string[] = MOVIES_LIST.map(movie => movie.title.international);
