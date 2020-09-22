@@ -1,10 +1,10 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EventForm } from '../../form/event.form';
 import { EventService } from '../../+state/event.service';
 import { Invitation }  from '@blockframes/invitation/+state/invitation.model';
 import { createAlgoliaUserForm } from '@blockframes/utils/algolia';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'event-edit',
@@ -12,7 +12,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
   styleUrls: ['./edit.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default  // required for changes on "pristine" for the save button
 })
-export class EventEditComponent implements OnInit {
+export class EventEditComponent implements OnInit, OnDestroy {
 
   @Input() form = new EventForm();
   @Input() invitations: Invitation[] = [];
@@ -20,6 +20,9 @@ export class EventEditComponent implements OnInit {
   progress: Observable<number>;
   sending = new BehaviorSubject(false);
   eventLink: string;
+  sub: Subscription;
+
+  private _previousStartValue: Date;
 
   constructor(
     private service: EventService,
@@ -29,6 +32,21 @@ export class EventEditComponent implements OnInit {
 
   ngOnInit() {
     this.eventLink = `/c/o/marketplace/event/${this.form.value.id}/session`;
+
+    this._previousStartValue = new Date(this.form.get('start').value);
+    this.sub = this.form.get('start').valueChanges.subscribe(start => {
+      const end = this.form.get('end').value as Date;
+      if (start >= end) {
+        var diff = Math.abs(this._previousStartValue.getTime() - start.getTime());
+        const newEndDate = new Date(end.setTime(end.getTime() + diff));
+        this.form.get('end').setValue(newEndDate);
+        this._previousStartValue = new Date(this.form.get('start').value);
+      }
+    })
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
   get meta() {
